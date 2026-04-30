@@ -1,0 +1,752 @@
+[
+    {
+        "id": 1,
+        "question": "What is the main purpose of GitHub Copilot Chat?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Compile code"
+            },
+            {
+                "key": "B",
+                "text": "Generate and explain code using natural language"
+            },
+            {
+                "key": "C",
+                "text": "Host applications"
+            },
+            {
+                "key": "D",
+                "text": "Run test suites"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 2,
+        "question": "What improves Copilot Chat responses the most?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Vague prompts"
+            },
+            {
+                "key": "B",
+                "text": "Clear and contextual prompts"
+            },
+            {
+                "key": "C",
+                "text": "No code provided"
+            },
+            {
+                "key": "D",
+                "text": "Random keywords"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 3,
+        "question": "What does #selection in a prompt refer to?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Entire repository"
+            },
+            {
+                "key": "B",
+                "text": "Selected code in editor"
+            },
+            {
+                "key": "C",
+                "text": "Terminal output"
+            },
+            {
+                "key": "D",
+                "text": "File explorer"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 4,
+        "question": "Copilot Chat can help with:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Only syntax highlighting"
+            },
+            {
+                "key": "B",
+                "text": "Code explanation and refactoring"
+            },
+            {
+                "key": "C",
+                "text": "Hardware setup"
+            },
+            {
+                "key": "D",
+                "text": "OS installation"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 5,
+        "question": "What is a best practice when prompting Copilot Chat?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Use short unclear words"
+            },
+            {
+                "key": "B",
+                "text": "Provide full context"
+            },
+            {
+                "key": "C",
+                "text": "Avoid code snippets"
+            },
+            {
+                "key": "D",
+                "text": "Disable IDE"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 6,
+        "question": "Copilot Chat cannot:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Explain code"
+            },
+            {
+                "key": "B",
+                "text": "Suggest improvements"
+            },
+            {
+                "key": "C",
+                "text": "Execute code"
+            },
+            {
+                "key": "D",
+                "text": "Generate tests"
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 7,
+        "question": "Which improves Copilot Chat accuracy?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Removing context"
+            },
+            {
+                "key": "B",
+                "text": "Adding relevant files and code"
+            },
+            {
+                "key": "C",
+                "text": "Using emojis"
+            },
+            {
+                "key": "D",
+                "text": "Random prompts"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 8,
+        "question": "What is the role of Copilot Chat in debugging?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Runs debugger automatically"
+            },
+            {
+                "key": "B",
+                "text": "Suggests fixes based on code analysis"
+            },
+            {
+                "key": "C",
+                "text": "Compiles code"
+            },
+            {
+                "key": "D",
+                "text": "Deletes errors automatically"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 9,
+        "question": "Copilot Chat responses are based on:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Real-time execution"
+            },
+            {
+                "key": "B",
+                "text": "Language model inference"
+            },
+            {
+                "key": "C",
+                "text": "Hardware sensors"
+            },
+            {
+                "key": "D",
+                "text": "Compiler logs"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 10,
+        "question": "What is a good prompt style?",
+        "options": [
+            {
+                "key": "A",
+                "text": "\"Fix this\""
+            },
+            {
+                "key": "B",
+                "text": "\"Explain why this function returns null and suggest a fix\""
+            },
+            {
+                "key": "C",
+                "text": "\"Code pls\""
+            },
+            {
+                "key": "D",
+                "text": "\"????\""
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 11,
+        "question": "Copilot Chat is useful for:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Code understanding"
+            },
+            {
+                "key": "B",
+                "text": "Server hosting"
+            },
+            {
+                "key": "C",
+                "text": "Network wiring"
+            },
+            {
+                "key": "D",
+                "text": "Hardware repair"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 12,
+        "question": "What does Copilot Chat use as context?",
+        "options": [
+            {
+                "key": "A",
+                "text": "IDE theme"
+            },
+            {
+                "key": "B",
+                "text": "Code, selection, and open files"
+            },
+            {
+                "key": "C",
+                "text": "Screen brightness"
+            },
+            {
+                "key": "D",
+                "text": "Internet speed"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 13,
+        "question": "Copilot Chat can generate:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Machine code only"
+            },
+            {
+                "key": "B",
+                "text": "Explanations and refactored code"
+            },
+            {
+                "key": "C",
+                "text": "Operating systems"
+            },
+            {
+                "key": "D",
+                "text": "BIOS firmware"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 14,
+        "question": "Best way to ask Copilot for a function:",
+        "options": [
+            {
+                "key": "A",
+                "text": "\"Make function\""
+            },
+            {
+                "key": "B",
+                "text": "Describe inputs, outputs, and purpose"
+            },
+            {
+                "key": "C",
+                "text": "\"??? function pls\""
+            },
+            {
+                "key": "D",
+                "text": "No description"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 15,
+        "question": "Copilot Chat helps mainly with:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Decision making in code"
+            },
+            {
+                "key": "B",
+                "text": "Hardware replacement"
+            },
+            {
+                "key": "C",
+                "text": "Network cabling"
+            },
+            {
+                "key": "D",
+                "text": "Database hosting"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 16,
+        "question": "Copilot Chat improves when:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Context is reduced"
+            },
+            {
+                "key": "B",
+                "text": "Code is selected and referenced"
+            },
+            {
+                "key": "C",
+                "text": "IDE is closed"
+            },
+            {
+                "key": "D",
+                "text": "No files exist"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 17,
+        "question": "Copilot Chat is NOT:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Context-aware"
+            },
+            {
+                "key": "B",
+                "text": "Language-based"
+            },
+            {
+                "key": "C",
+                "text": "Code-executing"
+            },
+            {
+                "key": "D",
+                "text": "Interactive"
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 18,
+        "question": "What is the benefit of using file references in prompts?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Faster internet"
+            },
+            {
+                "key": "B",
+                "text": "Better context understanding"
+            },
+            {
+                "key": "C",
+                "text": "Better screen rendering"
+            },
+            {
+                "key": "D",
+                "text": "Lower CPU usage"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 19,
+        "question": "Copilot Chat can help with:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Writing documentation"
+            },
+            {
+                "key": "B",
+                "text": "Installing OS"
+            },
+            {
+                "key": "C",
+                "text": "Hardware design"
+            },
+            {
+                "key": "D",
+                "text": "Power supply repair"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 20,
+        "question": "A poor prompt example is:",
+        "options": [
+            {
+                "key": "A",
+                "text": "\"Refactor this function for readability\""
+            },
+            {
+                "key": "B",
+                "text": "\"Explain this loop step by step\""
+            },
+            {
+                "key": "C",
+                "text": "\"Do stuff\""
+            },
+            {
+                "key": "D",
+                "text": "\"Optimize this algorithm\""
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 21,
+        "question": "Copilot Chat is most useful during:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Code review"
+            },
+            {
+                "key": "B",
+                "text": "Hardware assembly"
+            },
+            {
+                "key": "C",
+                "text": "Network configuration"
+            },
+            {
+                "key": "D",
+                "text": "Server cooling"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 22,
+        "question": "What does Copilot Chat NOT do automatically?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Explain code"
+            },
+            {
+                "key": "B",
+                "text": "Suggest improvements"
+            },
+            {
+                "key": "C",
+                "text": "Run tests"
+            },
+            {
+                "key": "D",
+                "text": "Generate functions"
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 23,
+        "question": "Context in Copilot Chat includes:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Only comments"
+            },
+            {
+                "key": "B",
+                "text": "Code + selection + files"
+            },
+            {
+                "key": "C",
+                "text": "CPU usage"
+            },
+            {
+                "key": "D",
+                "text": "RAM usage"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 24,
+        "question": "Copilot Chat responses can be improved by:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Adding irrelevant files"
+            },
+            {
+                "key": "B",
+                "text": "Being specific in instructions"
+            },
+            {
+                "key": "C",
+                "text": "Removing code"
+            },
+            {
+                "key": "D",
+                "text": "Closing IDE"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 25,
+        "question": "Copilot Chat helps primarily with:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Understanding and writing code"
+            },
+            {
+                "key": "B",
+                "text": "Hardware diagnostics"
+            },
+            {
+                "key": "C",
+                "text": "Internet routing"
+            },
+            {
+                "key": "D",
+                "text": "OS kernel updates"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 26,
+        "question": "Which prompt is best?",
+        "options": [
+            {
+                "key": "A",
+                "text": "\"Fix this bug in login function and explain root cause\""
+            },
+            {
+                "key": "B",
+                "text": "\"Fix pls\""
+            },
+            {
+                "key": "C",
+                "text": "\"Error???\""
+            },
+            {
+                "key": "D",
+                "text": "\"Help\""
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 27,
+        "question": "Copilot Chat uses:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Rule-based logic"
+            },
+            {
+                "key": "B",
+                "text": "AI language model reasoning"
+            },
+            {
+                "key": "C",
+                "text": "Manual templates"
+            },
+            {
+                "key": "D",
+                "text": "Compiler output"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 28,
+        "question": "Copilot Chat can assist in:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Writing unit tests"
+            },
+            {
+                "key": "B",
+                "text": "Replacing OS"
+            },
+            {
+                "key": "C",
+                "text": "Installing drivers"
+            },
+            {
+                "key": "D",
+                "text": "BIOS flashing"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 29,
+        "question": "Copilot Chat is designed to:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Replace developers"
+            },
+            {
+                "key": "B",
+                "text": "Assist developers"
+            },
+            {
+                "key": "C",
+                "text": "Replace IDE"
+            },
+            {
+                "key": "D",
+                "text": "Replace compiler"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 30,
+        "question": "The most important factor in Copilot Chat quality is:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Screen size"
+            },
+            {
+                "key": "B",
+                "text": "Prompt clarity and context"
+            },
+            {
+                "key": "C",
+                "text": "Internet speed"
+            },
+            {
+                "key": "D",
+                "text": "Keyboard type"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    }
+]

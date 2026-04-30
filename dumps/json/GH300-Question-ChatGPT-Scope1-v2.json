@@ -1,0 +1,752 @@
+[
+    {
+        "id": 1,
+        "question": "What is the main goal of GitHub Copilot?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Replace source control systems"
+            },
+            {
+                "key": "B",
+                "text": "Suggest code and developer guidance"
+            },
+            {
+                "key": "C",
+                "text": "Host production servers"
+            },
+            {
+                "key": "D",
+                "text": "Compile binaries without a build tool"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 2,
+        "question": "GitHub Copilot suggestions are primarily based on:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Code context and prompt intent"
+            },
+            {
+                "key": "B",
+                "text": "Battery level"
+            },
+            {
+                "key": "C",
+                "text": "Screen resolution"
+            },
+            {
+                "key": "D",
+                "text": "CPU clock speed"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 3,
+        "question": "Copilot is best described as:",
+        "options": [
+            {
+                "key": "A",
+                "text": "A programming language"
+            },
+            {
+                "key": "B",
+                "text": "A static code linter only"
+            },
+            {
+                "key": "C",
+                "text": "An AI-powered coding assistant"
+            },
+            {
+                "key": "D",
+                "text": "A package manager"
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 4,
+        "question": "In supported IDEs, Copilot suggestions commonly appear:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Inline while typing"
+            },
+            {
+                "key": "B",
+                "text": "Only in terminal output"
+            },
+            {
+                "key": "C",
+                "text": "In the operating system logs"
+            },
+            {
+                "key": "D",
+                "text": "In the browser history"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 5,
+        "question": "Why do specific comments improve Copilot output quality?",
+        "options": [
+            {
+                "key": "A",
+                "text": "They reduce RAM usage"
+            },
+            {
+                "key": "B",
+                "text": "They provide intent and constraints"
+            },
+            {
+                "key": "C",
+                "text": "They disable randomness entirely"
+            },
+            {
+                "key": "D",
+                "text": "They make code execute faster"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 6,
+        "question": "Which statement about Copilot suggestions is correct?",
+        "options": [
+            {
+                "key": "A",
+                "text": "They are always guaranteed correct"
+            },
+            {
+                "key": "B",
+                "text": "They are probabilistic and should be reviewed"
+            },
+            {
+                "key": "C",
+                "text": "They can directly execute themselves"
+            },
+            {
+                "key": "D",
+                "text": "They cannot include functions"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 7,
+        "question": "Copilot helps most with repetitive development tasks such as:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Boilerplate creation"
+            },
+            {
+                "key": "B",
+                "text": "Hardware diagnostics"
+            },
+            {
+                "key": "C",
+                "text": "Network cabling"
+            },
+            {
+                "key": "D",
+                "text": "BIOS configuration"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 8,
+        "question": "A key user responsibility when using Copilot is to:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Accept every suggestion automatically"
+            },
+            {
+                "key": "B",
+                "text": "Validate logic, security, and correctness"
+            },
+            {
+                "key": "C",
+                "text": "Disable tests to save time"
+            },
+            {
+                "key": "D",
+                "text": "Ignore code review"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 9,
+        "question": "Copilot can assist developers by:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Suggesting refactors"
+            },
+            {
+                "key": "B",
+                "text": "Replacing version control entirely"
+            },
+            {
+                "key": "C",
+                "text": "Auto-deploying to production by default"
+            },
+            {
+                "key": "D",
+                "text": "Compiling kernel modules automatically"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 10,
+        "question": "Copilot typically performs best when:",
+        "options": [
+            {
+                "key": "A",
+                "text": "The file is empty and vague"
+            },
+            {
+                "key": "B",
+                "text": "The prompt and nearby code are clear"
+            },
+            {
+                "key": "C",
+                "text": "The IDE has no open files"
+            },
+            {
+                "key": "D",
+                "text": "Comments are removed"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 11,
+        "question": "Which is NOT a core Copilot behavior?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Code completion support"
+            },
+            {
+                "key": "B",
+                "text": "Context-based code generation"
+            },
+            {
+                "key": "C",
+                "text": "Automatic execution of generated code"
+            },
+            {
+                "key": "D",
+                "text": "Suggesting helper functions"
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 12,
+        "question": "Copilot can be especially useful during initial development for:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Drafting scaffolding and starter implementations"
+            },
+            {
+                "key": "B",
+                "text": "Replacing all architecture decisions"
+            },
+            {
+                "key": "C",
+                "text": "Eliminating the need for debugging"
+            },
+            {
+                "key": "D",
+                "text": "Performing hardware firmware updates"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 13,
+        "question": "Which practice improves Copilot relevance?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Provide expected input/output examples"
+            },
+            {
+                "key": "B",
+                "text": "Hide function names and intent"
+            },
+            {
+                "key": "C",
+                "text": "Avoid describing requirements"
+            },
+            {
+                "key": "D",
+                "text": "Use single-word prompts only"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 14,
+        "question": "Copilot suggestions should be treated as:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Final production code by default"
+            },
+            {
+                "key": "B",
+                "text": "Drafts requiring engineering judgment"
+            },
+            {
+                "key": "C",
+                "text": "Immutable templates"
+            },
+            {
+                "key": "D",
+                "text": "Executable binaries"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 15,
+        "question": "What is a common benefit of Copilot in day-to-day coding?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Faster implementation of routine code"
+            },
+            {
+                "key": "B",
+                "text": "Elimination of all defects"
+            },
+            {
+                "key": "C",
+                "text": "Automatic infrastructure provisioning"
+            },
+            {
+                "key": "D",
+                "text": "Guaranteed architecture compliance"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 16,
+        "question": "Copilot can help explain code by:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Rewriting BIOS tables"
+            },
+            {
+                "key": "B",
+                "text": "Generating contextual summaries in chat tools"
+            },
+            {
+                "key": "C",
+                "text": "Replacing documentation systems entirely"
+            },
+            {
+                "key": "D",
+                "text": "Running integration tests automatically"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 17,
+        "question": "Which input usually gives better Copilot results?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Ambiguous prompts with no constraints"
+            },
+            {
+                "key": "B",
+                "text": "Clear task instructions with context"
+            },
+            {
+                "key": "C",
+                "text": "Random text blocks"
+            },
+            {
+                "key": "D",
+                "text": "Empty comments"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 18,
+        "question": "Copilot supports developers primarily inside:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Supported IDE/editor environments"
+            },
+            {
+                "key": "B",
+                "text": "Router firmware consoles"
+            },
+            {
+                "key": "C",
+                "text": "Spreadsheet applications only"
+            },
+            {
+                "key": "D",
+                "text": "Image editing software"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 19,
+        "question": "Copilot can generate code for:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Utility functions and test stubs"
+            },
+            {
+                "key": "B",
+                "text": "Physical hardware wiring diagrams only"
+            },
+            {
+                "key": "C",
+                "text": "VPN appliance firmware only"
+            },
+            {
+                "key": "D",
+                "text": "None of the above"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 20,
+        "question": "Why is human review still required with Copilot?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Suggestions may be incomplete or incorrect"
+            },
+            {
+                "key": "B",
+                "text": "Copilot cannot produce any code"
+            },
+            {
+                "key": "C",
+                "text": "Suggestions cannot be edited"
+            },
+            {
+                "key": "D",
+                "text": "Copilot blocks debugging tools"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 21,
+        "question": "Copilot effectiveness often improves when developers:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Keep relevant files and symbols in context"
+            },
+            {
+                "key": "B",
+                "text": "Remove all comments and names"
+            },
+            {
+                "key": "C",
+                "text": "Disable syntax highlighting"
+            },
+            {
+                "key": "D",
+                "text": "Avoid writing function signatures"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 22,
+        "question": "Copilot is NOT intended to:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Assist with coding productivity"
+            },
+            {
+                "key": "B",
+                "text": "Suggest implementation ideas"
+            },
+            {
+                "key": "C",
+                "text": "Fully replace developer accountability"
+            },
+            {
+                "key": "D",
+                "text": "Provide code drafts"
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 23,
+        "question": "Which scenario is a good use of Copilot?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Generating repetitive CRUD patterns"
+            },
+            {
+                "key": "B",
+                "text": "Replacing all QA processes"
+            },
+            {
+                "key": "C",
+                "text": "Deploying without verification"
+            },
+            {
+                "key": "D",
+                "text": "Skipping design reviews"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 24,
+        "question": "A realistic expectation of Copilot output is that it:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Will always pass every test immediately"
+            },
+            {
+                "key": "B",
+                "text": "May need adaptation to project standards"
+            },
+            {
+                "key": "C",
+                "text": "Never needs refactoring"
+            },
+            {
+                "key": "D",
+                "text": "Is guaranteed vulnerability-free"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 25,
+        "question": "Copilot can help with test development by:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Suggesting unit test cases and structure"
+            },
+            {
+                "key": "B",
+                "text": "Auto-running all test pipelines implicitly"
+            },
+            {
+                "key": "C",
+                "text": "Deleting failing tests automatically"
+            },
+            {
+                "key": "D",
+                "text": "Replacing test frameworks"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 26,
+        "question": "Which is true about context and Copilot?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Better context generally improves suggestions"
+            },
+            {
+                "key": "B",
+                "text": "Context has no effect on quality"
+            },
+            {
+                "key": "C",
+                "text": "More ambiguity improves precision"
+            },
+            {
+                "key": "D",
+                "text": "Context only matters for UI code"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 27,
+        "question": "Copilot-generated code should be checked for:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Correctness, security, and maintainability"
+            },
+            {
+                "key": "B",
+                "text": "Monitor refresh rate compatibility"
+            },
+            {
+                "key": "C",
+                "text": "CPU fan speed"
+            },
+            {
+                "key": "D",
+                "text": "Battery charging cycle"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 28,
+        "question": "Copilot can accelerate development velocity mainly by:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Reducing manual typing for common patterns"
+            },
+            {
+                "key": "B",
+                "text": "Replacing architecture diagrams automatically"
+            },
+            {
+                "key": "C",
+                "text": "Eliminating the need for pull requests"
+            },
+            {
+                "key": "D",
+                "text": "Handling production incident management"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 29,
+        "question": "Which statement is most accurate?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Copilot is a context-aware AI assistant, not a compiler"
+            },
+            {
+                "key": "B",
+                "text": "Copilot is a compiler replacement"
+            },
+            {
+                "key": "C",
+                "text": "Copilot is only for terminal commands"
+            },
+            {
+                "key": "D",
+                "text": "Copilot only works with empty files"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 30,
+        "question": "The best way to use Copilot in professional workflows is to:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Combine AI suggestions with human review and testing"
+            },
+            {
+                "key": "B",
+                "text": "Accept all suggestions without validation"
+            },
+            {
+                "key": "C",
+                "text": "Disable code reviews"
+            },
+            {
+                "key": "D",
+                "text": "Avoid writing clear prompts"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    }
+]

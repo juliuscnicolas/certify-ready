@@ -1,0 +1,240 @@
+SCOPE 5: Responsible AI & Limitations (30 MCQs)
+1. A key limitation of Copilot is:
+
+A. It executes code automatically
+B. It may produce incorrect suggestions
+C. It designs hardware
+D. It replaces IDEs
+Answer: B
+
+2. Copilot-generated code should always be:
+
+A. Trusted without review
+B. Reviewed by developers
+C. Ignored
+D. Automatically deployed
+Answer: B
+
+3. Copilot may sometimes produce:
+
+A. Guaranteed correct code
+B. Insecure or incorrect code
+C. Hardware configurations
+D. OS kernels
+Answer: B
+
+4. Responsible use of Copilot includes:
+
+A. Blindly accepting suggestions
+B. Validating outputs
+C. Disabling security checks
+D. Skipping testing
+Answer: B
+
+5. Copilot does NOT guarantee:
+
+A. Code correctness
+B. Code suggestions
+C. Code completion
+D. Code explanations
+Answer: A
+
+6. Developers should be cautious because Copilot:
+
+A. Executes code
+B. May hallucinate outputs
+C. Manages servers
+D. Replaces compilers
+Answer: B
+
+7. Copilot suggestions may reflect:
+
+A. Real-time internet data
+B. Patterns from training data
+C. Hardware errors
+D. IDE themes
+Answer: B
+
+8. Responsible AI use requires:
+
+A. Ignoring bugs
+B. Reviewing generated code
+C. Disabling testing
+D. Avoiding documentation
+Answer: B
+
+9. Copilot should NOT be used as:
+
+A. Assistant tool
+B. Replacement for developer judgment
+C. Coding helper
+D. Suggestion engine
+Answer: B
+
+10. Copilot may generate:
+
+A. Unsafe code patterns
+B. Hardware designs
+C. Network cables
+D. Operating systems
+Answer: A
+
+11. A responsible developer should:
+
+A. Deploy code immediately
+B. Test Copilot output
+C. Skip review
+D. Trust all suggestions
+Answer: B
+
+12. Copilot does NOT understand:
+
+A. Code context
+B. Business logic fully
+C. Syntax
+D. Patterns
+Answer: B
+
+13. Copilot is best described as:
+
+A. Decision maker
+B. Suggestion tool
+C. Compiler replacement
+D. Execution engine
+Answer: B
+
+14. Copilot may introduce:
+
+A. Logical errors
+B. Hardware fixes
+C. OS upgrades
+D. Network routing
+Answer: A
+
+15. Responsible usage includes:
+
+A. Code review
+B. Ignoring testing
+C. Skipping validation
+D. Auto-deploying
+Answer: A
+
+16. Copilot outputs should be:
+
+A. Assumed correct
+B. Verified
+C. Ignored
+D. Auto-approved
+Answer: B
+
+17. Copilot does NOT:
+
+A. Suggest code
+B. Explain code
+C. Guarantee correctness
+D. Generate tests
+Answer: C
+
+18. AI-generated code risks include:
+
+A. Security vulnerabilities
+B. Better performance always
+C. Hardware upgrades
+D. Faster internet
+Answer: A
+
+19. Copilot requires:
+
+A. Human oversight
+B. No review
+C. No testing
+D. No validation
+Answer: A
+
+20. Copilot suggestions are:
+
+A. Deterministic
+B. Probabilistic
+C. Always correct
+D. Hardware-based
+Answer: B
+
+21. Responsible AI means:
+
+A. Ignoring output quality
+B. Ensuring safe usage
+C. Disabling checks
+D. Avoiding review
+Answer: B
+
+22. Copilot may reflect biases from:
+
+A. Hardware
+B. Training data
+C. IDE themes
+D. CPU speed
+Answer: B
+
+23. Copilot is NOT a substitute for:
+
+A. Developer judgment
+B. Code suggestions
+C. Code explanations
+D. Boilerplate generation
+Answer: A
+
+24. Developers should:
+
+A. Trust Copilot blindly
+B. Validate security implications
+C. Skip testing
+D. Ignore warnings
+Answer: B
+
+25. Copilot cannot:
+
+A. Suggest code
+B. Understand intent fully
+C. Generate functions
+D. Explain code
+Answer: B
+
+26. A key risk of Copilot is:
+
+A. Hardware failure
+B. Incorrect logic generation
+C. Network outage
+D. OS crash
+Answer: B
+
+27. Copilot should be used:
+
+A. As a helper tool
+B. As a full replacement for developers
+C. Without supervision
+D. Without testing
+Answer: A
+
+28. Responsible development includes:
+
+A. Code validation
+B. Skipping review
+C. Ignoring bugs
+D. Auto deployment
+Answer: A
+
+29. Copilot-generated code should be:
+
+A. Reviewed and tested
+B. Immediately trusted
+C. Ignored
+D. Deleted always
+Answer: A
+
+30. Copilot is best used with:
+
+A. Human oversight
+B. No supervision
+C. No validation
+D. No testing
+Answer: A

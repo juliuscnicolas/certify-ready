@@ -1,0 +1,239 @@
+1. GitHub Copilot integrates primarily with:
+
+A. IDEs
+B. Operating systems
+C. Hardware chips
+D. Network routers
+Answer: A
+
+2. Copilot suggestions appear in:
+
+A. Terminal window
+B. Code editor inline
+C. Email client
+D. File explorer only
+Answer: B
+
+3. The Copilot completions panel is used to:
+
+A. Install extensions
+B. View multiple suggestions
+C. Compile code
+D. Debug hardware
+Answer: B
+
+4. Copilot works best when:
+
+A. No files are open
+B. Relevant project files are open
+C. IDE is offline
+D. Screen is locked
+Answer: B
+
+5. Version control helps Copilot by:
+
+A. Running builds
+B. Providing code context
+C. Increasing CPU speed
+D. Encrypting files
+Answer: B
+
+6. Copilot is available in:
+
+A. Supported IDEs like VS Code
+B. Only browsers
+C. Only terminals
+D. Only mobile phones
+Answer: A
+
+7. A key workflow benefit of Copilot is:
+
+A. Faster code writing
+B. Hardware repair
+C. Network setup
+D. OS installation
+Answer: A
+
+8. Copilot uses project context from:
+
+A. Open files and repositories
+B. Monitor resolution
+C. Keyboard input speed
+D. Internet latency
+Answer: A
+
+9. Copilot helps developers by:
+
+A. Replacing compilers
+B. Suggesting code in real time
+C. Managing servers
+D. Installing drivers
+Answer: B
+
+10. Copilot is triggered:
+
+A. Manually only
+B. While typing
+C. Only after saving
+D. Only after restart
+Answer: B
+
+11. Copilot improves workflow by:
+
+A. Automating repetitive coding
+B. Increasing hardware power
+C. Reducing RAM usage
+D. Replacing OS
+Answer: A
+
+12. Copilot suggestions are:
+
+A. Always static
+B. Context-based
+C. Hardware-generated
+D. Random only
+Answer: B
+
+13. Copilot is useful in:
+
+A. Code completion
+B. Cable installation
+C. CPU design
+D. Network wiring
+Answer: A
+
+14. Copilot works inside:
+
+A. IDE environment
+B. BIOS setup
+C. Hardware firmware
+D. OS kernel only
+Answer: A
+
+15. The best workflow practice is:
+
+A. Ignore context
+B. Keep relevant files open
+C. Close IDE frequently
+D. Remove comments
+Answer: B
+
+16. Copilot reduces developer workload by:
+
+A. Writing boilerplate code
+B. Replacing hardware
+C. Running servers
+D. Managing OS updates
+Answer: A
+
+17. Copilot is NOT:
+
+A. IDE integrated
+B. AI-based
+C. Compiler replacement
+D. Context-aware
+Answer: C
+
+18. Copilot works across:
+
+A. Multiple IDEs
+B. Only one OS
+C. Only cloud servers
+D. Only mobile apps
+Answer: A
+
+19. Copilot suggestions depend on:
+
+A. Code context
+B. Screen brightness
+C. CPU temperature
+D. Internet provider
+Answer: A
+
+20. Copilot helps with:
+
+A. Refactoring code
+B. Hardware assembly
+C. Network wiring
+D. Power supply repair
+Answer: A
+
+21. Copilot Chat is used for:
+
+A. Code explanations
+B. Hardware diagnostics
+C. BIOS updates
+D. OS installation
+Answer: A
+
+22. IDE integration allows Copilot to:
+
+A. Access code context
+B. Replace hardware
+C. Manage electricity
+D. Control monitor
+Answer: A
+
+23. Copilot improves productivity by:
+
+A. Suggesting code instantly
+B. Removing compiler
+C. Disabling IDE
+D. Increasing latency
+Answer: A
+
+24. Copilot works best when:
+
+A. Code is structured
+B. No files exist
+C. IDE is closed
+D. Internet is off
+Answer: A
+
+25. Copilot suggestions appear:
+
+A. Only in terminal
+B. Inline in editor
+C. Only in browser
+D. Only in logs
+Answer: B
+
+26. Copilot is useful during:
+
+A. Development workflow
+B. Hardware repair
+C. Network installation
+D. OS formatting
+Answer: A
+
+27. Copilot integrates with:
+
+A. Git repositories
+B. Power supply units
+C. CPUs
+D. RAM chips
+Answer: A
+
+28. Copilot improves code speed by:
+
+A. Auto-suggestions
+B. Increasing CPU clock
+C. Changing OS kernel
+D. Disabling IDE
+Answer: A
+
+29. Copilot is best described as:
+
+A. Development assistant
+B. Hardware tool
+C. Compiler engine
+D. Operating system
+Answer: A
+
+30. Copilot requires:
+
+A. IDE integration
+B. Hardware upgrade
+C. BIOS access
+D. Network switch
+Answer: A

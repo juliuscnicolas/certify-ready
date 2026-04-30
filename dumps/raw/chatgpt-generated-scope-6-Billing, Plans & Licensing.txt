@@ -1,0 +1,239 @@
+1. GitHub Copilot Individual is billed as:
+
+A. Pay-per-use
+B. Subscription
+C. Free for all users
+D. One-time purchase
+Answer: B
+
+2. Copilot Individual can be billed:
+
+A. Only yearly
+B. Monthly or yearly subscription
+C. Hourly
+D. Per line of code
+Answer: B
+
+3. Copilot is NOT typically billed as:
+
+A. Subscription
+B. Metered usage
+C. Monthly plan
+D. Annual plan
+Answer: B
+
+4. Copilot Business is designed for:
+
+A. Individual developers
+B. Organizations and teams
+C. Hardware engineers
+D. Students only
+Answer: B
+
+5. Copilot Enterprise adds:
+
+A. No extra features
+B. Advanced organization controls
+C. Hardware integration
+D. Offline mode only
+Answer: B
+
+6. Billing for Copilot is managed through:
+
+A. GitHub account settings
+B. IDE settings
+C. BIOS settings
+D. Operating system control panel
+Answer: A
+
+7. Copilot subscription renews:
+
+A. Automatically (if enabled)
+B. Never
+C. Every hour
+D. Only manually each time
+Answer: A
+
+8. Copilot Individual is:
+
+A. Free for all users
+B. Paid subscription service
+C. Hardware license
+D. Open-source tool
+Answer: B
+
+9. Copilot pricing varies by:
+
+A. CPU speed
+B. Plan type
+C. Monitor size
+D. IDE theme
+Answer: B
+
+10. Copilot Business includes:
+
+A. Team management features
+B. Hardware control
+C. Network configuration
+D. BIOS tools
+Answer: A
+
+11. Copilot Enterprise is intended for:
+
+A. Large organizations
+B. Home users only
+C. Hardware engineers
+D. Freelancers only
+Answer: A
+
+12. Copilot billing is tied to:
+
+A. GitHub account
+B. IDE license
+C. Operating system
+D. CPU vendor
+Answer: A
+
+13. Copilot subscription can be:
+
+A. Monthly
+B. Hourly
+C. Per compile
+D. Per file
+Answer: A
+
+14. Copilot Individual does NOT include:
+
+A. Code suggestions
+B. Chat features
+C. Hardware tools
+D. IDE integration
+Answer: C
+
+15. Copilot Business offers:
+
+A. Individual billing only
+B. Admin controls
+C. No collaboration features
+D. Offline usage only
+Answer: B
+
+16. Copilot licensing is based on:
+
+A. User subscription
+B. CPU usage
+C. Code length
+D. Network bandwidth
+Answer: A
+
+17. Copilot Enterprise is best for:
+
+A. Single developers
+B. Large teams with governance needs
+C. Hardware labs
+D. Offline systems only
+Answer: B
+
+18. Copilot pricing is:
+
+A. Free forever
+B. Subscription-based
+C. Hardware-based
+D. Usage-based metering
+Answer: B
+
+19. Copilot Individual is meant for:
+
+A. Solo developers
+B. Enterprises only
+C. Hardware engineers
+D. Network admins only
+Answer: A
+
+20. Copilot Business includes:
+
+A. No admin controls
+B. Centralized billing and management
+C. Hardware control
+D. BIOS access
+Answer: B
+
+21. Copilot Enterprise adds:
+
+A. Security and policy controls
+B. CPU optimization
+C. Hardware drivers
+D. OS kernel access
+Answer: A
+
+22. Copilot billing is NOT based on:
+
+A. Subscription plan
+B. Usage per line of code
+C. Monthly plan
+D. Annual plan
+Answer: B
+
+23. Copilot can be purchased through:
+
+A. GitHub
+B. Hardware stores
+C. OS installers
+D. BIOS menus
+Answer: A
+
+24. Copilot subscription is required for:
+
+A. Full usage
+B. Hardware repair
+C. OS installation
+D. Network setup
+Answer: A
+
+25. Copilot Business supports:
+
+A. Team policy enforcement
+B. Hardware configuration
+C. CPU upgrades
+D. OS reinstall
+Answer: A
+
+26. Copilot Enterprise is focused on:
+
+A. Individual freelancing
+B. Organizational governance
+C. Hardware design
+D. Network routing
+Answer: B
+
+27. Copilot billing cycle can be:
+
+A. Monthly or annual
+B. Hourly only
+C. Per request
+D. Per file
+Answer: A
+
+28. Copilot is NOT:
+
+A. Subscription-based
+B. Free for all users
+C. Paid service
+D. Tiered product
+Answer: B
+
+29. Copilot plans differ by:
+
+A. Features and controls
+B. Screen size
+C. CPU model
+D. IDE color
+Answer: A
+
+30. Copilot licensing is managed via:
+
+A. GitHub account settings
+B. BIOS settings
+C. Operating system registry
+D. Hardware firmware
+Answer: A

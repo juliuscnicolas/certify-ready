@@ -1,0 +1,752 @@
+[
+    {
+        "id": 1,
+        "question": "GitHub Copilot integrates primarily with:",
+        "options": [
+            {
+                "key": "A",
+                "text": "IDEs"
+            },
+            {
+                "key": "B",
+                "text": "Operating systems"
+            },
+            {
+                "key": "C",
+                "text": "Hardware chips"
+            },
+            {
+                "key": "D",
+                "text": "Network routers"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 2,
+        "question": "Copilot suggestions appear in:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Terminal window"
+            },
+            {
+                "key": "B",
+                "text": "Code editor inline"
+            },
+            {
+                "key": "C",
+                "text": "Email client"
+            },
+            {
+                "key": "D",
+                "text": "File explorer only"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 3,
+        "question": "The Copilot completions panel is used to:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Install extensions"
+            },
+            {
+                "key": "B",
+                "text": "View multiple suggestions"
+            },
+            {
+                "key": "C",
+                "text": "Compile code"
+            },
+            {
+                "key": "D",
+                "text": "Debug hardware"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 4,
+        "question": "Copilot works best when:",
+        "options": [
+            {
+                "key": "A",
+                "text": "No files are open"
+            },
+            {
+                "key": "B",
+                "text": "Relevant project files are open"
+            },
+            {
+                "key": "C",
+                "text": "IDE is offline"
+            },
+            {
+                "key": "D",
+                "text": "Screen is locked"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 5,
+        "question": "Version control helps Copilot by:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Running builds"
+            },
+            {
+                "key": "B",
+                "text": "Providing code context"
+            },
+            {
+                "key": "C",
+                "text": "Increasing CPU speed"
+            },
+            {
+                "key": "D",
+                "text": "Encrypting files"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 6,
+        "question": "Copilot is available in:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Supported IDEs like VS Code"
+            },
+            {
+                "key": "B",
+                "text": "Only browsers"
+            },
+            {
+                "key": "C",
+                "text": "Only terminals"
+            },
+            {
+                "key": "D",
+                "text": "Only mobile phones"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 7,
+        "question": "A key workflow benefit of Copilot is:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Faster code writing"
+            },
+            {
+                "key": "B",
+                "text": "Hardware repair"
+            },
+            {
+                "key": "C",
+                "text": "Network setup"
+            },
+            {
+                "key": "D",
+                "text": "OS installation"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 8,
+        "question": "Copilot uses project context from:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Open files and repositories"
+            },
+            {
+                "key": "B",
+                "text": "Monitor resolution"
+            },
+            {
+                "key": "C",
+                "text": "Keyboard input speed"
+            },
+            {
+                "key": "D",
+                "text": "Internet latency"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 9,
+        "question": "Copilot helps developers by:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Replacing compilers"
+            },
+            {
+                "key": "B",
+                "text": "Suggesting code in real time"
+            },
+            {
+                "key": "C",
+                "text": "Managing servers"
+            },
+            {
+                "key": "D",
+                "text": "Installing drivers"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 10,
+        "question": "Copilot is triggered:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Manually only"
+            },
+            {
+                "key": "B",
+                "text": "While typing"
+            },
+            {
+                "key": "C",
+                "text": "Only after saving"
+            },
+            {
+                "key": "D",
+                "text": "Only after restart"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 11,
+        "question": "Copilot improves workflow by:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Automating repetitive coding"
+            },
+            {
+                "key": "B",
+                "text": "Increasing hardware power"
+            },
+            {
+                "key": "C",
+                "text": "Reducing RAM usage"
+            },
+            {
+                "key": "D",
+                "text": "Replacing OS"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 12,
+        "question": "Copilot suggestions are:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Always static"
+            },
+            {
+                "key": "B",
+                "text": "Context-based"
+            },
+            {
+                "key": "C",
+                "text": "Hardware-generated"
+            },
+            {
+                "key": "D",
+                "text": "Random only"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 13,
+        "question": "Copilot is useful in:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Code completion"
+            },
+            {
+                "key": "B",
+                "text": "Cable installation"
+            },
+            {
+                "key": "C",
+                "text": "CPU design"
+            },
+            {
+                "key": "D",
+                "text": "Network wiring"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 14,
+        "question": "Copilot works inside:",
+        "options": [
+            {
+                "key": "A",
+                "text": "IDE environment"
+            },
+            {
+                "key": "B",
+                "text": "BIOS setup"
+            },
+            {
+                "key": "C",
+                "text": "Hardware firmware"
+            },
+            {
+                "key": "D",
+                "text": "OS kernel only"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 15,
+        "question": "The best workflow practice is:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Ignore context"
+            },
+            {
+                "key": "B",
+                "text": "Keep relevant files open"
+            },
+            {
+                "key": "C",
+                "text": "Close IDE frequently"
+            },
+            {
+                "key": "D",
+                "text": "Remove comments"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 16,
+        "question": "Copilot reduces developer workload by:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Writing boilerplate code"
+            },
+            {
+                "key": "B",
+                "text": "Replacing hardware"
+            },
+            {
+                "key": "C",
+                "text": "Running servers"
+            },
+            {
+                "key": "D",
+                "text": "Managing OS updates"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 17,
+        "question": "Copilot is NOT:",
+        "options": [
+            {
+                "key": "A",
+                "text": "IDE integrated"
+            },
+            {
+                "key": "B",
+                "text": "AI-based"
+            },
+            {
+                "key": "C",
+                "text": "Compiler replacement"
+            },
+            {
+                "key": "D",
+                "text": "Context-aware"
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 18,
+        "question": "Copilot works across:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Multiple IDEs"
+            },
+            {
+                "key": "B",
+                "text": "Only one OS"
+            },
+            {
+                "key": "C",
+                "text": "Only cloud servers"
+            },
+            {
+                "key": "D",
+                "text": "Only mobile apps"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 19,
+        "question": "Copilot suggestions depend on:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Code context"
+            },
+            {
+                "key": "B",
+                "text": "Screen brightness"
+            },
+            {
+                "key": "C",
+                "text": "CPU temperature"
+            },
+            {
+                "key": "D",
+                "text": "Internet provider"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 20,
+        "question": "Copilot helps with:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Refactoring code"
+            },
+            {
+                "key": "B",
+                "text": "Hardware assembly"
+            },
+            {
+                "key": "C",
+                "text": "Network wiring"
+            },
+            {
+                "key": "D",
+                "text": "Power supply repair"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 21,
+        "question": "Copilot Chat is used for:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Code explanations"
+            },
+            {
+                "key": "B",
+                "text": "Hardware diagnostics"
+            },
+            {
+                "key": "C",
+                "text": "BIOS updates"
+            },
+            {
+                "key": "D",
+                "text": "OS installation"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 22,
+        "question": "IDE integration allows Copilot to:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Access code context"
+            },
+            {
+                "key": "B",
+                "text": "Replace hardware"
+            },
+            {
+                "key": "C",
+                "text": "Manage electricity"
+            },
+            {
+                "key": "D",
+                "text": "Control monitor"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 23,
+        "question": "Copilot improves productivity by:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Suggesting code instantly"
+            },
+            {
+                "key": "B",
+                "text": "Removing compiler"
+            },
+            {
+                "key": "C",
+                "text": "Disabling IDE"
+            },
+            {
+                "key": "D",
+                "text": "Increasing latency"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 24,
+        "question": "Copilot works best when:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Code is structured"
+            },
+            {
+                "key": "B",
+                "text": "No files exist"
+            },
+            {
+                "key": "C",
+                "text": "IDE is closed"
+            },
+            {
+                "key": "D",
+                "text": "Internet is off"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 25,
+        "question": "Copilot suggestions appear:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Only in terminal"
+            },
+            {
+                "key": "B",
+                "text": "Inline in editor"
+            },
+            {
+                "key": "C",
+                "text": "Only in browser"
+            },
+            {
+                "key": "D",
+                "text": "Only in logs"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 26,
+        "question": "Copilot is useful during:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Development workflow"
+            },
+            {
+                "key": "B",
+                "text": "Hardware repair"
+            },
+            {
+                "key": "C",
+                "text": "Network installation"
+            },
+            {
+                "key": "D",
+                "text": "OS formatting"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 27,
+        "question": "Copilot integrates with:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Git repositories"
+            },
+            {
+                "key": "B",
+                "text": "Power supply units"
+            },
+            {
+                "key": "C",
+                "text": "CPUs"
+            },
+            {
+                "key": "D",
+                "text": "RAM chips"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 28,
+        "question": "Copilot improves code speed by:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Auto-suggestions"
+            },
+            {
+                "key": "B",
+                "text": "Increasing CPU clock"
+            },
+            {
+                "key": "C",
+                "text": "Changing OS kernel"
+            },
+            {
+                "key": "D",
+                "text": "Disabling IDE"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 29,
+        "question": "Copilot is best described as:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Development assistant"
+            },
+            {
+                "key": "B",
+                "text": "Hardware tool"
+            },
+            {
+                "key": "C",
+                "text": "Compiler engine"
+            },
+            {
+                "key": "D",
+                "text": "Operating system"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 30,
+        "question": "Copilot requires:",
+        "options": [
+            {
+                "key": "A",
+                "text": "IDE integration"
+            },
+            {
+                "key": "B",
+                "text": "Hardware upgrade"
+            },
+            {
+                "key": "C",
+                "text": "BIOS access"
+            },
+            {
+                "key": "D",
+                "text": "Network switch"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    }
+]

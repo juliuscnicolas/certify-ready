@@ -1,0 +1,211 @@
+SCOPE 1 (V2): Core GitHub Copilot Features (30 MCQs)
+
+1. What is the main goal of GitHub Copilot?
+A. Replace source control systems
+B. Suggest code and developer guidance
+C. Host production servers
+D. Compile binaries without a build tool
+Answer: B
+
+2. GitHub Copilot suggestions are primarily based on:
+A. Code context and prompt intent
+B. Battery level
+C. Screen resolution
+D. CPU clock speed
+Answer: A
+
+3. Copilot is best described as:
+A. A programming language
+B. A static code linter only
+C. An AI-powered coding assistant
+D. A package manager
+Answer: C
+
+4. In supported IDEs, Copilot suggestions commonly appear:
+A. Inline while typing
+B. Only in terminal output
+C. In the operating system logs
+D. In the browser history
+Answer: A
+
+5. Why do specific comments improve Copilot output quality?
+A. They reduce RAM usage
+B. They provide intent and constraints
+C. They disable randomness entirely
+D. They make code execute faster
+Answer: B
+
+6. Which statement about Copilot suggestions is correct?
+A. They are always guaranteed correct
+B. They are probabilistic and should be reviewed
+C. They can directly execute themselves
+D. They cannot include functions
+Answer: B
+
+7. Copilot helps most with repetitive development tasks such as:
+A. Boilerplate creation
+B. Hardware diagnostics
+C. Network cabling
+D. BIOS configuration
+Answer: A
+
+8. A key user responsibility when using Copilot is to:
+A. Accept every suggestion automatically
+B. Validate logic, security, and correctness
+C. Disable tests to save time
+D. Ignore code review
+Answer: B
+
+9. Copilot can assist developers by:
+A. Suggesting refactors
+B. Replacing version control entirely
+C. Auto-deploying to production by default
+D. Compiling kernel modules automatically
+Answer: A
+
+10. Copilot typically performs best when:
+A. The file is empty and vague
+B. The prompt and nearby code are clear
+C. The IDE has no open files
+D. Comments are removed
+Answer: B
+
+11. Which is NOT a core Copilot behavior?
+A. Code completion support
+B. Context-based code generation
+C. Automatic execution of generated code
+D. Suggesting helper functions
+Answer: C
+
+12. Copilot can be especially useful during initial development for:
+A. Drafting scaffolding and starter implementations
+B. Replacing all architecture decisions
+C. Eliminating the need for debugging
+D. Performing hardware firmware updates
+Answer: A
+
+13. Which practice improves Copilot relevance?
+A. Provide expected input/output examples
+B. Hide function names and intent
+C. Avoid describing requirements
+D. Use single-word prompts only
+Answer: A
+
+14. Copilot suggestions should be treated as:
+A. Final production code by default
+B. Drafts requiring engineering judgment
+C. Immutable templates
+D. Executable binaries
+Answer: B
+
+15. What is a common benefit of Copilot in day-to-day coding?
+A. Faster implementation of routine code
+B. Elimination of all defects
+C. Automatic infrastructure provisioning
+D. Guaranteed architecture compliance
+Answer: A
+
+16. Copilot can help explain code by:
+A. Rewriting BIOS tables
+B. Generating contextual summaries in chat tools
+C. Replacing documentation systems entirely
+D. Running integration tests automatically
+Answer: B
+
+17. Which input usually gives better Copilot results?
+A. Ambiguous prompts with no constraints
+B. Clear task instructions with context
+C. Random text blocks
+D. Empty comments
+Answer: B
+
+18. Copilot supports developers primarily inside:
+A. Supported IDE/editor environments
+B. Router firmware consoles
+C. Spreadsheet applications only
+D. Image editing software
+Answer: A
+
+19. Copilot can generate code for:
+A. Utility functions and test stubs
+B. Physical hardware wiring diagrams only
+C. VPN appliance firmware only
+D. None of the above
+Answer: A
+
+20. Why is human review still required with Copilot?
+A. Suggestions may be incomplete or incorrect
+B. Copilot cannot produce any code
+C. Suggestions cannot be edited
+D. Copilot blocks debugging tools
+Answer: A
+
+21. Copilot effectiveness often improves when developers:
+A. Keep relevant files and symbols in context
+B. Remove all comments and names
+C. Disable syntax highlighting
+D. Avoid writing function signatures
+Answer: A
+
+22. Copilot is NOT intended to:
+A. Assist with coding productivity
+B. Suggest implementation ideas
+C. Fully replace developer accountability
+D. Provide code drafts
+Answer: C
+
+23. Which scenario is a good use of Copilot?
+A. Generating repetitive CRUD patterns
+B. Replacing all QA processes
+C. Deploying without verification
+D. Skipping design reviews
+Answer: A
+
+24. A realistic expectation of Copilot output is that it:
+A. Will always pass every test immediately
+B. May need adaptation to project standards
+C. Never needs refactoring
+D. Is guaranteed vulnerability-free
+Answer: B
+
+25. Copilot can help with test development by:
+A. Suggesting unit test cases and structure
+B. Auto-running all test pipelines implicitly
+C. Deleting failing tests automatically
+D. Replacing test frameworks
+Answer: A
+
+26. Which is true about context and Copilot?
+A. Better context generally improves suggestions
+B. Context has no effect on quality
+C. More ambiguity improves precision
+D. Context only matters for UI code
+Answer: A
+
+27. Copilot-generated code should be checked for:
+A. Correctness, security, and maintainability
+B. Monitor refresh rate compatibility
+C. CPU fan speed
+D. Battery charging cycle
+Answer: A
+
+28. Copilot can accelerate development velocity mainly by:
+A. Reducing manual typing for common patterns
+B. Replacing architecture diagrams automatically
+C. Eliminating the need for pull requests
+D. Handling production incident management
+Answer: A
+
+29. Which statement is most accurate?
+A. Copilot is a context-aware AI assistant, not a compiler
+B. Copilot is a compiler replacement
+C. Copilot is only for terminal commands
+D. Copilot only works with empty files
+Answer: A
+
+30. The best way to use Copilot in professional workflows is to:
+A. Combine AI suggestions with human review and testing
+B. Accept all suggestions without validation
+C. Disable code reviews
+D. Avoid writing clear prompts
+Answer: A

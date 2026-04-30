@@ -1,0 +1,6 @@
+@certify_ready_api_HostAddress = http://localhost:5203
+
+GET {{certify_ready_api_HostAddress}}/api/questions?page=1&pageSize=10
+Accept: application/json
+
+###

@@ -1,0 +1,752 @@
+[
+    {
+        "id": 1,
+        "question": "A key limitation of Copilot is:",
+        "options": [
+            {
+                "key": "A",
+                "text": "It executes code automatically"
+            },
+            {
+                "key": "B",
+                "text": "It may produce incorrect suggestions"
+            },
+            {
+                "key": "C",
+                "text": "It designs hardware"
+            },
+            {
+                "key": "D",
+                "text": "It replaces IDEs"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 2,
+        "question": "Copilot-generated code should always be:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Trusted without review"
+            },
+            {
+                "key": "B",
+                "text": "Reviewed by developers"
+            },
+            {
+                "key": "C",
+                "text": "Ignored"
+            },
+            {
+                "key": "D",
+                "text": "Automatically deployed"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 3,
+        "question": "Copilot may sometimes produce:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Guaranteed correct code"
+            },
+            {
+                "key": "B",
+                "text": "Insecure or incorrect code"
+            },
+            {
+                "key": "C",
+                "text": "Hardware configurations"
+            },
+            {
+                "key": "D",
+                "text": "OS kernels"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 4,
+        "question": "Responsible use of Copilot includes:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Blindly accepting suggestions"
+            },
+            {
+                "key": "B",
+                "text": "Validating outputs"
+            },
+            {
+                "key": "C",
+                "text": "Disabling security checks"
+            },
+            {
+                "key": "D",
+                "text": "Skipping testing"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 5,
+        "question": "Copilot does NOT guarantee:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Code correctness"
+            },
+            {
+                "key": "B",
+                "text": "Code suggestions"
+            },
+            {
+                "key": "C",
+                "text": "Code completion"
+            },
+            {
+                "key": "D",
+                "text": "Code explanations"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 6,
+        "question": "Developers should be cautious because Copilot:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Executes code"
+            },
+            {
+                "key": "B",
+                "text": "May hallucinate outputs"
+            },
+            {
+                "key": "C",
+                "text": "Manages servers"
+            },
+            {
+                "key": "D",
+                "text": "Replaces compilers"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 7,
+        "question": "Copilot suggestions may reflect:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Real-time internet data"
+            },
+            {
+                "key": "B",
+                "text": "Patterns from training data"
+            },
+            {
+                "key": "C",
+                "text": "Hardware errors"
+            },
+            {
+                "key": "D",
+                "text": "IDE themes"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 8,
+        "question": "Responsible AI use requires:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Ignoring bugs"
+            },
+            {
+                "key": "B",
+                "text": "Reviewing generated code"
+            },
+            {
+                "key": "C",
+                "text": "Disabling testing"
+            },
+            {
+                "key": "D",
+                "text": "Avoiding documentation"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 9,
+        "question": "Copilot should NOT be used as:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Assistant tool"
+            },
+            {
+                "key": "B",
+                "text": "Replacement for developer judgment"
+            },
+            {
+                "key": "C",
+                "text": "Coding helper"
+            },
+            {
+                "key": "D",
+                "text": "Suggestion engine"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 10,
+        "question": "Copilot may generate:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Unsafe code patterns"
+            },
+            {
+                "key": "B",
+                "text": "Hardware designs"
+            },
+            {
+                "key": "C",
+                "text": "Network cables"
+            },
+            {
+                "key": "D",
+                "text": "Operating systems"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 11,
+        "question": "A responsible developer should:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Deploy code immediately"
+            },
+            {
+                "key": "B",
+                "text": "Test Copilot output"
+            },
+            {
+                "key": "C",
+                "text": "Skip review"
+            },
+            {
+                "key": "D",
+                "text": "Trust all suggestions"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 12,
+        "question": "Copilot does NOT understand:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Code context"
+            },
+            {
+                "key": "B",
+                "text": "Business logic fully"
+            },
+            {
+                "key": "C",
+                "text": "Syntax"
+            },
+            {
+                "key": "D",
+                "text": "Patterns"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 13,
+        "question": "Copilot is best described as:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Decision maker"
+            },
+            {
+                "key": "B",
+                "text": "Suggestion tool"
+            },
+            {
+                "key": "C",
+                "text": "Compiler replacement"
+            },
+            {
+                "key": "D",
+                "text": "Execution engine"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 14,
+        "question": "Copilot may introduce:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Logical errors"
+            },
+            {
+                "key": "B",
+                "text": "Hardware fixes"
+            },
+            {
+                "key": "C",
+                "text": "OS upgrades"
+            },
+            {
+                "key": "D",
+                "text": "Network routing"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 15,
+        "question": "Responsible usage includes:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Code review"
+            },
+            {
+                "key": "B",
+                "text": "Ignoring testing"
+            },
+            {
+                "key": "C",
+                "text": "Skipping validation"
+            },
+            {
+                "key": "D",
+                "text": "Auto-deploying"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 16,
+        "question": "Copilot outputs should be:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Assumed correct"
+            },
+            {
+                "key": "B",
+                "text": "Verified"
+            },
+            {
+                "key": "C",
+                "text": "Ignored"
+            },
+            {
+                "key": "D",
+                "text": "Auto-approved"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 17,
+        "question": "Copilot does NOT:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Suggest code"
+            },
+            {
+                "key": "B",
+                "text": "Explain code"
+            },
+            {
+                "key": "C",
+                "text": "Guarantee correctness"
+            },
+            {
+                "key": "D",
+                "text": "Generate tests"
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 18,
+        "question": "AI-generated code risks include:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Security vulnerabilities"
+            },
+            {
+                "key": "B",
+                "text": "Better performance always"
+            },
+            {
+                "key": "C",
+                "text": "Hardware upgrades"
+            },
+            {
+                "key": "D",
+                "text": "Faster internet"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 19,
+        "question": "Copilot requires:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Human oversight"
+            },
+            {
+                "key": "B",
+                "text": "No review"
+            },
+            {
+                "key": "C",
+                "text": "No testing"
+            },
+            {
+                "key": "D",
+                "text": "No validation"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 20,
+        "question": "Copilot suggestions are:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Deterministic"
+            },
+            {
+                "key": "B",
+                "text": "Probabilistic"
+            },
+            {
+                "key": "C",
+                "text": "Always correct"
+            },
+            {
+                "key": "D",
+                "text": "Hardware-based"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 21,
+        "question": "Responsible AI means:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Ignoring output quality"
+            },
+            {
+                "key": "B",
+                "text": "Ensuring safe usage"
+            },
+            {
+                "key": "C",
+                "text": "Disabling checks"
+            },
+            {
+                "key": "D",
+                "text": "Avoiding review"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 22,
+        "question": "Copilot may reflect biases from:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Hardware"
+            },
+            {
+                "key": "B",
+                "text": "Training data"
+            },
+            {
+                "key": "C",
+                "text": "IDE themes"
+            },
+            {
+                "key": "D",
+                "text": "CPU speed"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 23,
+        "question": "Copilot is NOT a substitute for:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Developer judgment"
+            },
+            {
+                "key": "B",
+                "text": "Code suggestions"
+            },
+            {
+                "key": "C",
+                "text": "Code explanations"
+            },
+            {
+                "key": "D",
+                "text": "Boilerplate generation"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 24,
+        "question": "Developers should:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Trust Copilot blindly"
+            },
+            {
+                "key": "B",
+                "text": "Validate security implications"
+            },
+            {
+                "key": "C",
+                "text": "Skip testing"
+            },
+            {
+                "key": "D",
+                "text": "Ignore warnings"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 25,
+        "question": "Copilot cannot:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Suggest code"
+            },
+            {
+                "key": "B",
+                "text": "Understand intent fully"
+            },
+            {
+                "key": "C",
+                "text": "Generate functions"
+            },
+            {
+                "key": "D",
+                "text": "Explain code"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 26,
+        "question": "A key risk of Copilot is:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Hardware failure"
+            },
+            {
+                "key": "B",
+                "text": "Incorrect logic generation"
+            },
+            {
+                "key": "C",
+                "text": "Network outage"
+            },
+            {
+                "key": "D",
+                "text": "OS crash"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 27,
+        "question": "Copilot should be used:",
+        "options": [
+            {
+                "key": "A",
+                "text": "As a helper tool"
+            },
+            {
+                "key": "B",
+                "text": "As a full replacement for developers"
+            },
+            {
+                "key": "C",
+                "text": "Without supervision"
+            },
+            {
+                "key": "D",
+                "text": "Without testing"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 28,
+        "question": "Responsible development includes:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Code validation"
+            },
+            {
+                "key": "B",
+                "text": "Skipping review"
+            },
+            {
+                "key": "C",
+                "text": "Ignoring bugs"
+            },
+            {
+                "key": "D",
+                "text": "Auto deployment"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 29,
+        "question": "Copilot-generated code should be:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Reviewed and tested"
+            },
+            {
+                "key": "B",
+                "text": "Immediately trusted"
+            },
+            {
+                "key": "C",
+                "text": "Ignored"
+            },
+            {
+                "key": "D",
+                "text": "Deleted always"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 30,
+        "question": "Copilot is best used with:",
+        "options": [
+            {
+                "key": "A",
+                "text": "Human oversight"
+            },
+            {
+                "key": "B",
+                "text": "No supervision"
+            },
+            {
+                "key": "C",
+                "text": "No validation"
+            },
+            {
+                "key": "D",
+                "text": "No testing"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    }
+]

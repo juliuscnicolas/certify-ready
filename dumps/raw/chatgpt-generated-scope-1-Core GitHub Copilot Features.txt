@@ -1,0 +1,240 @@
+SCOPE 1: Core GitHub Copilot Features (30 MCQs)
+1. GitHub Copilot is primarily used for:
+
+A. Writing and suggesting code
+B. Hosting websites
+C. Running databases
+D. Compiling operating systems
+Answer: A
+
+2. Copilot generates suggestions based on:
+
+A. Random input
+B. Code context and comments
+C. Screen resolution
+D. CPU speed
+Answer: B
+
+3. Copilot is powered by:
+
+A. Rule-based scripts
+B. Large language models
+C. SQL queries
+D. Browser extensions only
+Answer: B
+
+4. Copilot suggestions appear:
+
+A. In terminal only
+B. Inline in the code editor
+C. In email
+D. In file explorer
+Answer: B
+
+5. Copilot works best when:
+
+A. No context is provided
+B. Relevant code is available
+C. Files are empty
+D. IDE is closed
+Answer: B
+
+6. Copilot is integrated into:
+
+A. IDEs
+B. Hardware chips
+C. BIOS
+D. Network routers
+Answer: A
+
+7. Copilot can assist in:
+
+A. Writing code
+B. Installing hardware
+C. Managing electricity
+D. Running servers
+Answer: A
+
+8. Copilot learns from:
+
+A. Private computer only
+B. Public code patterns and training data
+C. CPU temperature
+D. Screen brightness
+Answer: B
+
+9. Copilot cannot:
+
+A. Suggest code
+B. Explain code
+C. Execute code
+D. Generate functions
+Answer: C
+
+10. Copilot improves results when:
+
+A. Context is added
+B. Files are removed
+C. IDE is minimized
+D. Code is hidden
+Answer: A
+
+11. Copilot is:
+
+A. A compiler
+B. An AI coding assistant
+C. An operating system
+D. A database engine
+Answer: B
+
+12. Copilot suggestions are:
+
+A. Always correct
+B. Probabilistic
+C. Fixed templates
+D. Hardware-based
+Answer: B
+
+13. Copilot is most useful for:
+
+A. Boilerplate code
+B. Hardware design
+C. Network wiring
+D. Server cooling
+Answer: A
+
+14. Copilot uses:
+
+A. Manual rules
+B. Neural networks
+C. Static templates
+D. OS kernels
+Answer: B
+
+15. Copilot requires:
+
+A. Code context
+B. Internet cables
+C. BIOS access
+D. GPU drivers only
+Answer: A
+
+16. Copilot helps reduce:
+
+A. Code repetition
+B. Hardware costs
+C. Network latency
+D. CPU usage
+Answer: A
+
+17. Copilot suggestions are based on:
+
+A. IDE theme
+B. Surrounding code
+C. Keyboard type
+D. Monitor size
+Answer: B
+
+18. Copilot is designed for:
+
+A. Developers
+B. Hardware engineers
+C. System administrators only
+D. Designers only
+Answer: A
+
+19. Copilot can generate:
+
+A. Functions
+B. Hardware diagrams
+C. Electrical circuits
+D. Network routers
+Answer: A
+
+20. Copilot is NOT:
+
+A. AI-based
+B. Context-aware
+C. A compiler
+D. Code assistant
+Answer: C
+
+21. Copilot works in:
+
+A. Supported IDEs
+B. Only mobile apps
+C. Only browsers
+D. Only terminals
+Answer: A
+
+22. Copilot helps mainly by:
+
+A. Writing code faster
+B. Managing servers
+C. Installing OS
+D. Replacing hardware
+Answer: A
+
+23. Copilot suggestions appear:
+
+A. Only after saving
+B. While typing
+C. Only after compiling
+D. Only on restart
+Answer: B
+
+24. Copilot is powered by:
+
+A. AI models
+B. Hard-coded rules
+C. Manual input
+D. Hardware sensors
+Answer: A
+
+25. Copilot is useful for:
+
+A. Code completion
+B. Network setup
+C. Hardware repair
+D. OS installation
+Answer: A
+
+26. Copilot improves when:
+
+A. More context is provided
+B. Less code is used
+C. IDE is closed
+D. Files are deleted
+Answer: A
+
+27. Copilot is NOT used for:
+
+A. Writing code
+B. Suggesting logic
+C. Executing code
+D. Generating functions
+Answer: C
+
+28. Copilot suggestions are:
+
+A. Deterministic
+B. AI-generated
+C. Random noise
+D. Manual templates
+Answer: B
+
+29. Copilot depends on:
+
+A. Code context
+B. Screen color
+C. Internet speed only
+D. Keyboard layout
+Answer: A
+
+30. Copilot is best described as:
+
+A. Code editor
+B. AI coding assistant
+C. Compiler
+D. Operating system
+Answer: B

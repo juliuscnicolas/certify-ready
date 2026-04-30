@@ -1,0 +1,772 @@
+[
+  {
+    "id": 1,
+    "question": "Your team is onboarding GitHub Copilot in VS Code and wants developers to understand suggestions before accepting them. What rollout approach is best?",
+    "options": [
+      { "key": "A", "text": "Enable Copilot and block all code reviews for two weeks" },
+      { "key": "B", "text": "Run a short workshop on prompt quality, validation, and secure coding checks" },
+      { "key": "C", "text": "Allow only senior developers to use Copilot forever" },
+      { "key": "D", "text": "Require accepting the first suggestion every time" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 2,
+    "question": "A developer asks Copilot to create a REST endpoint and gets multiple variants. Which action should they take first?",
+    "options": [
+      { "key": "A", "text": "Merge the shortest variant directly to main" },
+      { "key": "B", "text": "Select the variant that compiles and add tests for expected behavior" },
+      { "key": "C", "text": "Delete all variants and disable Copilot" },
+      { "key": "D", "text": "Choose the variant with most comments regardless of logic" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 3,
+    "question": "You want Copilot to generate a data access class that uses parameterized queries only. Which prompt is most effective?",
+    "options": [
+      { "key": "A", "text": "Write database code" },
+      { "key": "B", "text": "Build repository with SQL" },
+      { "key": "C", "text": "Create C# repository using parameterized SQL commands, no string concatenation, include async methods" },
+      { "key": "D", "text": "Generate any code quickly" }
+    ],
+    "answers": ["C"]
+  },
+  {
+    "id": 4,
+    "question": "A teammate says Copilot suggested code that looked correct but failed edge cases. What is the best response?",
+    "options": [
+      { "key": "A", "text": "Trust Copilot less and avoid all AI tools" },
+      { "key": "B", "text": "Use Copilot only for comments" },
+      { "key": "C", "text": "Treat suggestions as drafts and validate with tests, linting, and review" },
+      { "key": "D", "text": "Accept suggestions only at night" }
+    ],
+    "answers": ["C"]
+  },
+  {
+    "id": 5,
+    "question": "You need boilerplate for a React form with validation messages. Which workflow is most efficient?",
+    "options": [
+      { "key": "A", "text": "Write every line manually to avoid AI" },
+      { "key": "B", "text": "Use Copilot to scaffold form, then refine rules and accessibility labels" },
+      { "key": "C", "text": "Copy unknown code from forums" },
+      { "key": "D", "text": "Generate backend first and skip UI validation" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 6,
+    "question": "During pair programming, one dev uses Copilot suggestions while another reviews in real time. Which benefit is most likely?",
+    "options": [
+      { "key": "A", "text": "No need for pull requests" },
+      { "key": "B", "text": "Faster iteration while preserving human judgment" },
+      { "key": "C", "text": "Elimination of all logic bugs" },
+      { "key": "D", "text": "Automatic architecture governance" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 7,
+    "question": "A new engineer asks what context Copilot uses when suggesting code in an editor file. What is the most accurate explanation?",
+    "options": [
+      { "key": "A", "text": "Only the current line" },
+      { "key": "B", "text": "Only comments in the file" },
+      { "key": "C", "text": "Nearby code, file content, and prompt intent" },
+      { "key": "D", "text": "Only project README" }
+    ],
+    "answers": ["C"]
+  },
+  {
+    "id": 8,
+    "question": "Your team wants to reduce repetitive unit test setup code. Which Copilot use case fits best?",
+    "options": [
+      { "key": "A", "text": "Use Copilot to draft fixture setup and baseline test cases" },
+      { "key": "B", "text": "Use Copilot to bypass failing assertions" },
+      { "key": "C", "text": "Use Copilot to disable test runner" },
+      { "key": "D", "text": "Use Copilot only for production secrets" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 9,
+    "question": "A product manager asks if Copilot can replace design decisions. What should the engineering lead say?",
+    "options": [
+      { "key": "A", "text": "Yes, Copilot should make all architecture decisions" },
+      { "key": "B", "text": "No, Copilot assists implementation but humans own design choices" },
+      { "key": "C", "text": "Only if the repository is private" },
+      { "key": "D", "text": "Only for frontend projects" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 10,
+    "question": "A developer asks Copilot Chat to explain a legacy method before refactoring. What is the best next step after the explanation?",
+    "options": [
+      { "key": "A", "text": "Refactor blindly based on chat output" },
+      { "key": "B", "text": "Confirm understanding by reading code paths and adding characterization tests" },
+      { "key": "C", "text": "Delete the method" },
+      { "key": "D", "text": "Ignore test coverage" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 11,
+    "question": "You want Copilot Chat to generate a migration plan from REST polling to webhooks. Which prompt style works best?",
+    "options": [
+      { "key": "A", "text": "Give me code" },
+      { "key": "B", "text": "Tell me everything about APIs" },
+      { "key": "C", "text": "Propose phased migration plan with risks, rollback, monitoring, and sample endpoint changes" },
+      { "key": "D", "text": "Write unrelated Java code" }
+    ],
+    "answers": ["C"]
+  },
+  {
+    "id": 12,
+    "question": "A teammate pastes a vague prompt and gets poor results. Which prompt improvement is most likely to help?",
+    "options": [
+      { "key": "A", "text": "Add stack, constraints, acceptance criteria, and expected output format" },
+      { "key": "B", "text": "Shorten the prompt to two words" },
+      { "key": "C", "text": "Use only uppercase letters" },
+      { "key": "D", "text": "Ask for random examples" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 13,
+    "question": "You are debugging a null reference exception and ask Copilot Chat for likely causes. What should you request to improve usefulness?",
+    "options": [
+      { "key": "A", "text": "No context, just fix" },
+      { "key": "B", "text": "Stack trace, failing input, and relevant method snippet" },
+      { "key": "C", "text": "Only project name" },
+      { "key": "D", "text": "Only branch name" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 14,
+    "question": "A support issue occurs intermittently in production. You ask Copilot Chat for a triage checklist. Which output is most valuable?",
+    "options": [
+      { "key": "A", "text": "A random list of frameworks" },
+      { "key": "B", "text": "Step-by-step checklist with log points, repro strategy, and rollback criteria" },
+      { "key": "C", "text": "A meme about debugging" },
+      { "key": "D", "text": "A full rewrite proposal only" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 15,
+    "question": "You need Copilot Chat to rewrite a SQL query for readability without changing semantics. Which instruction is best?",
+    "options": [
+      { "key": "A", "text": "Optimize this" },
+      { "key": "B", "text": "Reformat and explain query, preserve result set and ordering, do not alter filters" },
+      { "key": "C", "text": "Do anything faster" },
+      { "key": "D", "text": "Remove all joins" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 16,
+    "question": "A developer asks Copilot Chat to create API documentation from controllers. What should they do before publishing?",
+    "options": [
+      { "key": "A", "text": "Publish directly without review" },
+      { "key": "B", "text": "Review endpoint behavior and examples against actual implementation" },
+      { "key": "C", "text": "Replace OpenAPI entirely" },
+      { "key": "D", "text": "Delete XML comments" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 17,
+    "question": "Your prompt asks for xUnit tests with mocks and edge cases. Copilot gives basic tests only. What is the best follow-up?",
+    "options": [
+      { "key": "A", "text": "Accept as-is" },
+      { "key": "B", "text": "Refine prompt to include specific edge cases, mock framework, and assertion expectations" },
+      { "key": "C", "text": "Disable tests" },
+      { "key": "D", "text": "Switch to manual copy-paste from blogs" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 18,
+    "question": "In a code review, a teammate used Copilot Chat to summarize a pull request. Which risk should reviewers still watch for?",
+    "options": [
+      { "key": "A", "text": "Summaries can miss nuanced behavioral changes" },
+      { "key": "B", "text": "Summaries always include runtime profiling" },
+      { "key": "C", "text": "Summaries compile code automatically" },
+      { "key": "D", "text": "Summaries replace integration tests" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 19,
+    "question": "A team lead wants standard prompt templates for recurring tasks. What is the main advantage?",
+    "options": [
+      { "key": "A", "text": "Guaranteed bug-free output" },
+      { "key": "B", "text": "Consistent context and higher quality responses across the team" },
+      { "key": "C", "text": "No need for coding standards" },
+      { "key": "D", "text": "Removes the need for documentation" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 20,
+    "question": "You ask Copilot Chat for three alternative implementations with trade-offs. Why is this useful?",
+    "options": [
+      { "key": "A", "text": "It removes the need to benchmark" },
+      { "key": "B", "text": "It helps compare readability, performance, and maintainability options" },
+      { "key": "C", "text": "It ensures all options are correct" },
+      { "key": "D", "text": "It blocks peer review" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 21,
+    "question": "Your CI build fails due to a flaky test. You ask Copilot to help isolate causes. Which action should be included?",
+    "options": [
+      { "key": "A", "text": "Ignore the test permanently" },
+      { "key": "B", "text": "Add retries only and move on" },
+      { "key": "C", "text": "Collect timing/log data and identify shared state or order dependencies" },
+      { "key": "D", "text": "Delete the CI pipeline" }
+    ],
+    "answers": ["C"]
+  },
+  {
+    "id": 22,
+    "question": "A developer uses Copilot to generate unit tests for a date parser. Which missing test is most critical?",
+    "options": [
+      { "key": "A", "text": "Only valid date format tests" },
+      { "key": "B", "text": "Boundary and invalid input tests" },
+      { "key": "C", "text": "A test that checks method name" },
+      { "key": "D", "text": "A test for comment formatting" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 23,
+    "question": "You ask Copilot Chat to explain a failing assertion. What additional context improves diagnosis most?",
+    "options": [
+      { "key": "A", "text": "Company logo" },
+      { "key": "B", "text": "Exact expected vs actual values and setup code" },
+      { "key": "C", "text": "Developer favorite color" },
+      { "key": "D", "text": "GitHub profile URL" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 24,
+    "question": "A bug appears after refactoring suggested by Copilot. Which rollback-safe practice should have been used?",
+    "options": [
+      { "key": "A", "text": "Large refactor in one commit without tests" },
+      { "key": "B", "text": "Small commits with passing tests at each step" },
+      { "key": "C", "text": "Direct edits in production" },
+      { "key": "D", "text": "No branch strategy" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 25,
+    "question": "You use Copilot to draft property-based tests for input sanitization. What should you verify first?",
+    "options": [
+      { "key": "A", "text": "Tests compile and assertions reflect security requirements" },
+      { "key": "B", "text": "Tests have the longest method names" },
+      { "key": "C", "text": "Tests contain TODO comments" },
+      { "key": "D", "text": "Tests run only on one machine" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 26,
+    "question": "A service throws timeout exceptions under load. How can Copilot assist responsibly?",
+    "options": [
+      { "key": "A", "text": "Suggest profiling and load-test script scaffolding before tuning" },
+      { "key": "B", "text": "Automatically increase all timeouts to 10 minutes" },
+      { "key": "C", "text": "Disable telemetry" },
+      { "key": "D", "text": "Skip root-cause analysis" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 27,
+    "question": "You ask Copilot to create integration tests for a payment API. Which test area is easy to miss but important?",
+    "options": [
+      { "key": "A", "text": "Idempotency behavior for retry requests" },
+      { "key": "B", "text": "Button color in dashboard" },
+      { "key": "C", "text": "Whitespace in README title" },
+      { "key": "D", "text": "Machine hostname" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 28,
+    "question": "A team asks Copilot for root cause after a regression. Which sequence is best?",
+    "options": [
+      { "key": "A", "text": "Guess likely module and hotfix" },
+      { "key": "B", "text": "Compare commits, reproduce failure, inspect logs, validate hypothesis with targeted tests" },
+      { "key": "C", "text": "Reboot CI agent" },
+      { "key": "D", "text": "Ignore until next sprint" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 29,
+    "question": "You want Copilot-generated test data to avoid exposing production customer records. What should you do?",
+    "options": [
+      { "key": "A", "text": "Paste real customer data into prompts" },
+      { "key": "B", "text": "Use synthetic or anonymized datasets" },
+      { "key": "C", "text": "Share secret keys in test comments" },
+      { "key": "D", "text": "Commit sample PII to a public repo" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 30,
+    "question": "Copilot suggests mocking every dependency in a unit test suite. What is a balanced approach?",
+    "options": [
+      { "key": "A", "text": "Mock everything always" },
+      { "key": "B", "text": "Mock only external boundaries and keep core logic tests meaningful" },
+      { "key": "C", "text": "Never mock anything" },
+      { "key": "D", "text": "Replace tests with comments" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 31,
+    "question": "Your team uses VS Code and wants Copilot Chat available across projects. What prerequisite is required?",
+    "options": [
+      { "key": "A", "text": "Install and sign in to the GitHub Copilot extension with eligible access" },
+      { "key": "B", "text": "Install SQL Server locally" },
+      { "key": "C", "text": "Use only offline mode" },
+      { "key": "D", "text": "Disable all other extensions" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 32,
+    "question": "A developer wants to cycle through alternative inline suggestions quickly. Which behavior should they use?",
+    "options": [
+      { "key": "A", "text": "Open terminal and run dotnet clean" },
+      { "key": "B", "text": "Use editor controls/keybindings for next or previous Copilot suggestions" },
+      { "key": "C", "text": "Restart the computer for each suggestion" },
+      { "key": "D", "text": "Disable IntelliSense permanently" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 33,
+    "question": "Your org wants consistent Copilot behavior in enterprise repos. Which governance action helps most?",
+    "options": [
+      { "key": "A", "text": "Document usage policy, review practices, and data handling standards" },
+      { "key": "B", "text": "Ban pull requests" },
+      { "key": "C", "text": "Require one coding style per person" },
+      { "key": "D", "text": "Store secrets in issue comments" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 34,
+    "question": "A team member says Copilot disappeared from editor suggestions. What should be checked first?",
+    "options": [
+      { "key": "A", "text": "Whether extension is installed, enabled, and authenticated" },
+      { "key": "B", "text": "Whether monitor brightness is high" },
+      { "key": "C", "text": "Whether keyboard backlight is on" },
+      { "key": "D", "text": "Whether git stash is empty" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 35,
+    "question": "You want Copilot to generate code that follows your team conventions. Which context is most useful?",
+    "options": [
+      { "key": "A", "text": "Random snippets from unrelated repos" },
+      { "key": "B", "text": "Nearby project patterns, naming conventions, and explicit prompt constraints" },
+      { "key": "C", "text": "OS wallpaper settings" },
+      { "key": "D", "text": "Browser bookmarks" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 36,
+    "question": "A developer needs a quick explanation of an unfamiliar TypeScript file in the IDE. Which Copilot workflow is best?",
+    "options": [
+      { "key": "A", "text": "Use chat to summarize the file and ask follow-up questions per function" },
+      { "key": "B", "text": "Delete the file" },
+      { "key": "C", "text": "Rename all symbols first" },
+      { "key": "D", "text": "Disable source control" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 37,
+    "question": "You are integrating Copilot into pull request workflows. Which practice maintains quality?",
+    "options": [
+      { "key": "A", "text": "Merge AI-generated code without review" },
+      { "key": "B", "text": "Keep normal review gates, static analysis, and tests" },
+      { "key": "C", "text": "Skip security scanning" },
+      { "key": "D", "text": "Require only one-line commits" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 38,
+    "question": "A team wants to measure Copilot adoption impact. Which metric pair is most practical?",
+    "options": [
+      { "key": "A", "text": "Wallpaper color and monitor size" },
+      { "key": "B", "text": "Lead time to merge and defect escape rate" },
+      { "key": "C", "text": "Number of browser tabs" },
+      { "key": "D", "text": "Keyboard brand and mouse DPI" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 39,
+    "question": "A developer gets long suggestions that are hard to evaluate. What should they do?",
+    "options": [
+      { "key": "A", "text": "Use narrower prompts and request smaller incremental code blocks" },
+      { "key": "B", "text": "Increase font size only" },
+      { "key": "C", "text": "Disable all syntax highlighting" },
+      { "key": "D", "text": "Stop using version control" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 40,
+    "question": "Your organization has strict branch protections. How should Copilot be used in that environment?",
+    "options": [
+      { "key": "A", "text": "Bypass branch protections for AI-authored commits" },
+      { "key": "B", "text": "Use Copilot normally but keep required checks and approvals" },
+      { "key": "C", "text": "Commit directly to protected branches" },
+      { "key": "D", "text": "Disable CI to speed up merges" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 41,
+    "question": "You are prompted to include a production API key in Copilot Chat for faster troubleshooting. What should you do?",
+    "options": [
+      { "key": "A", "text": "Share the full key if chat is private" },
+      { "key": "B", "text": "Share only part of the key" },
+      { "key": "C", "text": "Do not share secrets; use placeholders and rotate if exposed" },
+      { "key": "D", "text": "Store keys in source code comments" }
+    ],
+    "answers": ["C"]
+  },
+  {
+    "id": 42,
+    "question": "A Copilot-generated regex works but is hard to understand. Which responsible action is best?",
+    "options": [
+      { "key": "A", "text": "Ship immediately" },
+      { "key": "B", "text": "Ask for explanation, add tests, and document intent" },
+      { "key": "C", "text": "Obfuscate it further" },
+      { "key": "D", "text": "Remove input validation" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 43,
+    "question": "You suspect an AI suggestion may include insecure deserialization logic. What should you do?",
+    "options": [
+      { "key": "A", "text": "Accept if it passes unit tests" },
+      { "key": "B", "text": "Run security review and replace with safe parser patterns" },
+      { "key": "C", "text": "Hide the code path" },
+      { "key": "D", "text": "Disable logging" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 44,
+    "question": "A colleague asks whether Copilot output can be biased in non-code responses. What is most accurate?",
+    "options": [
+      { "key": "A", "text": "No, AI output is always neutral" },
+      { "key": "B", "text": "Yes, bias can appear; verify outputs and apply human review" },
+      { "key": "C", "text": "Only if internet is disconnected" },
+      { "key": "D", "text": "Only for mobile apps" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 45,
+    "question": "Your legal team asks how to reduce risk when using generated code. Which controls are appropriate?",
+    "options": [
+      { "key": "A", "text": "Skip code scanning to move faster" },
+      { "key": "B", "text": "Use review, dependency checks, and license/security compliance processes" },
+      { "key": "C", "text": "Never run tests" },
+      { "key": "D", "text": "Push directly to production" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 46,
+    "question": "You notice Copilot suggested offensive variable names from a prompt example. What should happen next?",
+    "options": [
+      { "key": "A", "text": "Keep names if code compiles" },
+      { "key": "B", "text": "Replace with professional language and report problematic output if needed" },
+      { "key": "C", "text": "Hide the names in minified code" },
+      { "key": "D", "text": "Ignore and continue" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 47,
+    "question": "A team is using Copilot to generate customer email responses in support tooling. Which safeguard is essential?",
+    "options": [
+      { "key": "A", "text": "Automatic send with no human check" },
+      { "key": "B", "text": "Human approval for sensitive or high-impact communications" },
+      { "key": "C", "text": "Disable audit logs" },
+      { "key": "D", "text": "Store customer passwords in prompts" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 48,
+    "question": "Which two practices best protect sensitive data when working with Copilot? (Choose two.)",
+    "options": [
+      { "key": "A", "text": "Use placeholders for secrets and PII in prompts" },
+      { "key": "B", "text": "Paste production database dumps for better context" },
+      { "key": "C", "text": "Apply least-privilege access and repository security controls" },
+      { "key": "D", "text": "Commit plaintext credentials for team convenience" }
+    ],
+    "answers": ["A", "C"]
+  },
+  {
+    "id": 49,
+    "question": "An engineer asks if AI suggestions eliminate accountability. What is correct?",
+    "options": [
+      { "key": "A", "text": "Yes, responsibility transfers to the model" },
+      { "key": "B", "text": "No, developers and organizations remain accountable for shipped code" },
+      { "key": "C", "text": "Only interns are accountable" },
+      { "key": "D", "text": "Only QA is accountable" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 50,
+    "question": "Your security team flags an AI-generated snippet using weak hashing. What should happen?",
+    "options": [
+      { "key": "A", "text": "Keep weak hashing for compatibility" },
+      { "key": "B", "text": "Replace with approved modern cryptographic algorithms and document change" },
+      { "key": "C", "text": "Obfuscate algorithm names" },
+      { "key": "D", "text": "Disable security scanner" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 51,
+    "question": "Finance asks which users are entitled to Copilot Business features. What should admins check?",
+    "options": [
+      { "key": "A", "text": "Only local VS Code settings" },
+      { "key": "B", "text": "Organization license assignments and seat management" },
+      { "key": "C", "text": "Desktop wallpaper policy" },
+      { "key": "D", "text": "Printer driver versions" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 52,
+    "question": "Your company pilot is ending and leadership needs renewal guidance. Which data is most relevant?",
+    "options": [
+      { "key": "A", "text": "Commit message length" },
+      { "key": "B", "text": "Usage analytics, productivity outcomes, and quality/safety indicators" },
+      { "key": "C", "text": "Number of office plants" },
+      { "key": "D", "text": "Keyboard cable length" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 53,
+    "question": "A manager asks if one Copilot seat can be shared by multiple developers to reduce cost. What is the best response?",
+    "options": [
+      { "key": "A", "text": "Yes, share credentials for convenience" },
+      { "key": "B", "text": "No, assign seats per user according to licensing terms and security policy" },
+      { "key": "C", "text": "Only share on weekends" },
+      { "key": "D", "text": "Use one shared admin account" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 54,
+    "question": "An enterprise with multiple subsidiaries wants controlled rollout. Which approach is most practical?",
+    "options": [
+      { "key": "A", "text": "Enable all users globally at once" },
+      { "key": "B", "text": "Roll out by org/team with policy checks and measurable milestones" },
+      { "key": "C", "text": "Give access only to contractors" },
+      { "key": "D", "text": "Avoid tracking adoption" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 55,
+    "question": "Procurement asks what must be in place before broad Copilot deployment. Which answer is best?",
+    "options": [
+      { "key": "A", "text": "License availability, governance policy, and enablement plan" },
+      { "key": "B", "text": "Only an internal chat channel" },
+      { "key": "C", "text": "Only one team lead approval" },
+      { "key": "D", "text": "No documentation" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 56,
+    "question": "A user loses Copilot access unexpectedly. Which two checks should admin perform first? (Choose two.)",
+    "options": [
+      { "key": "A", "text": "Seat assignment status" },
+      { "key": "B", "text": "User's preferred font" },
+      { "key": "C", "text": "Organization membership and policy eligibility" },
+      { "key": "D", "text": "Screen refresh rate" }
+    ],
+    "answers": ["A", "C"]
+  },
+  {
+    "id": 57,
+    "question": "Leadership asks for a realistic expectation from Copilot adoption in month one. What is best to communicate?",
+    "options": [
+      { "key": "A", "text": "Immediate elimination of defects" },
+      { "key": "B", "text": "Potential productivity gains with training, review discipline, and measured iteration" },
+      { "key": "C", "text": "No training needed" },
+      { "key": "D", "text": "Guaranteed 100 percent faster delivery" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 58,
+    "question": "You are creating a GH-300 study set and want scenarios tied to daily engineering work. Which design principle is best?",
+    "options": [
+      { "key": "A", "text": "Use only theory definitions" },
+      { "key": "B", "text": "Frame questions around realistic team decisions, trade-offs, and controls" },
+      { "key": "C", "text": "Focus only on keyboard shortcuts" },
+      { "key": "D", "text": "Avoid security and governance topics" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 59,
+    "question": "A team uses Copilot to draft Terraform modules. Which validation step is critical before apply?",
+    "options": [
+      { "key": "A", "text": "Run plan/review checks and security policy validation" },
+      { "key": "B", "text": "Apply directly to production" },
+      { "key": "C", "text": "Skip code review for infrastructure code" },
+      { "key": "D", "text": "Disable drift detection" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 60,
+    "question": "Copilot suggests adding a broad try/catch that swallows exceptions. What is the best correction?",
+    "options": [
+      { "key": "A", "text": "Keep it to avoid crashes" },
+      { "key": "B", "text": "Use targeted exception handling with logging and error propagation strategy" },
+      { "key": "C", "text": "Remove all error handling" },
+      { "key": "D", "text": "Retry infinitely" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 61,
+    "question": "You need to prompt Copilot for a migration from NUnit to xUnit. What prompt details matter most?",
+    "options": [
+      { "key": "A", "text": "Project scope, existing test patterns, target framework, and expected output diff" },
+      { "key": "B", "text": "Laptop model" },
+      { "key": "C", "text": "Desk location" },
+      { "key": "D", "text": "Favorite test method names" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 62,
+    "question": "A junior developer uses Copilot to generate an authentication middleware. Which review focus is highest priority?",
+    "options": [
+      { "key": "A", "text": "Comment capitalization" },
+      { "key": "B", "text": "Token validation, expiration checks, and authorization boundaries" },
+      { "key": "C", "text": "Import order only" },
+      { "key": "D", "text": "Variable name length" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 63,
+    "question": "A team asks Copilot to refactor synchronous I/O to async. Which acceptance criteria are most important?",
+    "options": [
+      { "key": "A", "text": "No behavior regressions and improved scalability under load tests" },
+      { "key": "B", "text": "Longest possible method names" },
+      { "key": "C", "text": "No unit tests" },
+      { "key": "D", "text": "No logging allowed" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 64,
+    "question": "When should a team prefer Copilot Chat over inline completion?",
+    "options": [
+      { "key": "A", "text": "When they need multi-step reasoning, explanations, or planning" },
+      { "key": "B", "text": "When they want zero context responses" },
+      { "key": "C", "text": "When they cannot write prompts" },
+      { "key": "D", "text": "When they are editing binary files" }
+    ],
+    "answers": ["A"]
+  },
+  {
+    "id": 65,
+    "question": "A developer asks Copilot to optimize a slow LINQ query. What should they verify before and after changes?",
+    "options": [
+      { "key": "A", "text": "Only code style" },
+      { "key": "B", "text": "Correctness, query plan impact, and benchmark results" },
+      { "key": "C", "text": "Desktop background" },
+      { "key": "D", "text": "Repository star count" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 66,
+    "question": "Your team uses Copilot for code comments and docs. Which practice prevents drift between docs and code?",
+    "options": [
+      { "key": "A", "text": "Never update docs" },
+      { "key": "B", "text": "Review generated docs in PRs and tie updates to code changes" },
+      { "key": "C", "text": "Generate once and freeze" },
+      { "key": "D", "text": "Store docs outside version control" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 67,
+    "question": "A repository has strict coding standards. Copilot suggestions keep using a disallowed library. What should you do?",
+    "options": [
+      { "key": "A", "text": "Accept and fix later" },
+      { "key": "B", "text": "Constrain prompts with approved libraries and enforce checks in CI" },
+      { "key": "C", "text": "Disable all package management" },
+      { "key": "D", "text": "Remove linting rules" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 68,
+    "question": "An architect asks whether Copilot can help with threat modeling discussions. What is the best answer?",
+    "options": [
+      { "key": "A", "text": "No, it cannot support security thinking" },
+      { "key": "B", "text": "Yes, it can suggest attack surfaces and mitigations, but experts must validate" },
+      { "key": "C", "text": "Yes, and validation is unnecessary" },
+      { "key": "D", "text": "Only if no compliance requirements exist" }
+    ],
+    "answers": ["B"]
+  },
+  {
+    "id": 69,
+    "question": "Which two actions improve quality when accepting Copilot-generated pull request changes? (Choose two.)",
+    "options": [
+      { "key": "A", "text": "Run automated tests and static analysis" },
+      { "key": "B", "text": "Skip peer review if output looks clean" },
+      { "key": "C", "text": "Perform human code review for logic and security" },
+      { "key": "D", "text": "Merge immediately to production" }
+    ],
+    "answers": ["A", "C"]
+  },
+  {
+    "id": 70,
+    "question": "You are mentoring a team preparing for GH-300. What final habit should be emphasized most?",
+    "options": [
+      { "key": "A", "text": "Memorize shortcuts only" },
+      { "key": "B", "text": "Treat Copilot as an accelerator, and always verify for correctness, security, and policy compliance" },
+      { "key": "C", "text": "Disable all automated checks" },
+      { "key": "D", "text": "Rely on AI output without testing" }
+    ],
+    "answers": ["B"]
+  }
+]

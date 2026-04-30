@@ -1,0 +1,240 @@
+SCOPE 2: Copilot Chat & Prompting (30 Questions)
+1. What is the main purpose of GitHub Copilot Chat?
+
+A. Compile code
+B. Generate and explain code using natural language
+C. Host applications
+D. Run test suites
+Answer: B
+
+2. What improves Copilot Chat responses the most?
+
+A. Vague prompts
+B. Clear and contextual prompts
+C. No code provided
+D. Random keywords
+Answer: B
+
+3. What does #selection in a prompt refer to?
+
+A. Entire repository
+B. Selected code in editor
+C. Terminal output
+D. File explorer
+Answer: B
+
+4. Copilot Chat can help with:
+
+A. Only syntax highlighting
+B. Code explanation and refactoring
+C. Hardware setup
+D. OS installation
+Answer: B
+
+5. What is a best practice when prompting Copilot Chat?
+
+A. Use short unclear words
+B. Provide full context
+C. Avoid code snippets
+D. Disable IDE
+Answer: B
+
+6. Copilot Chat cannot:
+
+A. Explain code
+B. Suggest improvements
+C. Execute code
+D. Generate tests
+Answer: C
+
+7. Which improves Copilot Chat accuracy?
+
+A. Removing context
+B. Adding relevant files and code
+C. Using emojis
+D. Random prompts
+Answer: B
+
+8. What is the role of Copilot Chat in debugging?
+
+A. Runs debugger automatically
+B. Suggests fixes based on code analysis
+C. Compiles code
+D. Deletes errors automatically
+Answer: B
+
+9. Copilot Chat responses are based on:
+
+A. Real-time execution
+B. Language model inference
+C. Hardware sensors
+D. Compiler logs
+Answer: B
+
+10. What is a good prompt style?
+
+A. "Fix this"
+B. "Explain why this function returns null and suggest a fix"
+C. "Code pls"
+D. "????"
+Answer: B
+
+11. Copilot Chat is useful for:
+
+A. Code understanding
+B. Server hosting
+C. Network wiring
+D. Hardware repair
+Answer: A
+
+12. What does Copilot Chat use as context?
+
+A. IDE theme
+B. Code, selection, and open files
+C. Screen brightness
+D. Internet speed
+Answer: B
+
+13. Copilot Chat can generate:
+
+A. Machine code only
+B. Explanations and refactored code
+C. Operating systems
+D. BIOS firmware
+Answer: B
+
+14. Best way to ask Copilot for a function:
+
+A. "Make function"
+B. Describe inputs, outputs, and purpose
+C. "??? function pls"
+D. No description
+Answer: B
+
+15. Copilot Chat helps mainly with:
+
+A. Decision making in code
+B. Hardware replacement
+C. Network cabling
+D. Database hosting
+Answer: A
+
+16. Copilot Chat improves when:
+
+A. Context is reduced
+B. Code is selected and referenced
+C. IDE is closed
+D. No files exist
+Answer: B
+
+17. Copilot Chat is NOT:
+
+A. Context-aware
+B. Language-based
+C. Code-executing
+D. Interactive
+Answer: C
+
+18. What is the benefit of using file references in prompts?
+
+A. Faster internet
+B. Better context understanding
+C. Better screen rendering
+D. Lower CPU usage
+Answer: B
+
+19. Copilot Chat can help with:
+
+A. Writing documentation
+B. Installing OS
+C. Hardware design
+D. Power supply repair
+Answer: A
+
+20. A poor prompt example is:
+
+A. "Refactor this function for readability"
+B. "Explain this loop step by step"
+C. "Do stuff"
+D. "Optimize this algorithm"
+Answer: C
+
+21. Copilot Chat is most useful during:
+
+A. Code review
+B. Hardware assembly
+C. Network configuration
+D. Server cooling
+Answer: A
+
+22. What does Copilot Chat NOT do automatically?
+
+A. Explain code
+B. Suggest improvements
+C. Run tests
+D. Generate functions
+Answer: C
+
+23. Context in Copilot Chat includes:
+
+A. Only comments
+B. Code + selection + files
+C. CPU usage
+D. RAM usage
+Answer: B
+
+24. Copilot Chat responses can be improved by:
+
+A. Adding irrelevant files
+B. Being specific in instructions
+C. Removing code
+D. Closing IDE
+Answer: B
+
+25. Copilot Chat helps primarily with:
+
+A. Understanding and writing code
+B. Hardware diagnostics
+C. Internet routing
+D. OS kernel updates
+Answer: A
+
+26. Which prompt is best?
+
+A. "Fix this bug in login function and explain root cause"
+B. "Fix pls"
+C. "Error???"
+D. "Help"
+Answer: A
+
+27. Copilot Chat uses:
+
+A. Rule-based logic
+B. AI language model reasoning
+C. Manual templates
+D. Compiler output
+Answer: B
+
+28. Copilot Chat can assist in:
+
+A. Writing unit tests
+B. Replacing OS
+C. Installing drivers
+D. BIOS flashing
+Answer: A
+
+29. Copilot Chat is designed to:
+
+A. Replace developers
+B. Assist developers
+C. Replace IDE
+D. Replace compiler
+Answer: B
+
+30. The most important factor in Copilot Chat quality is:
+
+A. Screen size
+B. Prompt clarity and context
+C. Internet speed
+D. Keyboard type
+Answer: B
