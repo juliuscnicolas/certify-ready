@@ -109,6 +109,66 @@
         ]
     },
     {
+        "id": 5,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Assignments: Users and groups",
+            "Assignments: Cloud apps",
+            "Access controls: Grant"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"],
+            ["G", "H", "I"]
+        ],
+        "question": "HOTSPOT - You have an Azure Active Directory (Azure AD) tenant. You want to implement multi-factor authentication by making use of a conditional access policy. The conditional access policy must be applied to all users when they access the Azure portal. Which three settings should you configure?\n\nAnswer area:\nUsers and groups -> [SLOT 1]\nCloud apps -> [SLOT 2]\nGrant -> [SLOT 3]",
+        "options": [
+            {
+                "key": "A",
+                "text": "All users"
+            },
+            {
+                "key": "B",
+                "text": "Directory roles"
+            },
+            {
+                "key": "C",
+                "text": "Guest or external users"
+            },
+            {
+                "key": "D",
+                "text": "Microsoft Azure Management"
+            },
+            {
+                "key": "E",
+                "text": "Office 365 SharePoint Online"
+            },
+            {
+                "key": "F",
+                "text": "Azure DevOps"
+            },
+            {
+                "key": "G",
+                "text": "Require multi-factor authentication"
+            },
+            {
+                "key": "H",
+                "text": "Require device to be marked as compliant"
+            },
+            {
+                "key": "I",
+                "text": "Require hybrid Azure AD joined device"
+            }
+        ],
+        "answers": [
+            "A",
+            "D",
+            "G"
+        ]
+    },
+    {
         "id": 6,
         "examType": "AZ204",
         "dumpSource": "Examprepper",
@@ -160,6 +220,51 @@
         ],
         "answers": [
             "B"
+        ]
+    },
+    {
+        "id": 8,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Command argument before 5m",
+            "Condition metric expression"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"]
+        ],
+        "question": "HOTSPOT - You have developed a Web App for your company. The Web App provides services and must run in multiple regions. You want to be notified whenever the Web App uses more than 85 percent of the available CPU cores over a 5 minute period. Your solution must minimize costs. Which command should you use?\n\nAnswer area:\naz monitor metrics alert create -n myAlert -g myResourceGroup --scopes targetResourceID --condition \"[SLOT 2] > 85\"\n[SLOT 1] 5m",
+        "options": [
+            {
+                "key": "A",
+                "text": "--window-size"
+            },
+            {
+                "key": "B",
+                "text": "--evaluation-frequency"
+            },
+            {
+                "key": "C",
+                "text": "--auto-mitigate"
+            },
+            {
+                "key": "D",
+                "text": "CPU Usage"
+            },
+            {
+                "key": "E",
+                "text": "Percentage CPU"
+            },
+            {
+                "key": "F",
+                "text": "avg Percentage CPU"
+            }
+        ],
+        "answers": [
+            "A",
+            "F"
         ]
     },
     {
@@ -217,6 +322,41 @@
         ],
         "answers": [
             "B"
+        ]
+    },
+    {
+        "id": 12,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "DRAG DROP - You have downloaded an Azure Resource Manager template to deploy numerous virtual machines. The template is based on a current virtual machine, but must be adapted to reference an administrative password. You need to make sure that the password is not stored in plain text. You are preparing to create the necessary components to achieve your goal. Which of the following should you create to achieve your goal?",
+        "options": [
+            {
+                "key": "A",
+                "text": "An Azure Key Vault"
+            },
+            {
+                "key": "B",
+                "text": "An Azure Storage account"
+            },
+            {
+                "key": "C",
+                "text": "Azure Active Directory (AD) Identity Protection"
+            },
+            {
+                "key": "D",
+                "text": "An access policy"
+            },
+            {
+                "key": "E",
+                "text": "An Azure policy"
+            },
+            {
+                "key": "F",
+                "text": "A backup policy"
+            }
+        ],
+        "answers": [
+            "A"
         ]
     },
     {
@@ -948,6 +1088,82 @@
         ],
         "answers": [
             "B"
+        ]
+    },
+    {
+        "id": 39,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Code library",
+            "API"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"]
+        ],
+        "question": "HOTSPOT - You need to implement the Azure Function for delivery driver profile information. Which configurations should you use?\n\nAnswer area:\nConfiguration: Code library -> [SLOT 1]\nConfiguration: API -> [SLOT 2]",
+        "options": [
+            {
+                "key": "A",
+                "text": "Microsoft Authentication Library (MSAL)"
+            },
+            {
+                "key": "B",
+                "text": "Microsoft Azure Key Vault SDK"
+            },
+            {
+                "key": "C",
+                "text": "Azure Identity library"
+            },
+            {
+                "key": "D",
+                "text": "Microsoft Graph"
+            },
+            {
+                "key": "E",
+                "text": "Azure Active Directory Graph"
+            },
+            {
+                "key": "F",
+                "text": "Azure Key Vault"
+            }
+        ],
+        "answers": [
+            "A",
+            "D"
+        ]
+    },
+    {
+        "id": 40,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You need to grant access to the retail store location data for the inventory service development effort. What should you use?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Azure AD access token"
+            },
+            {
+                "key": "B",
+                "text": "Azure RBAC role"
+            },
+            {
+                "key": "C",
+                "text": "Shared access signature (SAS) token"
+            },
+            {
+                "key": "D",
+                "text": "Azure AD ID token"
+            },
+            {
+                "key": "E",
+                "text": "Azure AD refresh token"
+            }
+        ],
+        "answers": [
+            "C"
         ]
     }
 ]
