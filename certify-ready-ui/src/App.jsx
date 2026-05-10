@@ -18,10 +18,29 @@ function shuffleQuestions(items) {
   return copy
 }
 
+function matchesQuestionType(question, selectedQuestionType) {
+  const questionType = question.questionType ?? 'choice'
+
+  if (selectedQuestionType === 'all') {
+    return true
+  }
+
+  if (selectedQuestionType === 'sequence') {
+    return questionType === 'sequence'
+  }
+
+  if (selectedQuestionType === 'hotspot') {
+    return questionType === 'hotspot'
+  }
+
+  return questionType !== 'sequence' && questionType !== 'hotspot'
+}
+
 function App() {
   const [exams, setExams] = useState([])
   const [selectedExamType, setSelectedExamType] = useState('GH300')
   const [selectedSourceType, setSelectedSourceType] = useState('Actual')
+  const [selectedQuestionType, setSelectedQuestionType] = useState('all')
   const [allQuestions, setAllQuestions] = useState([])
   const [selectedQuestions, setSelectedQuestions] = useState([])
   const [questionCount, setQuestionCount] = useState(10)
@@ -101,7 +120,28 @@ function App() {
     [answers, selectedQuestions],
   )
 
-  const availableQuestionCount = allQuestions.length
+  const availableQuestions = useMemo(
+    () => allQuestions.filter((question) => matchesQuestionType(question, selectedQuestionType)),
+    [allQuestions, selectedQuestionType],
+  )
+
+  useEffect(() => {
+    setQuestionCount((currentCount) => {
+      const numericCount = Number(currentCount)
+
+      if (Number.isNaN(numericCount)) {
+        return currentCount
+      }
+
+      if (availableQuestions.length === 0) {
+        return 0
+      }
+
+      return Math.min(Math.max(numericCount || 1, 1), availableQuestions.length)
+    })
+  }, [availableQuestions])
+
+  const availableQuestionCount = availableQuestions.length
   const safeQuestionCount = Math.min(Math.max(Number(questionCount) || 1, 1), availableQuestionCount || 1)
 
   function handleQuestionCountChange(value) {
@@ -116,7 +156,7 @@ function App() {
   }
 
   function startExam() {
-    const sampledQuestions = shuffleQuestions(allQuestions).slice(0, safeQuestionCount)
+    const sampledQuestions = shuffleQuestions(availableQuestions).slice(0, safeQuestionCount)
 
     setSelectedQuestions(sampledQuestions)
     setAnswers({})
@@ -141,6 +181,26 @@ function App() {
       return {
         ...currentAnswers,
         [questionId]: [...new Set(nextSelection)],
+      }
+    })
+  }
+
+  function handleSequenceAnswerChange(questionId, orderedOptionKeys) {
+    setAnswers((currentAnswers) => ({
+      ...currentAnswers,
+      [questionId]: [...new Set(orderedOptionKeys)],
+    }))
+  }
+
+  function handleHotspotAnswerChange(questionId, slotIndex, optionKey) {
+    setAnswers((currentAnswers) => {
+      const previousSelection = currentAnswers[questionId] ?? []
+      const nextSelection = [...previousSelection]
+      nextSelection[slotIndex] = optionKey
+
+      return {
+        ...currentAnswers,
+        [questionId]: nextSelection,
       }
     })
   }
@@ -288,21 +348,35 @@ function App() {
               <span>Question count</span>
               <input
                 type="number"
-                min="1"
+                min={availableQuestionCount ? '1' : '0'}
                 max={availableQuestionCount || 1}
                 value={questionCount}
                 onChange={(event) => handleQuestionCountChange(event.target.value)}
               />
             </label>
 
+            <label className="input-group">
+              <span>Question type</span>
+              <select
+                value={selectedQuestionType}
+                onChange={(event) => setSelectedQuestionType(event.target.value)}
+              >
+                <option value="all">All</option>
+                <option value="choice">Multiple choice</option>
+                <option value="sequence">Sequence</option>
+                <option value="hotspot">Hotspot</option>
+              </select>
+            </label>
+
             <label className="input-group input-group--range">
               <span>Adjust quickly</span>
               <input
                 type="range"
-                min="1"
+                min={availableQuestionCount ? '1' : '0'}
                 max={availableQuestionCount || 1}
-                value={safeQuestionCount}
+                value={availableQuestionCount ? safeQuestionCount : 0}
                 onChange={(event) => handleQuestionCountChange(event.target.value)}
+                disabled={!availableQuestionCount}
               />
             </label>
           </div>
@@ -343,6 +417,8 @@ function App() {
                 question={question}
                 selectedAnswers={answers[question.id] ?? []}
                 onAnswerChange={handleAnswerChange}
+                onSequenceAnswerChange={handleSequenceAnswerChange}
+                onHotspotAnswerChange={handleHotspotAnswerChange}
               />
             ))}
           </section>

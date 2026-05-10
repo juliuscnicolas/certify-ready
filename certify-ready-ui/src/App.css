@@ -230,9 +230,126 @@
   color: #185260;
 }
 
+.question-card__text {
+  white-space: pre-line;
+}
+
 .question-card__options {
   display: grid;
   gap: 0.8rem;
+}
+
+.sequence-builder {
+  display: grid;
+  gap: 1rem;
+}
+
+.sequence-builder__panel {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.sequence-builder__title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #14323f;
+}
+
+.sequence-builder__bank,
+.sequence-builder__slots {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.sequence-chip,
+.sequence-choice {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.85rem;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(7, 59, 76, 0.12);
+  background: #fffef9;
+  text-align: left;
+}
+
+.sequence-chip {
+  cursor: grab;
+}
+
+.sequence-slot {
+  display: grid;
+  gap: 0.65rem;
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px dashed rgba(7, 59, 76, 0.24);
+  background: rgba(238, 246, 247, 0.45);
+}
+
+.sequence-slot--filled {
+  border-style: solid;
+  background: #fff8f1;
+}
+
+.sequence-slot__index {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #185260;
+}
+
+.sequence-slot__placeholder {
+  color: #6a7d84;
+}
+
+.sequence-choice__content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.sequence-choice__remove {
+  border: 0;
+  background: transparent;
+  color: #b14e22;
+  font-weight: 700;
+}
+
+.hotspot-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.hotspot-slot {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.9rem;
+  border-radius: 14px;
+  border: 1px solid rgba(7, 59, 76, 0.12);
+  background: #fffef9;
+}
+
+.hotspot-slot__label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #185260;
+}
+
+.hotspot-slot select {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid rgba(7, 59, 76, 0.18);
+  padding: 0.8rem 0.9rem;
+  font: inherit;
+  background: #fffef9;
 }
 
 .option-tile {

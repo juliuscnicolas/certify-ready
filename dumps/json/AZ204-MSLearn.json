@@ -1,0 +1,393 @@
+[
+	{
+		"id": 1,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "Which of the following App Service plan categories provides the maximum scale-out capabilities?",
+		"options": [
+			{
+				"key": "A",
+				"text": "Dedicated compute"
+			},
+			{
+				"key": "B",
+				"text": "Isolated"
+			},
+			{
+				"key": "C",
+				"text": "Shared compute"
+			}
+		],
+		"answers": [
+			"B"
+		]
+	},
+	{
+		"id": 2,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "Which of the following networking features of App Service can be used to control outbound network traffic?",
+		"options": [
+			{
+				"key": "A",
+				"text": "App-assigned address"
+			},
+			{
+				"key": "B",
+				"text": "Hybrid Connections"
+			},
+			{
+				"key": "C",
+				"text": "Service endpoints"
+			}
+		],
+		"answers": [
+			"B"
+		]
+	},
+	{
+		"id": 3,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "What is the purpose of the Azure App Service Environment feature?",
+		"options": [
+			{
+				"key": "A",
+				"text": "It provides a shared infrastructure for running App Service apps."
+			},
+			{
+				"key": "B",
+				"text": "It allows for the deployment and running of containerized web apps on Windows and Linux."
+			},
+			{
+				"key": "C",
+				"text": "It provides a fully isolated and dedicated environment for running App Service apps with improved security at high scale."
+			}
+		],
+		"answers": [
+			"C"
+		]
+	},
+	{
+		"id": 4,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "What determines the set of compute resources for a web app to run in Azure App Service?",
+		"options": [
+			{
+				"key": "A",
+				"text": "The geographical region where the app is deployed"
+			},
+			{
+				"key": "B",
+				"text": "The pricing tier of the app"
+			},
+			{
+				"key": "C",
+				"text": "The App Service plan"
+			}
+		],
+		"answers": [
+			"C"
+		]
+	},
+	{
+		"id": 5,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "What is the purpose of using deployment slots in Azure App Service?",
+		"options": [
+			{
+				"key": "A",
+				"text": "To deploy an app to a staging environment and then swap staging and production slots, eliminating downtime"
+			},
+			{
+				"key": "B",
+				"text": "To increase the storage capacity of the application"
+			},
+			{
+				"key": "C",
+				"text": "To add up to nine sidecar containers for each sidecar-enabled custom container app"
+			}
+		],
+		"answers": [
+			"A"
+		]
+	},
+	{
+		"id": 6,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "In which of the following app configuration settings categories would you set the stack and SDK version?",
+		"options": [
+			{
+				"key": "A",
+				"text": "Application settings"
+			},
+			{
+				"key": "B",
+				"text": "Path mappings"
+			},
+			{
+				"key": "C",
+				"text": "General settings"
+			}
+		],
+		"answers": [
+			"C"
+		]
+	},
+	{
+		"id": 7,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "Which of the following types of application logging is supported on the Linux platform?",
+		"options": [
+			{
+				"key": "A",
+				"text": "Web server logging"
+			},
+			{
+				"key": "B",
+				"text": "Failed request tracing"
+			},
+			{
+				"key": "C",
+				"text": "Deployment logging"
+			}
+		],
+		"answers": [
+			"C"
+		]
+	},
+	{
+		"id": 8,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "Which of these statements best describes autoscaling?",
+		"options": [
+			{
+				"key": "A",
+				"text": "Autoscaling requires an administrator to actively monitor the workload on a system."
+			},
+			{
+				"key": "B",
+				"text": "Autoscaling is a scale out/scale in solution."
+			},
+			{
+				"key": "C",
+				"text": "Scaling up/scale down provides better availability than autoscaling."
+			}
+		],
+		"answers": [
+			"B"
+		]
+	},
+	{
+		"id": 9,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "Which of these scenarios is a suitable candidate for autoscaling?",
+		"options": [
+			{
+				"key": "A",
+				"text": "The number of users requiring access to an application varies according to a regular schedule."
+			},
+			{
+				"key": "B",
+				"text": "The system is subject to a sudden influx of requests that grinds your system to a halt."
+			},
+			{
+				"key": "C",
+				"text": "Your organization is running a promotion and expects to see increased traffic to their web site for the next couple of weeks."
+			}
+		],
+		"answers": [
+			"A"
+		]
+	},
+	{
+		"id": 10,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "By default, all client requests to the app's production URL (http://<app_name>.azurewebsites.net) are routed to the production slot. One can automatically route a portion of the traffic to another slot. What is the default routing rule applied to new deployment slots?",
+		"options": [
+			{
+				"key": "A",
+				"text": "0%"
+			},
+			{
+				"key": "B",
+				"text": "10%"
+			},
+			{
+				"key": "C",
+				"text": "20%"
+			}
+		],
+		"answers": [
+			"A"
+		]
+	},
+	{
+		"id": 11,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "Some configuration elements follow the content across a swap (not slot specific), whereas other configuration elements stay in the same slot after a swap (slot specific). Which of the following settings are swapped?",
+		"options": [
+			{
+				"key": "A",
+				"text": "Publishing endpoints"
+			},
+			{
+				"key": "B",
+				"text": "WebJobs content"
+			},
+			{
+				"key": "C",
+				"text": "WebJobs schedulers"
+			}
+		],
+		"answers": [
+			"B"
+		]
+	},
+	{
+		"id": 12,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "An organization wants to implement a serverless workflow to solve a business problem. One of the requirements is the solution needs to use a designer-first (declarative) development model. Which of the choices below meets the requirements?",
+		"options": [
+			{
+				"key": "A",
+				"text": "Azure Functions"
+			},
+			{
+				"key": "B",
+				"text": "Azure Logic Apps"
+			},
+			{
+				"key": "C",
+				"text": "WebJobs"
+			}
+		],
+		"answers": [
+			"B"
+		]
+	},
+	{
+		"id": 13,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "What is a key benefit of the Flex Consumption plan in Azure Functions hosting options?",
+		"options": [
+			{
+				"key": "A",
+				"text": "It provides fully predictable billing and manual scale instances."
+			},
+			{
+				"key": "B",
+				"text": "It offers high scalability with compute choices, virtual networking, and pay-as-you-go billing."
+			},
+			{
+				"key": "C",
+				"text": "It allows for the packaging of custom libraries with function code."
+			}
+		],
+		"answers": [
+			"B"
+		]
+	},
+	{
+		"id": 14,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "What is the maximum number of instances for a function app on a Consumption plan in Windows?",
+		"options": [
+			{
+				"key": "A",
+				"text": "300"
+			},
+			{
+				"key": "B",
+				"text": "100"
+			},
+			{
+				"key": "C",
+				"text": "200"
+			}
+		],
+		"answers": [
+			"C"
+		]
+	},
+	{
+		"id": 15,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "Which of the following choices is required for a function to run?",
+		"options": [
+			{
+				"key": "A",
+				"text": "Binding"
+			},
+			{
+				"key": "B",
+				"text": "Trigger"
+			},
+			{
+				"key": "C",
+				"text": "Both triggers and bindings"
+			}
+		],
+		"answers": [
+			"B"
+		]
+	},
+	{
+		"id": 16,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "Which of the following choices supports both the in and out direction settings?",
+		"options": [
+			{
+				"key": "A",
+				"text": "Bindings"
+			},
+			{
+				"key": "B",
+				"text": "Trigger"
+			},
+			{
+				"key": "C",
+				"text": "Connection value"
+			}
+		],
+		"answers": [
+			"A"
+		]
+	},
+	{
+		"id": 17,
+		"examType": "AZ204",
+		"dumpSource": "MSLearn",
+		"question": "In the Node.js v4 programming model, how are triggers and bindings configured?",
+		"options": [
+			{
+				"key": "A",
+				"text": "In code using the @azure/functions package"
+			},
+			{
+				"key": "B",
+				"text": "By editing function.json directly in the Azure portal"
+			},
+			{
+				"key": "C",
+				"text": "By adding entries to host.json"
+			}
+		],
+		"answers": [
+			"A"
+		]
+	}
+]

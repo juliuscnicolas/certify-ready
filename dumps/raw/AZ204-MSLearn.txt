@@ -1,0 +1,100 @@
+1. Which of the following App Service plan categories provides the maximum scale-out capabilities?
+Dedicated compute
+Isolated
+Correct
+Shared compute
+
+2. Which of the following networking features of App Service can be used to control outbound network traffic?
+App-assigned address
+Hybrid Connections
+Correct
+Service endpoints
+
+3. What is the purpose of the Azure App Service Environment feature?
+It provides a shared infrastructure for running App Service apps.
+It allows for the deployment and running of containerized web apps on Windows and Linux.
+It provides a fully isolated and dedicated environment for running App Service apps with improved security at high scale.
+
+4. What determines the set of compute resources for a web app to run in Azure App Service?
+The geographical region where the app is deployed
+The pricing tier of the app
+The App Service plan
+Correct
+
+5. What is the purpose of using deployment slots in Azure App Service?
+To deploy an app to a staging environment and then swap staging and production slots, eliminating downtime
+Correct
+To increase the storage capacity of the application
+To add up to nine sidecar containers for each sidecar-enabled custom container app
+
+6. In which of the following app configuration settings categories would you set the stack and SDK version?
+Application settings
+Path mappings
+General settings
+Correct
+
+7. Which of the following types of application logging is supported on the Linux platform?
+Web server logging
+Failed request tracing
+Deployment logging
+Correct
+
+8. Which of these statements best describes autoscaling?
+Autoscaling requires an administrator to actively monitor the workload on a system.
+Autoscaling is a scale out/scale in solution.
+Correct
+Scaling up/scale down provides better availability than autoscaling.
+
+9. Which of these scenarios is a suitable candidate for autoscaling?
+The number of users requiring access to an application varies according to a regular schedule.
+Correct
+The system is subject to a sudden influx of requests that grinds your system to a halt.
+Your organization is running a promotion and expects to see increased traffic to their web site for the next couple of weeks.
+
+10. By default, all client requests to the app's production URL (http://<app_name>.azurewebsites.net) are routed to the production slot. One can automatically route a portion of the traffic to another slot. What is the default routing rule applied to new deployment slots?
+0%
+Correct
+10%
+20%
+
+11. Some configuration elements follow the content across a swap (not slot specific), whereas other configuration elements stay in the same slot after a swap (slot specific). Which of the following settings are swapped?
+Publishing endpoints
+WebJobs content
+Correct
+WebJobs schedulers
+
+12. An organization wants to implement a serverless workflow to solve a business problem. One of the requirements is the solution needs to use a designer-first (declarative) development model. Which of the choices below meets the requirements?
+Azure Functions
+Azure Logic Apps
+Correct
+WebJobs
+
+13. What is a key benefit of the Flex Consumption plan in Azure Functions hosting options?
+It provides fully predictable billing and manual scale instances.
+It offers high scalability with compute choices, virtual networking, and pay-as-you-go billing.
+Correct
+It allows for the packaging of custom libraries with function code.
+
+14. What is the maximum number of instances for a function app on a Consumption plan in Windows?
+300
+100
+200
+Correct
+
+15. Which of the following choices is required for a function to run?
+Binding
+Trigger
+Correct
+Both triggers and bindings
+
+16. Which of the following choices supports both the in and out direction settings?
+Bindings
+Correct
+Trigger
+Connection value
+
+17. In the Node.js v4 programming model, how are triggers and bindings configured?
+In code using the @azure/functions package
+Correct
+By editing function.json directly in the Azure portal
+By adding entries to host.json

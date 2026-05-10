@@ -125,19 +125,10 @@ public class QuestionsController : ControllerBase
             return NotFound();
         }
 
-        var selected = (request.SelectedAnswers ?? new List<string>())
-            .Select(a => a.Trim().ToUpperInvariant())
-            .Where(a => !string.IsNullOrWhiteSpace(a))
-            .Distinct()
-            .OrderBy(a => a)
-            .ToList();
-
-        var correct = question.Answers
-            .Select(a => a.Trim().ToUpperInvariant())
-            .Where(a => !string.IsNullOrWhiteSpace(a))
-            .Distinct()
-            .OrderBy(a => a)
-            .ToList();
+        var preservesOrder = string.Equals(question.QuestionType, "sequence", StringComparison.OrdinalIgnoreCase)
+            || string.Equals(question.QuestionType, "hotspot", StringComparison.OrdinalIgnoreCase);
+        var selected = NormalizeAnswers(request.SelectedAnswers, preservesOrder);
+        var correct = NormalizeAnswers(question.Answers, preservesOrder);
 
         var isCorrect = selected.SequenceEqual(correct);
 
@@ -150,5 +141,23 @@ public class QuestionsController : ControllerBase
             CorrectAnswers = correct,
             IsCorrect = isCorrect
         });
+    }
+
+    private static List<string> NormalizeAnswers(IEnumerable<string>? answers, bool preserveOrder)
+    {
+        var normalized = (answers ?? Array.Empty<string>())
+            .Select(answer => answer.Trim().ToUpperInvariant())
+            .Where(answer => !string.IsNullOrWhiteSpace(answer))
+            .ToList();
+
+        if (!preserveOrder)
+        {
+            normalized = normalized
+                .Distinct()
+                .ToList();
+            normalized.Sort(StringComparer.Ordinal);
+        }
+
+        return normalized;
     }
 }

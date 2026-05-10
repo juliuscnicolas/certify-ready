@@ -1,0 +1,953 @@
+[
+    {
+        "id": 1,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You have two Hyper-V hosts named Host1 and Host2. Host1 has an Azure virtual machine named VM1 that was deployed by using a custom Azure Resource Manager template. You need to move VM1 to Host2. What should you do?",
+        "options": [
+            {
+                "key": "A",
+                "text": "From the Update management blade, click Enable."
+            },
+            {
+                "key": "B",
+                "text": "From the Overview blade, move VM1 to a different subscription."
+            },
+            {
+                "key": "C",
+                "text": "From the Redeploy blade, click Redeploy."
+            },
+            {
+                "key": "D",
+                "text": "From the Profile blade, modify the usage location."
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 2,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing an e-Commerce Web App. You want to use Azure Key Vault to ensure that sign-ins to the e-Commerce Web App are secured by using Azure App Service authentication and Azure Active Directory (AAD). What should you do on the e-Commerce Web App?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Run the az keyvault secret command."
+            },
+            {
+                "key": "B",
+                "text": "Enable Azure AD Connect."
+            },
+            {
+                "key": "C",
+                "text": "Enable Managed Service Identity (MSI)."
+            },
+            {
+                "key": "D",
+                "text": "Create an Azure AD service principal."
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 3,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "This question requires that you evaluate the underlined text to determine if it is correct. Your Azure Active Directory Azure (Azure AD) tenant has an Azure subscription linked to it. Your developer has created a mobile application that obtains Azure AD access tokens using the OAuth 2 implicit grant type. The mobile application must be registered in Azure AD. You require a redirect URI from the developer for registration purposes. Review the underlined text. If it makes the statement correct, select 'No change is needed.' If the statement is incorrect, select the answer choice that makes the statement correct.",
+        "options": [
+            {
+                "key": "A",
+                "text": "No change required."
+            },
+            {
+                "key": "B",
+                "text": "a secret"
+            },
+            {
+                "key": "C",
+                "text": "a login hint"
+            },
+            {
+                "key": "D",
+                "text": "a client ID"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 4,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are creating an Azure key vault using PowerShell. Objects deleted from the key vault must be kept for a set period of 90 days. Which two of the following parameters must be used in conjunction to meet the requirement?",
+        "options": [
+            {
+                "key": "A",
+                "text": "EnabledForDeployment"
+            },
+            {
+                "key": "B",
+                "text": "EnablePurgeProtection"
+            },
+            {
+                "key": "C",
+                "text": "EnabledForTemplateDeployment"
+            },
+            {
+                "key": "D",
+                "text": "EnableSoftDelete"
+            }
+        ],
+        "answers": [
+            "B",
+            "D"
+        ]
+    },
+    {
+        "id": 6,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You manage an Azure SQL database that allows for Azure AD authentication. You need to make sure that database developers can connect to the SQL database via Microsoft SQL Server Management Studio (SSMS). You also need to make sure the developers use their on-premises Active Directory account for authentication. Your strategy should allow for authentication prompts to be kept to a minimum. Which of the following should you implement?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Azure AD token."
+            },
+            {
+                "key": "B",
+                "text": "Azure Multi-Factor authentication."
+            },
+            {
+                "key": "C",
+                "text": "Active Directory integrated authentication."
+            },
+            {
+                "key": "D",
+                "text": "OATH software tokens."
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 7,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing an application to transfer data between on-premises file servers and Azure Blob storage. The application stores keys, secrets, and certificates in Azure Key Vault and makes use of the Azure Key Vault APIs. You want to configure the application to allow recovery of an accidental deletion of the key vault or key vault objects for 90 days after deletion. What should you do?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Run the Add-AzKeyVaultKey cmdlet."
+            },
+            {
+                "key": "B",
+                "text": "Run the az keyvault update --enable-soft-delete true --enable-purge-protection true CLI."
+            },
+            {
+                "key": "C",
+                "text": "Implement virtual network service endpoints for Azure Key Vault."
+            },
+            {
+                "key": "D",
+                "text": "Run the az keyvault update --enable-soft-delete false CLI."
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 9,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. You are configuring a web app that delivers streaming video to users. The application makes use of continuous integration and deployment. You need to ensure that the application is highly available and that the users' streaming experience is constant. You also want to configure the application to store data in a geographic location that is nearest to the user. Solution: You include the use of Azure Redis Cache in your design. Does the solution meet the goal?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 10,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. You are configuring a web app that delivers streaming video to users. The application makes use of continuous integration and deployment. You need to ensure that the application is highly available and that the users' streaming experience is constant. You also want to configure the application to store data in a geographic location that is nearest to the user. Solution: You include the use of an Azure Content Delivery Network (CDN) in your design. Does the solution meet the goal?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 11,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. You are configuring a web app that delivers streaming video to users. The application makes use of continuous integration and deployment. You need to ensure that the application is highly available and that the users' streaming experience is constant. You also want to configure the application to store data in a geographic location that is nearest to the user. Solution: You include the use of a Storage Area Network (SAN) in your design. Does the solution meet the goal?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 13,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You develop a Web App on a tier D1 app service plan. You notice that page load times increase during periods of peak traffic. You want to implement automatic scaling when CPU load is above 80 percent. Your solution must minimize costs. What should you do first?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Enable autoscaling on the Web App."
+            },
+            {
+                "key": "B",
+                "text": "Switch to the Premium App Service tier plan."
+            },
+            {
+                "key": "C",
+                "text": "Switch to the Standard App Service tier plan."
+            },
+            {
+                "key": "D",
+                "text": "Switch to the Azure App Services consumption plan."
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 14,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Your company's Azure subscription includes an Azure Log Analytics workspace. Your company has a hundred on-premises servers that run either Windows Server 2012 R2 or Windows Server 2016, and is linked to the Azure Log Analytics workspace. The Azure Log Analytics workspace is set up to gather performance counters associated with security from these linked servers. You must configure alerts based on the information gathered by the Azure Log Analytics workspace. You have to make sure that alert rules allow for dimensions, and that alert creation time should be kept to a minimum. Furthermore, a single alert notification must be created when the alert is created and when the alert is resolved. You need to make use of the necessary signal type when creating the alert rules. Which of the following is the option you should use?",
+        "options": [
+            {
+                "key": "A",
+                "text": "The Activity log signal type."
+            },
+            {
+                "key": "B",
+                "text": "The Application Log signal type."
+            },
+            {
+                "key": "C",
+                "text": "The Metric signal type."
+            },
+            {
+                "key": "D",
+                "text": "The Audit Log signal type."
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 15,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing a .NET Core MVC application that allows customers to research independent holiday accommodation providers. You want to implement Azure Search to allow the application to search the index by using various criteria to locate documents related to accommodation. You want the application to allow customers to search the index by using regular expressions. What should you do?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Configure the SearchMode property of the SearchParameters class."
+            },
+            {
+                "key": "B",
+                "text": "Configure the QueryType property of the SearchParameters class."
+            },
+            {
+                "key": "C",
+                "text": "Configure the Facets property of the SearchParameters class."
+            },
+            {
+                "key": "D",
+                "text": "Configure the Filter property of the SearchParameters class."
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 16,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are a developer at your company. You need to update the definitions for an existing Logic App. What should you use?",
+        "options": [
+            {
+                "key": "A",
+                "text": "the Enterprise Integration Pack (EIP)"
+            },
+            {
+                "key": "B",
+                "text": "the Logic App Code View"
+            },
+            {
+                "key": "C",
+                "text": "the API Connections"
+            },
+            {
+                "key": "D",
+                "text": "the Logic Apps Designer"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 17,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. You are developing a solution for a public facing API. The API back end is hosted in an Azure App Service instance. You have implemented a RESTful service for the API back end. You must configure back-end authentication for the API Management service instance. Solution: You configure Basic gateway credentials for the Azure resource. Does the solution meet the goal?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 18,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. You are developing a solution for a public facing API. The API back end is hosted in an Azure App Service instance. You have implemented a RESTful service for the API back end. You must configure back-end authentication for the API Management service instance. Solution: You configure Client cert gateway credentials for the HTTP(s) endpoint. Does the solution meet the goal?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 19,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. You are developing a solution for a public facing API. The API back end is hosted in an Azure App Service instance. You have implemented a RESTful service for the API back end. You must configure back-end authentication for the API Management service instance. Solution: You configure Basic gateway credentials for the HTTP(s) endpoint. Does the solution meet the goal?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 20,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. You are developing a solution for a public facing API. The API back end is hosted in an Azure App Service instance. You have implemented a RESTful service for the API back end. You must configure back-end authentication for the API Management service instance. Solution: You configure Client cert gateway credentials for the Azure resource. Does the solution meet the goal?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 21,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing a .NET Core MVC application that allows customers to research independent holiday accommodation providers. You want to implement Azure Search to allow the application to search the index by using various criteria to locate documents related to accommodation venues. You want the application to list holiday accommodation venues that fall within a specific price range and are within a specified distance to an airport. What should you do?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Configure the SearchMode property of the SearchParameters class."
+            },
+            {
+                "key": "B",
+                "text": "Configure the QueryType property of the SearchParameters class."
+            },
+            {
+                "key": "C",
+                "text": "Configure the Facets property of the SearchParameters class."
+            },
+            {
+                "key": "D",
+                "text": "Configure the Filter property of the SearchParameters class."
+            }
+        ],
+        "answers": [
+            "D"
+        ]
+    },
+    {
+        "id": 22,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are a developer at your company. You need to edit the workflows for an existing Logic App. What should you use?",
+        "options": [
+            {
+                "key": "A",
+                "text": "the Enterprise Integration Pack (EIP)"
+            },
+            {
+                "key": "B",
+                "text": "the Logic App Code View"
+            },
+            {
+                "key": "C",
+                "text": "the API Connections"
+            },
+            {
+                "key": "D",
+                "text": "the Logic Apps Designer"
+            }
+        ],
+        "answers": [
+            "D"
+        ]
+    },
+    {
+        "id": 23,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Your company has an Azure Kubernetes Service (AKS) cluster that you manage from an Azure AD-joined device. The cluster is located in a resource group. Developers have created an application named MyApp. MyApp was packaged into a container image. You need to deploy the YAML manifest file for the application. Solution: You install the Azure CLI on the device and run the kubectl apply -f myapp.yaml command. Does this meet the goal?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 24,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "sequence",
+        "sequenceLength": 3,
+        "question": "You are a developer for a company that provides a bookings management service in the tourism industry. You are implementing Azure Search for the tour agencies listed in your company's solution. You create the index in Azure Search. You now need to use the Azure Search .NET SDK to import the relevant data into the Azure Search service. Which three actions should you perform in sequence?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Create a DataSource instance and set its Container property to the DataContainer."
+            },
+            {
+                "key": "B",
+                "text": "Create an IndexBatch that contains the documents which must be added."
+            },
+            {
+                "key": "C",
+                "text": "Set the DataSources property of the SearchServiceClient."
+            },
+            {
+                "key": "D",
+                "text": "Create a SearchIndexClient object to connect to the search index."
+            },
+            {
+                "key": "E",
+                "text": "Call the Documents.Index method of the SearchIndexClient and pass the IndexBatch."
+            },
+            {
+                "key": "F",
+                "text": "Call the Documents.Suggest method of the SearchIndexClient and pass the DataSource."
+            }
+        ],
+        "answers": [
+            "D",
+            "B",
+            "E"
+        ]
+    },
+    {
+        "id": 25,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing an application that applies a set of governance policies for internal and external services, as well as for applications. You develop a stateful ASP.NET Core 2.1 web application named PolicyApp and deploy it to an Azure App Service Web App. The PolicyApp reacts to events from Azure Event Grid and performs policy actions based on those events. You have the following requirements: Authentication events must be used to monitor users when they sign in and sign out. All authentication events must be processed by PolicyApp. Sign outs must be processed as fast as possible. What should you do?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Create a new Azure Event Grid subscription for all authentication events. Use the subscription to process sign-out events."
+            },
+            {
+                "key": "B",
+                "text": "Create a separate Azure Event Grid handler for sign-in and sign-out events."
+            },
+            {
+                "key": "C",
+                "text": "Create separate Azure Event Grid topics and subscriptions for sign-in and sign-out events."
+            },
+            {
+                "key": "D",
+                "text": "Add a subject prefix to sign-out events. Create an Azure Event Grid subscription. Configure the subscription to use the subjectBeginsWith filter."
+            }
+        ],
+        "answers": [
+            "D"
+        ]
+    },
+    {
+        "id": 26,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "function.json: choose the missing output binding setting",
+            "host.json: choose the root section that defines the executable",
+            "host.json: choose enableForwardingHttpRequest value"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"],
+            ["I", "J"]
+        ],
+        "question": "HOTSPOT - You are developing a C++ application that compiles to a native application named process.exe. The application accepts images as input and returns images in GIF, PNG, or JPEG format. You must deploy the application as an Azure Function. You need to configure the function and host json files. How should you complete the json files?\n\nfunction.json:\n{\n  [SLOT 1],\n  \"direction\": \"out\",\n  \"name\": \"result\"\n}\n\nhost.json:\n{\n  [SLOT 2]\n    \"defaultExecutablePath\": \"process.exe\"\n    },\n    [SLOT 3]\n  }\n}",
+        "options": [
+            {
+                "key": "A",
+                "text": "\"type\": \"http\""
+            },
+            {
+                "key": "B",
+                "text": "\"platform\": \"gcm\""
+            },
+            {
+                "key": "C",
+                "text": "\"dataType\": \"stream\""
+            },
+            {
+                "key": "D",
+                "text": "\"path\": \"process.exe\""
+            },
+            {
+                "key": "E",
+                "text": "\"customHandler\": { \"description\": {"
+            },
+            {
+                "key": "F",
+                "text": "\"languageWorker\": { \"path\": {"
+            },
+            {
+                "key": "G",
+                "text": "\"extensions\": { \"worker\": {"
+            },
+            {
+                "key": "H",
+                "text": "\"extensionBundle\": {"
+            },
+            {
+                "key": "I",
+                "text": "\"enableForwardingHttpRequest\": true"
+            },
+            {
+                "key": "J",
+                "text": "\"enableForwardingHttpRequest\": false"
+            }
+        ],
+        "answers": [
+            "C",
+            "E",
+            "I"
+        ]
+    },
+    {
+        "id": 27,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Root section key that contains the redirect rule",
+            "HTTP status code that triggers the redirect",
+            "Azure AD auth provider name in the redirect URL",
+            "post_login_redirect_uri value"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"],
+            ["I", "J", "K", "L"],
+            ["M", "N", "O", "P"]
+        ],
+        "question": "HOTSPOT - You are developing an Azure Static Web app that contains training materials for a tool company. Each tool's training material is contained in a static web page that is linked from the tool's publicly available description page. A user must be authenticated using Azure AD prior to viewing training. You need to ensure that the user can view training material pages after authentication. How should you complete the configuration file?\n\nstaticwebapp.config.json:\n{\n  \"[SLOT 1]\": {\n    \"[SLOT 2]\": {\n      \"redirect\": \"/.auth/login/[SLOT 3]?post_login_redirect_uri=.[SLOT 4]\",\n      \"statusCode\": 302\n    }\n  }\n}",
+        "options": [
+            { "key": "A", "text": "routes" },
+            { "key": "B", "text": "headers" },
+            { "key": "C", "text": "responseOverrides" },
+            { "key": "D", "text": "navigationFallback" },
+            { "key": "E", "text": "400" },
+            { "key": "F", "text": "401" },
+            { "key": "G", "text": "403" },
+            { "key": "H", "text": "404" },
+            { "key": "I", "text": "aad" },
+            { "key": "J", "text": "azure" },
+            { "key": "K", "text": "graph" },
+            { "key": "L", "text": "microsoftonline" },
+            { "key": "M", "text": "orig" },
+            { "key": "N", "text": "route" },
+            { "key": "O", "text": "return" },
+            { "key": "P", "text": "referrer" }
+        ],
+        "answers": [
+            "C",
+            "F",
+            "I",
+            "P"
+        ]
+    },
+    {
+        "id": 28,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "az subcommand to store the template",
+            "--template-file value"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"]
+        ],
+        "question": "HOTSPOT - You are authoring a set of nested Azure Resource Manager templates to deploy Azure resources. You author an Azure Resource Manager template named mainTemplate.json that contains the following linked templates: linkedTemplate1.json, linkedTemplate2.json. You add parameters to a parameters template file named mainTemplate.parameters.json. You save all templates on a local device in the C:\\templates\\ folder.\n\nYou have the following requirements:\n• Store the templates in Azure for later deployment.\n• Enable versioning of the templates.\n• Manage access to the templates by using Azure RBAC.\n• Ensure that users have read-only access to the templates.\n• Allow users to deploy the templates.\n\nYou need to store the templates in Azure. How should you complete the command?\n\naz [SLOT 1] \\\n  --name templateStore \\\n  --version \"1.0\" \\\n  --resource-group templatesRG \\\n  --location \"eastus\" \\\n  --template-file [SLOT 2] \"C:\\templates\\\n  --tags Dept=HumanResources Environment=Production",
+        "options": [
+            { "key": "A", "text": "ts create" },
+            { "key": "B", "text": "storage account create" },
+            { "key": "C", "text": "storage account update" },
+            { "key": "D", "text": "blueprint artifact template create" },
+            { "key": "E", "text": "mainTemplate.json" },
+            { "key": "F", "text": "linkedTemplate1.json" },
+            { "key": "G", "text": "linkedTemplate2.json" },
+            { "key": "H", "text": "mainTemplate.parameters.json" }
+        ],
+        "answers": [
+            "A",
+            "E"
+        ]
+    },
+    {
+        "id": 29,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "\"type\" value for the binding",
+            "\"eventType\" value for the binding"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D", "E", "F"],
+            ["A", "B", "C", "D", "E", "F"]
+        ],
+        "question": "HOTSPOT - You are developing a service where customers can report news events from a browser using Azure Web PubSub. The service is implemented as an Azure Function App that uses the JSON WebSocket subprotocol to receive news events. You need to implement the bindings for the Azure Function App. How should you configure the binding?\n\n{\n  \"bindings\": [\n    {\n      \"type\": \"[SLOT 1]\",\n      \"direction\": \"in\",\n      \"name\": \"data\",\n      \"eventName\": \"message\",\n      \"eventType\": \"[SLOT 2]\"\n    }\n  ]\n}",
+        "options": [
+            { "key": "A", "text": "user" },
+            { "key": "B", "text": "system" },
+            { "key": "C", "text": "message" },
+            { "key": "D", "text": "connected" },
+            { "key": "E", "text": "webPubSubTrigger" },
+            { "key": "F", "text": "webPubSubConnection" }
+        ],
+        "answers": [
+            "E",
+            "A"
+        ]
+    },
+    {
+        "id": 30,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Disk type",
+            "Redundancy"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"]
+        ],
+        "question": "HOTSPOT - You are building a software-as-a-service (SaaS) application that analyzes DNA data that will run on Azure virtual machines (VMs) in an availability zone. The data is stored on managed disks attached to the VM. The performance of the analysis is determined by the speed of the disk attached to the VM.\n\nYou have the following requirements:\n• The application must be able to quickly revert to the previous day's data if a systemic error is detected.\n• The application must minimize downtime in the case of an Azure datacenter outage.\n\nYou need to provision the managed disk for the VM to maximize performance while meeting the requirements. Which type of Azure Managed Disk should you use?\n\nAnswer area:\nRequirement: Disk type -> [SLOT 1]\nRequirement: Redundancy -> [SLOT 2]",
+        "options": [
+            { "key": "A", "text": "Premium SSD" },
+            { "key": "B", "text": "Standard SSD" },
+            { "key": "C", "text": "Standard HDD" },
+            { "key": "D", "text": "Geo-redundant storage (GRS)" },
+            { "key": "E", "text": "Zone-redundant storage (ZRS)" },
+            { "key": "F", "text": "Locally-redundant storage (LRS)" }
+        ],
+        "answers": [
+            "A",
+            "E"
+        ]
+    },
+    {
+        "id": 31,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Shared lifecycle",
+            "Storage volume"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"]
+        ],
+        "question": "HOTSPOT - You are developing an application that includes two Docker containers.\n\nThe application must meet the following requirements:\n• The containers must not run as root.\n• The containers must be deployed to Azure Container Instances by using a YAML file.\n• The containers must share a lifecycle, resources, local network, and storage volume.\n• The storage volume must persist through container crashes.\n• The storage volume must be deployed on stop or restart of the containers.\n\nYou need to configure Azure Container Instances for the application. Which configuration values should you use?\n\nAnswer area:\nConfiguration setting: Shared lifecycle -> [SLOT 1]\nConfiguration setting: Storage volume -> [SLOT 2]",
+        "options": [
+            { "key": "A", "text": "Container group" },
+            { "key": "B", "text": "Container image" },
+            { "key": "C", "text": "Service endpoint" },
+            { "key": "D", "text": "Resource group" },
+            { "key": "E", "text": "Azure file share" },
+            { "key": "F", "text": "Secret" },
+            { "key": "G", "text": "Empty directory" },
+            { "key": "H", "text": "Cloned Git repo" }
+        ],
+        "answers": [
+            "A",
+            "E"
+        ]
+    },
+    {
+        "id": 32,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Azure CLI command group",
+            "Command argument before the GitHub repository URL"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"]
+        ],
+        "question": "HOTSPOT - You have a Dockerfile that builds a container image named image1. The container image and its base image are stored in separate repositories of an Azure Container registry named registry1. The codebase of image1 is stored in a GitHub repo named app1 of an account named account1.\n\nYou plan to implement automatic updates to image1 whenever its base image is updated or an update to the main branch of the GitHub repo occurs.\n\nYou need to complete the Azure CLI command that will apply the planned implementation.\n\nAnswer area:\n\naz [SLOT 1] task create --registry registry1 --name task1 --image image1:{{.Run.ID}} --arg REGISTRY_NAME=registry1.azurecr.io --[SLOT 2] https://github.com/account1/app1.git#main --file Dockerfile",
+        "options": [
+            { "key": "A", "text": "acr" },
+            { "key": "B", "text": "image" },
+            { "key": "C", "text": "automation" },
+            { "key": "D", "text": "arg" },
+            { "key": "E", "text": "target" },
+            { "key": "F", "text": "context" }
+        ],
+        "answers": [
+            "A",
+            "F"
+        ]
+    },
+    {
+        "id": 33,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Your company has an Azure Kubernetes Service (AKS) cluster that you manage from an Azure AD-joined device. The cluster is located in a resource group. Developers have created an application named MyApp. MyApp was packaged into a container image. You need to deploy the YAML manifest file for the application. Solution: You install the docker client on the device and run the docker run -it microsoft/azure-cli:0.10.17 command. Does this meet the goal?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 34,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Your company has a web app named WebApp1. You use the WebJobs SDK to design a triggered App Service background task that automatically invokes a function in the code every time new data is received in a queue. You are preparing to configure the service that processes a queue data item. Which of the following is the service you should use?",
+        "options": [
+            {
+                "key": "A",
+                "text": "Logic Apps"
+            },
+            {
+                "key": "B",
+                "text": "WebJobs"
+            },
+            {
+                "key": "C",
+                "text": "Flow"
+            },
+            {
+                "key": "D",
+                "text": "Functions"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 35,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Your company has an Azure subscription. You need to deploy a number of Azure virtual machines to the subscription by using Azure Resource Manager (ARM) templates. The virtual machines will be included in a single availability set. You need to ensure that the ARM template allows for as many virtual machines as possible to remain accessible in the event of fabric failure or maintenance. Which of the following is the value that you should configure for the platformFaultDomainCount property?",
+        "options": [
+            {
+                "key": "A",
+                "text": "10"
+            },
+            {
+                "key": "B",
+                "text": "30"
+            },
+            {
+                "key": "C",
+                "text": "Min Value"
+            },
+            {
+                "key": "D",
+                "text": "Max Value"
+            }
+        ],
+        "answers": [
+            "D"
+        ]
+    },
+    {
+        "id": 36,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Your company has an Azure subscription. You need to deploy a number of Azure virtual machines to the subscription by using Azure Resource Manager (ARM) templates. The virtual machines will be included in a single availability set. You need to ensure that the ARM template allows for as many virtual machines as possible to remain accessible in the event of fabric failure or maintenance. Which of the following is the value that you should configure for the platformUpdateDomainCount property?",
+        "options": [
+            {
+                "key": "A",
+                "text": "10"
+            },
+            {
+                "key": "B",
+                "text": "20"
+            },
+            {
+                "key": "C",
+                "text": "30"
+            },
+            {
+                "key": "D",
+                "text": "40"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 37,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "sequence",
+        "sequenceLength": 3,
+        "question": "DRAG DROP - You are creating an Azure Cosmos DB account that makes use of the SQL API. Data will be added to the account every day by a web application. You need to ensure that an email notification is sent when information is received from IoT devices, and that compute cost is reduced. You decide to deploy a function app. Which of the following should you configure the function app to use?\n\nSelect and Place (in order):\n1. IoT message source trigger\n2. Email notification output\n3. Cost-optimized hosting",
+        "options": [
+            {
+                "key": "A",
+                "text": "Azure Cosmos DB connector"
+            },
+            {
+                "key": "B",
+                "text": "SendGrid action"
+            },
+            {
+                "key": "C",
+                "text": "Consumption plan"
+            },
+            {
+                "key": "D",
+                "text": "Azure Event Hubs binding"
+            },
+            {
+                "key": "E",
+                "text": "SendGrid binding"
+            }
+        ],
+        "answers": [
+            "D",
+            "E",
+            "C"
+        ]
+    },
+    {
+        "id": 38,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "This question requires that you evaluate the underlined text to determine if it is correct. Your company has an on-premises deployment of MongoDB, and an Azure Cosmos DB account that makes use of the MongoDB API. You need to devise a strategy to migrate MongoDB to the Azure Cosmos DB account. <u>You include the Data Management Gateway tool in your migration strategy.</u> Instructions: Review the underlined text. If it makes the statement correct, select 'No change required.' If the statement is incorrect, select the answer choice that makes the statement correct.",
+        "options": [
+            {
+                "key": "A",
+                "text": "No change required"
+            },
+            {
+                "key": "B",
+                "text": "mongorestore"
+            },
+            {
+                "key": "C",
+                "text": "Azure Storage Explorer"
+            },
+            {
+                "key": "D",
+                "text": "AzCopy"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    }
+]

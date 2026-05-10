@@ -15,6 +15,14 @@ public class QuestionItem
 
     public string SourceType { get; set; } = string.Empty;
 
+    public string QuestionType { get; set; } = "choice";
+
+    public int? SequenceLength { get; set; }
+
+    public List<string> HotspotSlots { get; set; } = new();
+
+    public List<List<string>> HotspotSlotOptionKeys { get; set; } = new();
+
     public string Question { get; set; } = string.Empty;
 
     public List<QuestionOption> Options { get; set; } = new();
