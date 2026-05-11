@@ -75,6 +75,11 @@ export function ResultsPanel({ results, onRestart, onReview }) {
                 <p>
                   <strong>Correct answer:</strong> {renderOptionText(item.question, item.correctAnswers)}
                 </p>
+                {item.question.explanation ? (
+                  <p className="incorrect-list__explanation">
+                    <strong>Why:</strong> {item.question.explanation}
+                  </p>
+                ) : null}
               </article>
             ))}
           </div>

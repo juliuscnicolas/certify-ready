@@ -25,6 +25,8 @@ public class QuestionItem
 
     public string Question { get; set; } = string.Empty;
 
+    public string Explanation { get; set; } = string.Empty;
+
     public List<QuestionOption> Options { get; set; } = new();
 
     public List<string> Answers { get; set; } = new();
