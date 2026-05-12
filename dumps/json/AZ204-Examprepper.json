@@ -2079,5 +2079,1154 @@
         "answers": [
             "A"
         ]
+    },
+    {
+        "id": 61,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You need to investigate the HTTP server log output to resolve the issue with the ContentUploadService. Which command should you use first?",
+        "explanation": "Correct: A. Use az webapp log first to access App Service web/server logging, which is the direct source for HTTP server log output in this scenario. Why others are wrong: B targets Azure Media Services live output and is unrelated; C shows Azure subscription activity/control-plane events, not app HTTP server logs; D attaches to a container instance session and is not the primary command for App Service HTTP server logs.",
+        "options": [
+            {
+                "key": "A",
+                "text": "az webapp log"
+            },
+            {
+                "key": "B",
+                "text": "az ams live-output"
+            },
+            {
+                "key": "C",
+                "text": "az monitor activity-log"
+            },
+            {
+                "key": "D",
+                "text": "az container attach"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 62,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You need to investigate the Azure Function app error message in the development environment. What should you do?",
+        "explanation": "Correct: C. Update the Function app code to use Microsoft.Extensions.Logging and write diagnostic events through the provided log instance so you can capture detailed runtime error context during development. Why others are wrong: A Live Metrics is useful for near-real-time telemetry but does not by itself add the missing application-level error details; B creating a new workspace and re-instrumenting is unnecessary overhead for immediate troubleshooting; D diagnostic settings to Log Analytics help centralize platform logs but are not the first development-time step to enrich function error messages.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Connect Live Metrics Stream from Application Insights to the Azure Function app and filter the metrics."
+            },
+            {
+                "key": "B",
+                "text": "Create a new Azure Log Analytics workspace and instrument the Azure Function app with Application Insights."
+            },
+            {
+                "key": "C",
+                "text": "Update the Azure Function app with extension methods from Microsoft.Extensions.Logging to log events by using the log instance."
+            },
+            {
+                "key": "D",
+                "text": "Add a new diagnostic setting to the Azure Function app to send logs to Log Analytics."
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 63,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Restrict file access",
+            "Enable file auditing"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"]
+        ],
+        "question": "HOTSPOT - You need to configure security and compliance for the corporate website files. Which Azure Blob storage settings should you use?\n\nAnswer area:\nAction: Restrict file access -> [SLOT 1]\nAction: Enable file auditing -> [SLOT 2]",
+        "explanation": "Correct: C and F. Use a shared access signature (SAS) token to restrict file access with scoped, time-limited permissions, and use change feed to provide an auditable record of blob create/update/delete events. Why others are wrong: A RBAC is identity/role assignment and not the direct per-file delegated access mechanism asked here; B managed identity is for workload authentication, not end-user file access delegation; D connection string is a credential artifact and does not enforce least-privilege file access by itself; E access tier controls storage cost/performance; G blob indexer supports search/indexing scenarios; H storage account type defines redundancy/performance characteristics, not auditing.",
+        "options": [
+            {
+                "key": "A",
+                "text": "role-based access control (RBAC)"
+            },
+            {
+                "key": "B",
+                "text": "managed identity"
+            },
+            {
+                "key": "C",
+                "text": "shared access signature (SAS) token"
+            },
+            {
+                "key": "D",
+                "text": "connection string"
+            },
+            {
+                "key": "E",
+                "text": "access tier"
+            },
+            {
+                "key": "F",
+                "text": "change feed"
+            },
+            {
+                "key": "G",
+                "text": "blob indexer"
+            },
+            {
+                "key": "H",
+                "text": "storage account type"
+            }
+        ],
+        "answers": [
+            "C",
+            "F"
+        ]
+    },
+    {
+        "id": 64,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You need to correct the RequestUserApproval Function app error. What should you do?",
+        "explanation": "Correct: C. Request/approval workflows are long-running and stateful, which is exactly what Durable Functions are designed to handle. Why others are wrong: A does not fix the underlying workflow/state problem; B addresses hosting and cold-start behavior but not the request approval orchestration issue; D only changes the timeout and still leaves the function as a poor fit for a multi-step approval flow.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Update line RA13 to use the async keyword and return an HttpRequest object value."
+            },
+            {
+                "key": "B",
+                "text": "Configure the Function app to use an App Service hosting plan. Enable the Always On setting of the hosting plan."
+            },
+            {
+                "key": "C",
+                "text": "Update the function to be stateful by using Durable Functions to process the request payload."
+            },
+            {
+                "key": "D",
+                "text": "Update the functionTimeout property of the host.json project file to 15 minutes."
+            }
+        ],
+        "answers": [
+            "C"
+        ]
+    },
+    {
+        "id": 65,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Destination endpoint type",
+            "Filter property name",
+            "Included event type"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"],
+            ["A", "B", "C"]
+        ],
+        "question": "DRAG DROP - You need to implement the Log policy. How should you complete the Azure Event Grid subscription?\n\nAnswer area:\n{\n  \"name\": \"newlogs\",\n  \"properties\": {\n    \"topic\": \"/subscriptions/.../providers/Microsoft.EventGrid/topics/...\",\n    \"destination\": { \"endpointType\": \"[SLOT 1]\" },\n    \"filter\": {\n      \"[SLOT 2]\": \"/blobServices/default/containers/logdrop/\",\n      \"includedEventTypes\": [ \"[SLOT 3]\" ]\n    },\n    \"labels\": [],\n    \"eventDeliverySchema\": \"EventGridSchema\"\n  }\n}",
+        "explanation": "Correct: WebHook, subjectBeginsWith, and Microsoft.Storage.BlobCreated. The subscription should point at a webhook endpoint, filter on subjects that begin with the logdrop container path, and only include blob-created events for new log files. Why others are wrong: EventHub would require a different destination shape and is not shown here; subjectEndsWith is the wrong match operator because the container path is a prefix; All is too broad for a creation-only log policy; Microsoft.Storage is not the event type, while Microsoft.Storage.BlobCreated is the specific event needed.",
+        "options": [
+            {
+                "key": "A",
+                "text": "All"
+            },
+            {
+                "key": "B",
+                "text": "WebHook"
+            },
+            {
+                "key": "C",
+                "text": "EventHub"
+            },
+            {
+                "key": "D",
+                "text": "subjectEndsWith"
+            },
+            {
+                "key": "E",
+                "text": "Mictosoft.Storage"
+            },
+            {
+                "key": "F",
+                "text": "subjectBeginsWith"
+            },
+            {
+                "key": "G",
+                "text": "Microsoft.Storage.BlobCreated"
+            }
+        ],
+        "answers": [
+            "B",
+            "F",
+            "G"
+        ]
+    },
+    {
+        "id": 66,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You need to ensure that the solution can meet the scaling requirements for Policy Service. Which Azure Application Insights data model should you use?",
+        "explanation": "Correct: D. Metrics are the right Application Insights data model for scaling decisions because they provide aggregated numerical signals such as request rate, CPU, latency, and queue depth that can drive autoscale rules. Why others are wrong: Dependencies describe calls to external components, events capture discrete user or business actions, and traces are best for diagnostic logging, not autoscaling signals.",
+        "options": [
+            {
+                "key": "A",
+                "text": "an Application Insights dependency"
+            },
+            {
+                "key": "B",
+                "text": "an Application Insights event"
+            },
+            {
+                "key": "C",
+                "text": "an Application Insights trace"
+            },
+            {
+                "key": "D",
+                "text": "an Application Insights metric"
+            }
+        ],
+        "answers": [
+            "D"
+        ]
+    },
+    {
+        "id": 67,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Class base type",
+            "Private field type",
+            "Constructor parameter type",
+            "Telemetry cast type",
+            "Path to filter"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D", "E", "F"],
+            ["A", "B", "C", "D", "E", "F"],
+            ["A", "B", "C", "D", "E", "F"],
+            ["A", "B", "C", "D", "E", "F"],
+            ["A", "B"]
+        ],
+        "question": "DRAG DROP - You need to implement telemetry for non-user actions. How should you complete the Filter class?\n\npublic class Filter : [SLOT 1]\n{\n    private readonly [SLOT 2] _next;\n    public Filter([SLOT 3] next)\n    {\n        _next = next;\n    }\n\n    public void Process(ITelemetry item)\n    {\n        var x = item as [SLOT 4];\n        if (x?.Url.AbsolutePath == \"[SLOT 5]\")\n        {\n            return;\n        }\n        _next.Process(item);\n    }\n}",
+        "explanation": "Correct: ITelemetryProcessor, ITelemetryProcessor, ITelemetryProcessor, RequestTelemetry, /health. The class is an Application Insights telemetry processor that filters server request telemetry before passing the rest of the pipeline onward, and /health is the non-user endpoint to suppress. Why others are wrong: ITelemetryInitializer runs when telemetry is created and is not the right pipeline stage for dropping items; PageViewTelemetry is for browser page views, not server request filtering; /status would be a different endpoint and does not match the shown health-check filter.",
+        "options": [
+            {
+                "key": "A",
+                "text": "ITelemetryProcessor"
+            },
+            {
+                "key": "B",
+                "text": "ITelemetryInitializer"
+            },
+            {
+                "key": "C",
+                "text": "RequestTelemetry"
+            },
+            {
+            "key": "D",
+                "text": "PageViewTelemetry"
+            },
+            {
+                "key": "E",
+                "text": "/health"
+            },
+            {
+                "key": "F",
+                "text": "/status"
+            }
+        ],
+        "answers": [
+            "A",
+            "A",
+            "A",
+            "C",
+            "E"
+        ]
+    },
+    {
+        "id": 68,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Implemented interface",
+            "Method name",
+            "Telemetry property container",
+            "EventId source value"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D", "E", "F", "G", "H"],
+            ["A", "B", "C", "D", "E", "F", "G", "H"],
+            ["A", "B", "C", "D", "E", "F", "G", "H"],
+            ["A", "B", "C", "D", "E", "F", "G", "H"]
+        ],
+        "question": "DRAG DROP - You need to ensure that PolicyLib requirements are met. How should you complete the code segment?\n\npublic class IncludeEventId : [SLOT 1]\n{\n    public void [SLOT 2](ITelemetry telemetry)\n    {\n        [SLOT 3].Properties[\"EventId\"] =\n        [SLOT 4];\n    }\n}",
+        "explanation": "Correct: ITelemetryInitializer, Initialize, telemetry.Context, EventGridController.EventId.Value. This pattern enriches telemetry by adding a custom EventId during initialization. Why others are wrong: ITelemetryProcessor and Process are for pipeline processing/filtering, not initializer enrichment; telemetry.Sequence is not a property bag; ((EventTelemetry)telemetry).Properties[\"EventId\"] is already the final indexed target and does not fit before an additional .Properties access in this code shape.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Process"
+            },
+            {
+                "key": "B",
+                "text": "Initialize"
+            },
+            {
+                "key": "C",
+                "text": "telemetry.Sequence"
+            },
+            {
+                "key": "D",
+                "text": "ITelemetryProcessor"
+            },
+            {
+                "key": "E",
+                "text": "ITelemetryInitializer"
+            },
+            {
+                "key": "F",
+                "text": "telemetry.Context"
+            },
+            {
+                "key": "G",
+                "text": "EventGridController.EventId.Value"
+            },
+            {
+                "key": "H",
+                "text": "((EventTelemetry)telemetry).Properties[\"EventId\"]"
+            }
+        ],
+        "answers": [
+            "E",
+            "B",
+            "F",
+            "G"
+        ]
+    },
+    {
+        "id": 69,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Number of VM instances",
+            "Pricing tier"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"]
+        ],
+        "question": "HOTSPOT - You are implementing a software as a service (SaaS) ASP.NET Core web service that will run as an Azure Web App. The web service will use an on-premises SQL Server database for storage. The web service also includes a WebJob that processes data updates. Four customers will use the web service. Each instance of the WebJob processes data for a single customer and must run as a singleton instance. Each deployment must be tested by using deployment slots prior to serving production data. Azure costs must be minimized. Azure resources must be located in an isolated network. You need to configure the App Service plan for the Web App. How should you configure the App Service plan?\n\nAnswer area:\nApp service plan setting: Number of VM instances -> [SLOT 1]\nApp service plan setting: Pricing tier -> [SLOT 2]",
+        "explanation": "Correct: 4 VM instances and Isolated tier. Four singleton WebJob workers are needed so each customer can be processed by a dedicated single instance. Isolated tier is required to run App Service in an isolated network (ASE) while still supporting deployment slots. Why others are wrong: 2 instances cannot cover four singleton customer workers concurrently; 8 and 16 add unnecessary cost and violate cost-minimization. Standard and Premium are not the isolated-network tier requirement here; Consumption is for Functions and not the correct App Service plan tier for this Web App + WebJob scenario with isolated networking and slots.",
+        "options": [
+            {
+                "key": "A",
+                "text": "2"
+            },
+            {
+                "key": "B",
+                "text": "4"
+            },
+            {
+                "key": "C",
+                "text": "8"
+            },
+            {
+                "key": "D",
+                "text": "16"
+            },
+            {
+                "key": "E",
+                "text": "Isolated"
+            },
+            {
+                "key": "F",
+                "text": "Standard"
+            },
+            {
+                "key": "G",
+                "text": "Premium"
+            },
+            {
+                "key": "H",
+                "text": "Consumption"
+            }
+        ],
+        "answers": [
+            "B",
+            "E"
+        ]
+    },
+    {
+        "id": 70,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "sequence",
+        "sequenceLength": 3,
+        "question": "DRAG DROP - You are developing a Docker/Go solution by using Azure App Service Web App for Containers. You plan to run the container in an App Service on Linux. You identify a Docker container image to use. None of your current resource groups reside in a location that supports Linux. You must minimize the number of resource groups required. You need to create the application and perform an initial deployment. Which three Azure CLI commands should you use, and in what order?",
+        "explanation": "Correct sequence: az group create, az appservice plan create, az webapp create. First create one new resource group in a Linux-supported region (minimizes extra groups), then create a Linux App Service plan, then create the Web App and perform the initial container deployment. Why others are wrong: az group update is unnecessary because a new supported-region group is required; az webapp update is for modifying an existing app and is not needed for first-time creation/deployment.",
+        "options": [
+            {
+                "key": "A",
+                "text": "az group create"
+            },
+            {
+                "key": "B",
+                "text": "az group update"
+            },
+            {
+                "key": "C",
+                "text": "az webapp update"
+            },
+            {
+                "key": "D",
+                "text": "az webapp create"
+            },
+            {
+                "key": "E",
+                "text": "az appservice plan create"
+            }
+        ],
+        "answers": [
+            "A",
+            "E",
+            "D"
+        ]
+    },
+    {
+        "id": 71,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "sequence",
+        "sequenceLength": 4,
+        "question": "DRAG DROP - Fourth Coffee has an ASP.NET Core web app that runs in Docker. The app is mapped to the www.fourthcoffee.com domain. Fourth Coffee is migrating this application to Azure. You need to provision an App Service Web App to host this Docker image and map the custom domain to the App Service web app. A resource group named FourthCoffeePublicWebResourceGroup has been created in the WestUS region that contains an App Service Plan named AppServiceLinuxDockerPlan. Which order should the CLI commands be used to develop the solution?",
+        "explanation": "Correct sequence: D, C, A, B. First define the script variables in D, then create the web app by using C, configure the container image by using A, and finally map the custom hostname by using B.",
+        "options": [
+            {
+                "key": "A",
+                "text": "az webapp config container set --docker-custom-image-name $dockerHubContainerPath --name $appName --resource-group FourthCoffeePublicWebResourceGroup"
+            },
+            {
+                "key": "B",
+                "text": "az webapp config hostname add --webapp-name $appName --resource-group FourthCoffeePublicWebResourceGroup --hostname $fqdn"
+            },
+            {
+                "key": "C",
+                "text": "az webapp create --name $appName --plan AppServiceLinuxDockerPlan --resource-group FourthCoffeePublicWebResourceGroup"
+            },
+            {
+                "key": "D",
+                "text": "#!/bin/bash appName=\"FourthCoffeePublicWeb$random\" location=\"WestUS\" dockerHubContainerPath=\"FourthCoffee/publicweb:v1\" fqdn=\"http://www.fourthcoffee.com\">www.fourthcoffee.com"
+            }
+        ],
+        "answers": [
+            "D",
+            "C",
+            "A",
+            "B"
+        ]
+    },
+    {
+        "id": 72,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "sequence",
+        "sequenceLength": 3,
+        "question": "DRAG DROP - You are developing a serverless Java application on Azure. You create a new Azure Key Vault to work with secrets from a new Azure Functions application. The application must reference Key Vault without Java code changes, scale dynamically on incoming events, keep instances warm, connect to a VNet, and remove Key Vault authentication automatically if the Function app is deleted. You need to grant the Azure Functions application access to the Azure Key Vault. Which three actions should you perform in sequence?",
+        "explanation": "Correct sequence: Create the Azure Functions app with a Premium plan type, create a system-assigned managed identity for the application, then create an access policy in Azure Key Vault for that identity. Premium satisfies dynamic scale plus pre-warmed instances and VNet support. System-assigned identity is tied to the Function app lifecycle, so auth is removed when the app is deleted. Why others are wrong: user-assigned identity persists independently; App Service plan and Consumption do not satisfy all warm-instance plus VNet requirements together for this scenario; SSL certificate creation is unrelated to Key Vault secret access authorization.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Create a user-assigned managed identity for the application."
+            },
+            {
+                "key": "B",
+                "text": "Create the Azure Functions app with a Premium plan type."
+            },
+            {
+                "key": "C",
+                "text": "Create an access policy in Azure Key Vault for the application identity."
+            },
+            {
+                "key": "D",
+                "text": "Create an SSL certification in Azure Key Vault for the application identity."
+            },
+            {
+                "key": "E",
+                "text": "Create the Azure Functions app with an App Service plan type."
+            },
+            {
+                "key": "F",
+                "text": "Create the Azure Functions app with a Consumption plan type."
+            },
+            {
+                "key": "G",
+                "text": "Create a system-assigned managed identity for the application."
+            }
+        ],
+        "answers": [
+            "B",
+            "G",
+            "C"
+        ]
+    },
+    {
+        "id": 73,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You develop a website. You plan to host the website in Azure. You expect the website to experience high traffic volumes after it is published. You must ensure that the website remains available and responsive while minimizing cost. You need to deploy the website. What should you do?",
+        "explanation": "Correct: D. App Service Standard supports autoscale and is the lowest App Service tier that can autoscale, which keeps the site responsive under high traffic while minimizing cost compared to higher tiers. Why others are wrong: A uses a single VM with vertical scaling concept and does not provide the same managed web scaling model; B Shared tier does not support autoscale; C VM Scale Sets can scale but add higher operational overhead and typically higher management complexity/cost than App Service for a web app scenario.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Deploy the website to a virtual machine. Configure the virtual machine to automatically scale when the CPU load is high."
+            },
+            {
+                "key": "B",
+                "text": "Deploy the website to an App Service that uses the Shared service tier. Configure the App Service plan to automatically scale when the CPU load is high."
+            },
+            {
+                "key": "C",
+                "text": "Deploy the website to a virtual machine. Configure a Scale Set to increase the virtual machine instance count when the CPU load is high."
+            },
+            {
+                "key": "D",
+                "text": "Deploy the website to an App Service that uses the Standard service tier. Configure the App Service plan to automatically scale when the CPU load is high."
+            }
+        ],
+        "answers": [
+            "D"
+        ]
+    },
+    {
+        "id": 74,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Create resource group command group",
+            "Create App Service plan command group",
+            "Create web app command group",
+            "Create deployment slot command group",
+            "Configure deployment source command group"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D", "E"],
+            ["A", "B", "C", "D", "E"],
+            ["A", "B", "C", "D", "E"],
+            ["A", "B", "C", "D", "E"],
+            ["A", "B", "C", "D", "E"]
+        ],
+        "question": "HOTSPOT - A company is developing a Java web app. The web app code is hosted in a GitHub repository located at https://github.com/Contoso/webapp. The web app must be evaluated before it is moved to production. You must deploy the initial code release to a deployment slot named staging. You need to create the web app and deploy the code. How should you complete the commands?\n\nAnswer area:\ngitrepo=https://github.com/Contoso/webapp\nwebappname=businesswebapp\nresourcegroupname=BusinessAppResourceGroup\n\naz [SLOT 1] create --location centralus --name $resourcegroupname\naz [SLOT 2] create --name $webappname --resource-group $resourcegroupname --sku S3\naz [SLOT 3] create --name $webappname --resource-group $resourcegroupname --plan $webappname\naz [SLOT 4] create --name $webappname --resource-group $resourcegroupname --slot staging\naz [SLOT 5] config --name $webappname --resource-group $resourcegroupname --slot staging --repo-url $gitrepo --branch master --manual-integration",
+        "explanation": "Correct: group, appservice plan, webapp, webapp deployment slot, webapp deployment source. This sequence creates the resource group, creates the App Service plan, creates the web app, creates the staging slot, then configures source deployment for that slot from GitHub. Why others are wrong in each slot: choosing webapp/appservice plan/deployment-slot/deployment-source for resource-group creation is invalid; using group/webapp/deployment-slot/deployment-source for S3 plan creation is incorrect; slot/source/group/plan command groups do not create the web app resource; group/plan/webapp/source are not the slot-creation command family; and only deployment source supports repo URL branch configuration.",
+        "options": [
+            {
+                "key": "A",
+                "text": "group"
+            },
+            {
+                "key": "B",
+                "text": "webapp"
+            },
+            {
+                "key": "C",
+                "text": "appservice plan"
+            },
+            {
+                "key": "D",
+                "text": "webapp deployment slot"
+            },
+            {
+                "key": "E",
+                "text": "webapp deployment source"
+            }
+        ],
+        "answers": [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E"
+        ]
+    },
+    {
+        "id": 75,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Assign request object to r",
+            "Condition to normalize tip",
+            "Write updated document back"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"],
+            ["I", "J", "K", "L"]
+        ],
+        "question": "HOTSPOT - You have a web service that is used to pay for food deliveries. The web service uses Azure Cosmos DB as the data store. You plan to add a new feature that allows users to set a tip amount. The new feature requires that a property named tip on the document in Cosmos DB must be present and contain a numeric value. There are many existing websites and mobile apps that use the web service that will not be updated to set the tip property for some time. How should you complete the trigger?\n\nfunction ensureTip() {\n  var r = [SLOT 1]\n  var i = r.getBody();\n\n  [SLOT 2]\n    i[\"tip\"] = 0;\n  }\n\n  [SLOT 3]\n}",
+        "explanation": "Correct: getContext().getRequest(), if (isNaN(i[\"tip\"]) || i[\"tip\"] == null) {, and r.setBody(i);. In a Cosmos DB pre-trigger, you read/modify the request document body and write it back to the request before commit. This guarantees tip exists and is numeric for older clients that omit or send invalid values. Why others are wrong: response/value/readDocument variants are not the proper pre-trigger request-body flow; checking only key existence misses nonnumeric values; request.getValue/pluck variants do not match this trigger document-body pattern; upsert/replace document operations are not needed inside this trigger logic.",
+        "options": [
+            {
+                "key": "A",
+                "text": "__.value();"
+            },
+            {
+                "key": "B",
+                "text": "__.readDocument(\"item\");"
+            },
+            {
+                "key": "C",
+                "text": "__.getContext().getRequest();"
+            },
+            {
+                "key": "D",
+                "text": "getContext().getResponse();"
+            },
+            {
+                "key": "E",
+                "text": "if (!(\"tip\" in i)) {"
+            },
+            {
+                "key": "F",
+                "text": "if (request.getValue(\"tip\") === null)"
+            },
+            {
+                "key": "G",
+                "text": "if (isNaN(i[\"tip\"]) || i[\"tip\"] == null) {"
+            },
+            {
+                "key": "H",
+                "text": "if (typeof __.pluck(\"tip\") == \"number\") {"
+            },
+            {
+                "key": "I",
+                "text": "r.setBody(i);"
+            },
+            {
+                "key": "J",
+                "text": "r.setValue(i);"
+            },
+            {
+                "key": "K",
+                "text": "__.upsertDocument(i);"
+            },
+            {
+                "key": "L",
+                "text": "__.replaceDocument();"
+            }
+        ],
+        "answers": [
+            "C",
+            "G",
+            "I"
+        ]
+    },
+    {
+        "id": 76,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. You develop an HTTP triggered Azure Function app to process Azure Storage blob data. The app is triggered using an output binding on the blob. The app continues to time out after four minutes. The app must process the blob data. You need to ensure the app does not time out and processes the blob data. Solution: Use the Durable Function async pattern to process the blob data. Does the solution meet the goal?",
+        "explanation": "Correct: A (Yes). Durable Functions async orchestration is designed for long-running, reliable workflows and avoids request-timeout limitations by checkpointing state and resuming work, which allows blob processing to complete beyond the normal execution window.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 77,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. You develop an HTTP triggered Azure Function app to process Azure Storage blob data. The app is triggered using an output binding on the blob. The app continues to time out after four minutes. The app must process the blob data. You need to ensure the app does not time out and processes the blob data. Solution: Pass the HTTP trigger payload into an Azure Service Bus queue to be processed by a queue trigger function and return an immediate HTTP success response. Does the solution meet the goal?",
+        "explanation": "Correct: A (Yes). Offloading work to Service Bus and handling it with a queue-triggered function decouples long-running blob processing from the HTTP request lifecycle, allowing an immediate response and avoiding HTTP timeout while still processing the data asynchronously.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 78,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. You develop an HTTP triggered Azure Function app to process Azure Storage blob data. The app is triggered using an output binding on the blob. The app continues to time out after four minutes. The app must process the blob data. You need to ensure the app does not time out and processes the blob data. Solution: Configure the app to use an App Service hosting plan and enable the Always On setting. Does the solution meet the goal?",
+        "explanation": "Correct: B (No). Always On helps keep the function host warm and reduces idle cold starts, but it does not solve long-running execution timeout constraints by itself. The workload still needs an async/decoupled or orchestration approach to reliably process beyond the timeout window.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 79,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution. You develop a software as a service (SaaS) offering to manage photographs. Users upload photos to a web service which then stores the photos in Azure Storage Blob storage. The storage account type is General-purpose V2. When photos are uploaded, they must be processed to produce and save a mobile-friendly version of the image. The process to produce a mobile-friendly version of the image must start in less than one minute. You need to design the process that starts the photo processing. Solution: Move photo processing to an Azure Function triggered from the blob upload. Does the solution meet the goal?",
+        "explanation": "Correct: B (No). A standard blob-triggered Azure Function does not strictly guarantee start time in under one minute because trigger detection can be delayed. For sub-minute start guarantees, an event-driven approach such as Event Grid-triggered processing is the more appropriate design.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 80,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Azure Function code",
+            "Polling interval",
+            "Azure Storage connection string"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"]
+        ],
+        "question": "DRAG DROP - You are a developer for a software as a service (SaaS) company that uses an Azure Function to process orders. The Azure Function currently runs on an Azure Function app that is triggered by an Azure Storage queue. You are preparing to migrate the Azure Function to Kubernetes using Kubernetes-based Event Driven Autoscaling (KEDA). You need to configure Kubernetes Custom Resource Definitions (CRD) for the Azure Function. Which CRDs should you configure?",
+        "explanation": "Correct: Deployment, ScaledObject, Secret. Deployment defines and runs the Azure Function containerized workload code. ScaledObject holds KEDA scaling configuration including pollingInterval. Secret stores sensitive data such as the Azure Storage connection string. Why others are wrong: TriggerAuthentication is used to reference authentication metadata/secrets from scalers, but the connection string value itself is stored in Secret.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Secret"
+            },
+            {
+                "key": "B",
+                "text": "Deployment"
+            },
+            {
+                "key": "C",
+                "text": "ScaledObject"
+            },
+            {
+                "key": "D",
+                "text": "TriggerAuthentication"
+            }
+        ],
+        "answers": [
+            "B",
+            "C",
+            "A"
+        ]
+    },
+    {
+        "id": 81,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing an application that uses Azure Blob storage. The application must read the transaction logs of all the changes that occur to the blobs and the blob metadata in the storage account for auditing purposes. The changes must be in the order in which they occurred, include only create, update, delete, and copy operations and be retained for compliance reasons. You need to process the transaction logs asynchronously. What should you do?",
+        "explanation": "Correct: B. Enable Blob change feed and process changes asynchronously. Change feed provides an ordered, durable, append-only log of blob changes suitable for auditing and compliance retention scenarios, including create/update/delete/copy style changes. Why others are wrong: A Event Grid is near-real-time eventing and does not provide the same durable ordered transaction-log retention semantics as change feed; C Storage Analytics logs are legacy and do not best satisfy this ordered durable audit requirement; D Azure Monitor HTTP Data Collector API is for custom log ingestion, not native blob change transaction capture.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Process all Azure Blob storage events by using Azure Event Grid with a subscriber Azure Function app."
+            },
+            {
+                "key": "B",
+                "text": "Enable the change feed on the storage account and process all changes for available events."
+            },
+            {
+                "key": "C",
+                "text": "Process all Azure Storage Analytics logs for successful blob events."
+            },
+            {
+                "key": "D",
+                "text": "Use the Azure Monitor HTTP Data Collector API and scan the request body for successful blob events."
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 82,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "sequence",
+        "sequenceLength": 5,
+        "question": "DRAG DROP - You plan to create a Docker image that runs an ASP.NET Core application named ContosoApp. You have a setup script named setupScript.ps1 and a series of application files including ContosoApp.dll. You need to create a Dockerfile document that calls setupScript.ps1 when the container is built and runs ContosoApp.dll when the container starts. The Dockerfile document must be created in the same folder where ContosoApp.dll and setupScript.ps1 are stored. Which five commands should you use, and in what order?",
+        "explanation": "Correct sequence: FROM microsoft/aspnetcore:latest, WORKDIR /apps/ContosoApp, COPY ./ ., RUN powershell ./setupScript.ps1, CMD [\"dotnet\", \"ContosoApp.dll\"]. This order selects the base runtime image, sets the working directory, copies local files into the image, runs setup at build time, and defines the startup command for container runtime.",
+        "options": [
+            {
+                "key": "A",
+                "text": "FROM microsoft/aspnetcore:latest"
+            },
+            {
+                "key": "B",
+                "text": "WORKDIR /apps/ContosoApp"
+            },
+            {
+                "key": "C",
+                "text": "CMD [\"dotnet\", \"ContosoApp.dll\"]"
+            },
+            {
+                "key": "D",
+                "text": "COPY ./ ."
+            },
+            {
+                "key": "E",
+                "text": "RUN powershell ./setupScript.ps1"
+            }
+        ],
+        "answers": [
+            "A",
+            "B",
+            "D",
+            "E",
+            "C"
+        ]
+    },
+    {
+        "id": 83,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing an Azure Function App that processes images that are uploaded to an Azure Blob container. Images must be processed as quickly as possible after they are uploaded, and the solution must minimize latency. You create code to process images when the Function App is triggered. You need to configure the Function App. What should you do?",
+        "explanation": "Correct: D. Use an App Service plan with an Azure Blob Storage trigger to minimize latency by avoiding consumption-plan cold starts while still triggering from blob uploads. Why others are wrong: A and E use an input trigger concept, which is not the proper trigger mechanism for this pattern; B uses the correct trigger but Consumption can introduce cold-start latency; C timer trigger does not react immediately to blob uploads.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Use an App Service plan. Configure the Function App to use an Azure Blob Storage input trigger."
+            },
+            {
+                "key": "B",
+                "text": "Use a Consumption plan. Configure the Function App to use an Azure Blob Storage trigger."
+            },
+            {
+                "key": "C",
+                "text": "Use a Consumption plan. Configure the Function App to use a Timer trigger."
+            },
+            {
+                "key": "D",
+                "text": "Use an App Service plan. Configure the Function App to use an Azure Blob Storage trigger."
+            },
+            {
+                "key": "E",
+                "text": "Use a Consumption plan. Configure the Function App to use an Azure Blob Storage input trigger."
+            }
+        ],
+        "answers": [
+            "D"
+        ]
+    },
+    {
+        "id": 84,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Storage account name index function",
+            "Storage resource iteration block",
+            "VMSS dependency list property"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"]
+        ],
+        "question": "HOTSPOT - You are configuring a new development environment for a Java application. The environment requires a Virtual Machine Scale Set (VMSS), several storage accounts, and networking components. The VMSS must not be created until the storage accounts have been successfully created and an associated load balancer and virtual network is configured. How should you complete the Azure Resource Manager template?\n\n{\n  \"resources\": [\n    {\n      \"apiVersion\": \"2016-01-01\",\n      \"type\": \"Microsoft.Storage/storageAccounts\",\n      \"name\": \"[concat([SLOT 1], '-storage', uniqueString(resourceGroup().id))]\",\n      \"location\": \"[resourceGroup().location]\",\n      \"sku\": { \"name\": \"Standard_LRS\" },\n      \"kind\": \"Storage\",\n      \"properties\": {},\n      \"[SLOT 2]\": {\n        \"name\": \"storagesetup\",\n        \"count\": 3\n      }\n    },\n    {\n      \"apiVersion\": \"2015-06-15\",\n      \"type\": \"Microsoft.Compute/virtualMachines\",\n      \"name\": \"[concat('VM', uniqueString(resourceGroup().id))]\",\n      \"[SLOT 3]\": [\n        \"[variables('loadBalancerName')]\",\n        \"[variables('virtualNetworkName')]\",\n        \"storagesetup\"\n      ]\n    }\n  ]\n}",
+        "explanation": "Correct: copyIndex, copy, dependsOn. Use copyIndex() in the storage account name expression to generate unique names per iteration. Use the copy block to create multiple storage accounts. Use dependsOn in the VM resource so creation waits for storage setup, load balancer, and virtual network prerequisites. Why others are wrong: priority is not used for ARM resource iteration or dependency wiring in this template context.",
+        "options": [
+            {
+                "key": "A",
+                "text": "copy"
+            },
+            {
+                "key": "B",
+                "text": "copyIndex"
+            },
+            {
+                "key": "C",
+                "text": "priority"
+            },
+            {
+                "key": "D",
+                "text": "dependsOn"
+            }
+        ],
+        "answers": [
+            "B",
+            "A",
+            "D"
+        ]
+    },
+    {
+        "id": 85,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "The code will log the time that the order was processed from the queue",
+            "When the ProcessOrders function fails, the function will retry up to five times for a given order, including the first try",
+            "When there are multiple orders in the queue, a batch of orders will be retrieved and the ProcessOrders function will run multiple instances concurrently to process the orders",
+            "The ProcessOrders function will output the order to an Orders table in Azure Table Storage"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B"],
+            ["A", "B"],
+            ["A", "B"],
+            ["A", "B"]
+        ],
+        "question": "HOTSPOT - You are developing an Azure Function App by using Visual Studio. The app will process orders input by an Azure Web App. The web app places the order information into Azure Queue Storage. You need to review the Azure Function App code shown below.\n\npublic static class OrderProcessor\n{\n    [FunctionName(\"ProcessOrders\")]\n    public static void ProcessOrders([QueueTrigger(\"incoming-orders\")]CloudQueueMessage myQueueItem, [Table(\"Orders\")]ICollector<Order> tableBindings, TraceWriter log)\n    {\n        log.Info($\"Processing Order: {myQueueItem.Id}\");\n        log.Info($\"Queue Insertion Time: {myQueueItem.InsertionTime}\");\n        log.Info($\"Queue Expiration Time: {myQueueItem.ExpirationTime}\");\n        tableBindings.Add(JsonConvert.DeserializeObject<Order>(myQueueItem.AsString));\n    }\n\n    [FunctionName(\"ProcessOrders-Poison\")]\n    public static void ProcessFailedOrders([QueueTrigger(\"incoming-orders-poison\")]CloudQueueMessage myQueueItem, TraceWriter log)\n    {\n        log.Error($\"Failed to process order: {myQueueItem.AsString}\");\n    }\n}\n\nFor each statement, select Yes or No.",
+        "explanation": "Correct: No, Yes, Yes, Yes. The code logs queue insertion/expiration metadata, not an explicit processed timestamp value. Queue-triggered functions retry failed processing and eventually move messages to the poison queue. Queue triggers can process batches concurrently when multiple messages exist. The [Table(\"Orders\")] ICollector<Order> output binding writes deserialized orders to Azure Table Storage.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    {
+        "id": 86,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Return the most recent patient status",
+            "Return monitoring data no less than one version behind",
+            "Retrieve final billing data after discharge"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"]
+        ],
+        "question": "DRAG DROP - You are developing a solution for a hospital to support the following use cases: the most recent patient status details must be retrieved even if multiple users in different locations have updated the patient record; patient health monitoring data retrieved must be the current version or the prior version; and after a patient is discharged and all charges have been assessed, the patient billing record contains the final charges. You provision a Cosmos DB NoSQL database and set the default consistency level to Strong and indexing mode to Consistent. You need to minimize latency and any impact to availability by overriding consistency at query level where possible. Which consistency levels should you implement?",
+        "explanation": "Correct: Strong, Bounded Staleness, Strong. Most recent patient status requires Strong for latest global view. A requirement of current or prior version maps directly to Bounded Staleness (for example K=1). Final billing correctness requires Strong to ensure the read reflects the definitive final-charge record when queried. Why others are wrong for these slots: Eventual and Consistent Prefix can return stale values that may violate most-recent or final-charge correctness guarantees.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Strong"
+            },
+            {
+                "key": "B",
+                "text": "Bounded Staleness"
+            },
+            {
+                "key": "C",
+                "text": "Consistent Prefix"
+            },
+            {
+                "key": "D",
+                "text": "Eventual"
+            }
+        ],
+        "answers": [
+            "A",
+            "B",
+            "A"
+        ]
+    },
+    {
+        "id": 87,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Generalize the VM",
+            "Store images"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"]
+        ],
+        "question": "HOTSPOT - You are configuring a development environment for your team. You deploy the latest Visual Studio image from the Azure Marketplace to your Azure subscription. The development environment requires several software development kits (SDKs) and third-party components to support application development across the organization. You install and customize the deployed virtual machine (VM) for your development team. The customized VM must be saved to allow provisioning of a new team member development environment. You need to save the customized VM for future provisioning. Which tools or services should you use?",
+        "explanation": "Correct: Azure PowerShell and Azure Blob Storage. Use Azure PowerShell to mark/generalize the customized VM before image capture. Store the captured VM image/VHD artifacts in Azure Blob Storage for reuse in provisioning workflows. Why others are wrong: Visual Studio command prompt is not used to generalize Azure VMs; Azure Migrate and Azure Backup are for migration/protection scenarios, not VM generalization for image capture; Data Lake/File/Table storage are not the standard storage target for VM image VHD artifacts in this context.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Azure PowerShell"
+            },
+            {
+                "key": "B",
+                "text": "Visual Studio command prompt"
+            },
+            {
+                "key": "C",
+                "text": "Azure Migrate"
+            },
+            {
+                "key": "D",
+                "text": "Azure Backup"
+            },
+            {
+                "key": "E",
+                "text": "Azure Blob Storage"
+            },
+            {
+                "key": "F",
+                "text": "Azure Data Lake Storage"
+            },
+            {
+                "key": "G",
+                "text": "Azure File Storage"
+            },
+            {
+                "key": "H",
+                "text": "Azure Table Storage"
+            }
+        ],
+        "answers": [
+            "A",
+            "E"
+        ]
+    },
+    {
+        "id": 88,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are preparing to deploy a website to an Azure Web App from a GitHub repository. The website includes static content generated by a script.\n\nYou plan to use the Azure Web App continuous deployment feature.\n\nYou need to run the static generation script before the website starts serving traffic.\n\nWhat are two possible ways to achieve this goal? Each correct answer presents a complete solution.",
+        "explanation": "Correct: B and D. A PreBuild target in the .csproj file executes during the build process before the application is deployed, allowing the static generation script to run before traffic begins. A .deployment file in the repository root is consumed by Azure App Service during deployment and can execute custom scripts as part of the deployment pipeline, including running static generation before the application starts. Why others are wrong: A is incorrect—WEBSITE_RUN_FROM_PACKAGE is an app setting that affects how the application runs from a deployment package; it is not used to trigger pre-deployment scripts and is not a host.json setting. C is incorrect—Azure App Service does not automatically execute scripts from a /run folder; this is not a recognized lifecycle hook for App Service deployment.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Add the path to the static content generation tool to WEBSITE_RUN_FROM_PACKAGE setting in the host.json file."
+            },
+            {
+                "key": "B",
+                "text": "Add a PreBuild target in the websites csproj project file that runs the static content generation script."
+            },
+            {
+                "key": "C",
+                "text": "Create a file named run.cmd in the folder /run that calls a script which generates the static content and deploys the website."
+            },
+            {
+                "key": "D",
+                "text": "Create a file named .deployment in the root of the repository that calls a script which generates the static content and deploys the website."
+            }
+        ],
+        "answers": [
+            "B",
+            "D"
+        ]
+    },
+    {
+        "id": 89,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "sequence",
+        "sequenceLength": 5,
+        "question": "DRAG DROP - You are developing an application to use Azure Blob storage. You have configured Azure Blob storage to include change feeds.\n\nA copy of your storage account must be created in another region. Data must be copied from the current storage account to the new storage account directly between the storage servers.\n\nYou need to create a copy of the storage account in another region and copy the data.\n\nIn which order should you perform the actions? To answer, move all actions from the list of actions to the answer area and arrange them in the correct order.",
+        "explanation": "Correct sequence: 1) Export a Resource Manager template to capture the current storage account configuration including change feeds setting. 2) Modify the template by changing the storage account name and specifying the target region. 3) Create a new template deployment to prepare the deployment operation. 4) Deploy the template to create the new storage account in the target region with the same configuration. 5) Use AZCopy to copy data directly between the storage servers, ensuring change feeds data is transferred. AZCopy is used for server-to-server data transfer which meets the requirement for direct copying between storage servers.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Use AZCopy to copy the data to the new storage account."
+            },
+            {
+                "key": "B",
+                "text": "Deploy the template to create a new storage account in the target region."
+            },
+            {
+                "key": "C",
+                "text": "Export a Resource Manager template."
+            },
+            {
+                "key": "D",
+                "text": "Create a new template deployment."
+            },
+            {
+                "key": "E",
+                "text": "Modify the template by changing the storage account name and region."
+            }
+        ],
+        "answers": [
+            "C",
+            "E",
+            "D",
+            "B",
+            "A"
+        ]
+    },
+    {
+        "id": 90,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Firewall configuration",
+            "Supporting services script"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"]
+        ],
+        "question": "DRAG DROP - You are preparing to deploy an Azure virtual machine (VM)-based application.\n\nThe VMs that run the application have the following requirements:\n\n✓ When a VM is provisioned the firewall must be automatically configured before it can access Azure resources.\n\n✓ Supporting services must be installed by using an Azure PowerShell script that is stored in Azure Storage.\n\nYou need to ensure that the requirements are met.\n\nWhich features should you use? To answer, drag the appropriate features to the correct requirements. Each feature may be used once, more than once, or not at all.",
+        "explanation": "Correct: Custom Script Extension for firewall configuration; Hybrid Runbook Worker for supporting services script. Custom Script Extension runs during VM provisioning and can execute scripts to configure the firewall before the VM accesses Azure resources. Hybrid Runbook Worker executes Azure PowerShell scripts stored in Azure Storage with full access to Azure resources, making it ideal for installing supporting services with Azure connectivity requirements. Why others are wrong: Run Command executes commands post-deployment but not automatically at provisioning time. Serial Console is for troubleshooting/access only, not automation.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Run Command"
+            },
+            {
+                "key": "B",
+                "text": "Serial console"
+            },
+            {
+                "key": "C",
+                "text": "Hybrid Runbook Worker"
+            },
+            {
+                "key": "D",
+                "text": "Custom Script Extension"
+            }
+        ],
+        "answers": [
+            "D",
+            "C"
+        ]
     }
 ]
