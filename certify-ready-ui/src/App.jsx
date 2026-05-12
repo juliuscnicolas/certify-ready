@@ -44,6 +44,9 @@ function App() {
   const [allQuestions, setAllQuestions] = useState([])
   const [selectedQuestions, setSelectedQuestions] = useState([])
   const [questionCount, setQuestionCount] = useState(10)
+  const [questionIdFrom, setQuestionIdFrom] = useState('')
+  const [questionIdTo, setQuestionIdTo] = useState('')
+  const [randomizeOrder, setRandomizeOrder] = useState(true)
   const [answers, setAnswers] = useState({})
   const [phase, setPhase] = useState('setup')
   const [loading, setLoading] = useState(true)
@@ -98,6 +101,8 @@ function App() {
         const items = await fetchAllQuestionsByExam(selectedExamType, selectedSourceType)
         setAllQuestions(items)
         setQuestionCount(Math.min(20, items.length || 10))
+        setQuestionIdFrom('')
+        setQuestionIdTo('')
         setSelectedQuestions([])
         setAnswers({})
         setResults(null)
@@ -125,6 +130,62 @@ function App() {
     [allQuestions, selectedQuestionType],
   )
 
+  const availableIdBounds = useMemo(() => {
+    if (availableQuestions.length === 0) {
+      return { min: null, max: null }
+    }
+
+    const ids = availableQuestions.map((question) => question.id)
+    return {
+      min: Math.min(...ids),
+      max: Math.max(...ids),
+    }
+  }, [availableQuestions])
+
+  useEffect(() => {
+    if (availableIdBounds.min === null || availableIdBounds.max === null) {
+      setQuestionIdFrom('')
+      setQuestionIdTo('')
+      return
+    }
+
+    setQuestionIdFrom((currentValue) =>
+      currentValue === '' ? String(availableIdBounds.min) : currentValue,
+    )
+    setQuestionIdTo((currentValue) =>
+      currentValue === '' ? String(availableIdBounds.max) : currentValue,
+    )
+  }, [availableIdBounds])
+
+  const rangeFilteredQuestions = useMemo(() => {
+    const fromValue = Number(questionIdFrom)
+    const toValue = Number(questionIdTo)
+
+    const hasFrom = !Number.isNaN(fromValue)
+    const hasTo = !Number.isNaN(toValue)
+
+    let rangeStart = hasFrom ? fromValue : null
+    let rangeEnd = hasTo ? toValue : null
+
+    if (rangeStart !== null && rangeEnd !== null && rangeStart > rangeEnd) {
+      const temp = rangeStart
+      rangeStart = rangeEnd
+      rangeEnd = temp
+    }
+
+    return availableQuestions.filter((question) => {
+      if (rangeStart !== null && question.id < rangeStart) {
+        return false
+      }
+
+      if (rangeEnd !== null && question.id > rangeEnd) {
+        return false
+      }
+
+      return true
+    })
+  }, [availableQuestions, questionIdFrom, questionIdTo])
+
   useEffect(() => {
     setQuestionCount((currentCount) => {
       const numericCount = Number(currentCount)
@@ -133,15 +194,15 @@ function App() {
         return currentCount
       }
 
-      if (availableQuestions.length === 0) {
+      if (rangeFilteredQuestions.length === 0) {
         return 0
       }
 
-      return Math.min(Math.max(numericCount || 1, 1), availableQuestions.length)
+      return Math.min(Math.max(numericCount || 1, 1), rangeFilteredQuestions.length)
     })
-  }, [availableQuestions])
+  }, [rangeFilteredQuestions])
 
-  const availableQuestionCount = availableQuestions.length
+  const availableQuestionCount = rangeFilteredQuestions.length
   const safeQuestionCount = Math.min(Math.max(Number(questionCount) || 1, 1), availableQuestionCount || 1)
 
   function handleQuestionCountChange(value) {
@@ -156,7 +217,11 @@ function App() {
   }
 
   function startExam() {
-    const sampledQuestions = shuffleQuestions(availableQuestions).slice(0, safeQuestionCount)
+    const sourceQuestions = randomizeOrder
+      ? shuffleQuestions(rangeFilteredQuestions)
+      : [...rangeFilteredQuestions].sort((left, right) => left.id - right.id)
+
+    const sampledQuestions = sourceQuestions.slice(0, safeQuestionCount)
 
     setSelectedQuestions(sampledQuestions)
     setAnswers({})
@@ -356,6 +421,30 @@ function App() {
             </label>
 
             <label className="input-group">
+              <span>Question ID from</span>
+              <input
+                type="number"
+                min={availableIdBounds.min ?? undefined}
+                max={availableIdBounds.max ?? undefined}
+                value={questionIdFrom}
+                onChange={(event) => setQuestionIdFrom(event.target.value)}
+                placeholder={availableIdBounds.min ? String(availableIdBounds.min) : ''}
+              />
+            </label>
+
+            <label className="input-group">
+              <span>Question ID to</span>
+              <input
+                type="number"
+                min={availableIdBounds.min ?? undefined}
+                max={availableIdBounds.max ?? undefined}
+                value={questionIdTo}
+                onChange={(event) => setQuestionIdTo(event.target.value)}
+                placeholder={availableIdBounds.max ? String(availableIdBounds.max) : ''}
+              />
+            </label>
+
+            <label className="input-group">
               <span>Question type</span>
               <select
                 value={selectedQuestionType}
@@ -365,6 +454,17 @@ function App() {
                 <option value="choice">Multiple choice</option>
                 <option value="sequence">Sequence</option>
                 <option value="hotspot">Hotspot</option>
+              </select>
+            </label>
+
+            <label className="input-group">
+              <span>Order</span>
+              <select
+                value={randomizeOrder ? 'random' : 'ordered'}
+                onChange={(event) => setRandomizeOrder(event.target.value === 'random')}
+              >
+                <option value="random">Randomize in selected range</option>
+                <option value="ordered">Keep ID order</option>
               </select>
             </label>
 

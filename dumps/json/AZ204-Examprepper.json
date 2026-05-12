@@ -3228,5 +3228,379 @@
             "D",
             "C"
         ]
+    },
+    {
+        "id": 91,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Command to create the App Service plan",
+            "Command to create the web app",
+            "Argument to specify the App Service plan",
+            "Command prefix to configure deployment source",
+            "Argument to connect GitHub repository"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "B", "C", "D"],
+            ["F", "G", "H"],
+            ["I", "A", "B", "D"],
+            ["F", "G", "H"]
+        ],
+        "question": "HOTSPOT - You are creating a CLI script that creates an Azure web app and related services in Azure App Service. The web app uses the following variables:\n\n$gitrepo = https://github.com/Contos/webapp\n$webappname = webapp1103\n\nYou need to automatically deploy code from GitHub to the newly created web app.\n\nHow should you complete the script? To answer, select the appropriate options in the answer area.",
+        "explanation": "Correct script flow: az appservice plan create --name $webappname --resource-group myResourceGroup --sku FREE; az webapp create --name $webappname --resource-group myResourceGroup --plan $webappname; az webapp deployment source config --name $webappname --resource-group myResourceGroup --repo-url $gitrepo --branch master --manual-integration. Why others are wrong: az group delete removes resources, not creates them. git clone $gitrepo only clones locally and does not configure App Service deployment. --plan is not valid for deployment source config, and --repo-url is not valid for web app creation command.",
+        "options": [
+            {
+                "key": "A",
+                "text": "az webapp"
+            },
+            {
+                "key": "B",
+                "text": "az appservice plan create"
+            },
+            {
+                "key": "C",
+                "text": "az webapp deployment"
+            },
+            {
+                "key": "D",
+                "text": "az group delete"
+            },
+            {
+                "key": "E",
+                "text": "az webapp create"
+            },
+            {
+                "key": "F",
+                "text": "--repo-url $gitrepo --branch master --manual-integration"
+            },
+            {
+                "key": "G",
+                "text": "git clone $gitrepo"
+            },
+            {
+                "key": "H",
+                "text": "--plan $webappname"
+            },
+            {
+                "key": "I",
+                "text": "az webapp deployment"
+            }
+        ],
+        "answers": [
+            "B",
+            "E",
+            "H",
+            "I",
+            "F"
+        ]
+    },
+    {
+        "id": 92,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Create resource group command",
+            "Create App Service plan command",
+            "Create web app command",
+            "Create review slot command"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"]
+        ],
+        "question": "HOTSPOT - A company is developing a Node.js web app. The web app code is hosted in a GitHub repository located at https://github.com/TailSpinToys/webapp.\n\nThe web app must be reviewed before it is moved to production. You must deploy the initial code release to a deployment slot named review.\n\nYou need to create the web app and deploy the code.\n\nHow should you complete the commands? To answer, select the appropriate options in the answer area.",
+        "explanation": "Correct order of command selections: New-AzResourceGroup, New-AzAppServicePlan, New-AzWebApp, New-AzWebAppSlot. New-AzResourceGroup creates myResourceGroup in the target region. New-AzAppServicePlan creates the hosting plan (Tier Standard supports deployment slots). New-AzWebApp creates the app in that plan. New-AzWebAppSlot creates the review slot where the initial release is deployed before swap to production. Why others are wrong: using New-AzWebApp or New-AzWebAppSlot before creating the resource group/plan fails prerequisite dependencies; New-AzAppServicePlan does not create the web app itself.",
+        "options": [
+            {
+                "key": "A",
+                "text": "New-AzWebAppSlot"
+            },
+            {
+                "key": "B",
+                "text": "New-AzWebApp"
+            },
+            {
+                "key": "C",
+                "text": "New-AzAppServicePlan"
+            },
+            {
+                "key": "D",
+                "text": "New-AzResourceGroup"
+            }
+        ],
+        "answers": [
+            "D",
+            "C",
+            "B",
+            "A"
+        ]
+    },
+    {
+        "id": 93,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Identity assignment parameter",
+            "Identity type value"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B"],
+            ["C", "D"]
+        ],
+        "question": "HOTSPOT - You are developing an application that needs access to an Azure virtual machine (VM).\n\nThe access lifecycle for the application must be associated with the VM service instance.\n\nYou need to enable managed identity for the VM.\n\nHow should you complete the PowerShell segment?\n\n$vm = Get-AzVM -ResourceGroupName \"ContosoRG\" -Name \"ContosoVM\"\nUpdate-AzVM -ResourceGroupName \"ContosoRG\" -VM $vm [SLOT 1] [SLOT 2]",
+        "explanation": "Correct: -AssignIdentity: and $SystemAssigned. A system-assigned managed identity is tied directly to the VM lifecycle and is deleted when the VM is deleted, matching the requirement that access lifecycle be associated with the VM service instance. Why others are wrong: -IdentityId: is used to attach a user-assigned identity resource ID, and $UserAssigned creates lifecycle independence from the VM, which does not meet the requirement.",
+        "options": [
+            {
+                "key": "A",
+                "text": "-AssignIdentity:"
+            },
+            {
+                "key": "B",
+                "text": "-IdentityId:"
+            },
+            {
+                "key": "C",
+                "text": "$SystemAssigned"
+            },
+            {
+                "key": "D",
+                "text": "$UserAssigned"
+            }
+        ],
+        "answers": [
+            "A",
+            "C"
+        ]
+    },
+    {
+        "id": 94,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou develop a software as a service (SaaS) offering to manage photographs. Users upload photos to a web service which then stores the photos in Azure Storage Blob storage. The storage account type is General-purpose V2.\n\nWhen photos are uploaded, they must be processed to produce and save a mobile-friendly version of the image. The process to produce a mobile-friendly version of the image must start in less than one minute.\n\nYou need to design the process that starts the photo processing.\n\nSolution: Create an Azure Function app that uses the Consumption hosting model and that is triggered from the blob upload.\n\nDoes the solution meet the goal?",
+        "explanation": "No. A blob-triggered Azure Function in the Consumption plan can experience cold-start delay and trigger latency that may exceed the one-minute requirement. To guarantee start time under one minute, a continuously warm hosting option or a different event-processing design is a better fit. Why yes is wrong: the trigger alone does not eliminate cold starts on Consumption hosting, so the solution does not reliably meet the timing requirement.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 95,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou develop and deploy an Azure App Service API app to a Windows-hosted deployment slot named Development. You create additional deployment slots named Testing and Production. You enable auto swap on the Production deployment slot.\n\nYou need to ensure that scripts run and resources are available before a swap operation occurs.\n\nSolution: Update the app with a method named statuscheck to run the scripts. Update the app settings for the app. Set the WEBSITE_SWAP_WARMUP_PING_PATH and WEBSITE_SWAP_WARMUP_PING_STATUSES with a path to the new method and appropriate response codes.\n\nDoes the solution meet the goal?",
+        "explanation": "Yes. The WEBSITE_SWAP_WARMUP_PING_PATH and WEBSITE_SWAP_WARMUP_PING_STATUSES settings are designed for App Service slot warm-up before swap. Pointing the warm-up path to a statuscheck endpoint lets the app run initialization logic and confirm resources are ready before the Production swap completes. Why no is wrong: this is the supported mechanism for pre-swap warm-up and health verification on Windows-hosted App Service deployment slots.",
+        "options": [
+            {
+                "key": "A",
+                "text": "No"
+            },
+            {
+                "key": "B",
+                "text": "Yes"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 96,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "A log alert is created that sends an email when the CPU percentage is above 60 percent for five minutes.",
+            "A log alert is created that sends an email when the number of virtual machine heartbeats in the past hour is less than five.",
+            "The log alert is scheduled to run every two hours."
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B"],
+            ["A", "B"],
+            ["A", "B"]
+        ],
+        "question": "HOTSPOT - You create the following PowerShell script:\n\n$source = New-AzScheduledQueryRuleSource -Query 'Heartbeat | where TimeGenerated > ago(1h)' -DataSourceId \"contoso\"\n$schedule = New-AzScheduledQueryRuleSchedule -FrequencyInMinutes 60 -TimeWindowInMinutes 60\n$triggerCondition = New-AzScheduledQueryRuleTriggerCondition -ThresholdOperator \"LessThan\" -Threshold 5\n$aznsActionGroup = New-AzScheduledQueryRuleAznsActionGroup -ActionGroup \"contoso\" -EmailSubject \"Custom email subject\" -CustomWebhookPayload '{\"alert\":\"#alertruleName\",\"IncludeSearchResults\":\"true\"}'\n$alertingAction = New-AzScheduledQueryRuleAlertingAction -AznsActionGroup $aznsActionGroup -Severity \"3\" -Trigger $triggerCondition\nNew-AzScheduledQueryRule -ResourceGroupName \"contoso\" -Location \"eastus\" -Action $alertingAction -Enabled $true -Description \"Alert description\" -Schedule $schedule -Source $source -Name \"Alert Name\"\n\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+        "explanation": "Correct evaluations: 1) No, 2) Yes, 3) No. The query targets Heartbeat records, not CPU percentage, so the first statement is false. The trigger condition uses LessThan 5 for the number of heartbeat records in the past hour, which makes the second statement true. The schedule runs every 60 minutes, not every two hours, so the third statement is false. Why the opposite answers are wrong: the script does not monitor CPU, it does not use a two-hour interval, and it does use a heartbeat-based threshold alert.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B",
+            "A",
+            "B"
+        ]
+    },
+    {
+        "id": 97,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Enable developers to write the functions by using the Rust language.",
+            "Declaratively connect to an Azure Blob Storage account."
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D", "E", "F"],
+            ["A", "B", "C", "D", "E", "F"]
+        ],
+        "question": "DRAG DROP - You are developing an Azure Function app.\n\nThe app must meet the following requirements:\n\n✓ Enable developers to write the functions by using the Rust language.\n\n✓ Declaratively connect to an Azure Blob Storage account.\n\nYou need to implement the app.\n\nWhich Azure Function app features should you use? To answer, drag the appropriate features to the correct requirements.",
+        "explanation": "Correct: Custom handler for Rust and Trigger for Azure Blob Storage. Custom handlers let you run Azure Functions written in languages that are not natively supported by the runtime, including Rust. A trigger declaratively connects the function to Azure Blob Storage so the function starts in response to blob events. Why others are wrong: Extension bundles package bindings but do not enable Rust as a language; Runtime and Hosting plan are not the feature used to add Rust support; Policy is unrelated to language support or blob connectivity.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Custom handler"
+            },
+            {
+                "key": "B",
+                "text": "Extension bundle"
+            },
+            {
+                "key": "C",
+                "text": "Trigger"
+            },
+            {
+                "key": "D",
+                "text": "Runtime"
+            },
+            {
+                "key": "E",
+                "text": "Policy"
+            },
+            {
+                "key": "F",
+                "text": "Hosting plan"
+            }
+        ],
+        "answers": [
+            "A",
+            "C"
+        ]
+    },
+    {
+        "id": 98,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "App setting to enable persistent storage",
+            "Path to store runtime diagnostic data"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"]
+        ],
+        "question": "HOTSPOT - You are developing an ASP.NET Core web application. You plan to deploy the application to Azure Web App for Containers.\n\nThe application needs to store runtime diagnostic data that must be persisted across application restarts. You have the following code:\n\npublic void SaveDiagData(string data)\n{\n    var path = Environment.GetEnvironmentVariable(\"DIAGDATA\");\n    File.WriteAllText(Path.Combine(path, \"data\"), data);\n}\n\nYou need to configure the application settings so that diagnostic data is stored as required.\n\nHow should you configure the web app's settings? To answer, select the appropriate options in the answer area.",
+        "explanation": "Correct: WEBSITES_ENABLE_APP_SERVICE_STORAGE and /home. For Web App for Containers, enabling WEBSITES_ENABLE_APP_SERVICE_STORAGE makes the App Service mounted storage available to the container across restarts, and the diagnostic path should point to the mounted home directory. Why others are wrong: WEBSITE_LOCALCACHE_ENABLED affects local cache behavior, not persistent storage; LOCALAPPDATA and DOTNET_HOSTING_OPTIMIZATION_CACHE are not the App Service setting used to persist container data; /local and D:\\local are not the persistent App Service storage mount used for this scenario.",
+        "options": [
+            {
+                "key": "A",
+                "text": "LOCALAPPDATA"
+            },
+            {
+                "key": "B",
+                "text": "WEBSITE_LOCALCACHE_ENABLED"
+            },
+            {
+                "key": "C",
+                "text": "DOTNET_HOSTING_OPTIMIZATION_CACHE"
+            },
+            {
+                "key": "D",
+                "text": "WEBSITES_ENABLE_APP_SERVICE_STORAGE"
+            },
+            {
+                "key": "E",
+                "text": "/home"
+            },
+            {
+                "key": "F",
+                "text": "/local"
+            },
+            {
+                "key": "G",
+                "text": "D:\\home"
+            },
+            {
+                "key": "H",
+                "text": "D:\\local"
+            }
+        ],
+        "answers": [
+            "D",
+            "E"
+        ]
+    },
+    {
+        "id": 99,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing a web app that is protected by Azure Web Application Firewall (WAF). All traffic to the web app is routed through an Azure Application Gateway instance that is used by multiple web apps. The web app address is contoso.azurewebsites.net.\n\nAll traffic must be secured with SSL. The Azure Application Gateway instance is used by multiple web apps.\n\nYou need to configure the Azure Application Gateway for the web app.\n\nWhich two actions should you perform? Each correct answer presents part of the solution.",
+        "explanation": "Correct: A and C. Enabling Use for App service in the Application Gateway HTTP setting ensures the gateway uses the proper App Service-specific host header and SNI behavior when forwarding HTTPS traffic to the web app. Adding an authentication certificate lets Application Gateway trust and secure the backend SSL connection to contoso.azurewebsites.net. Why others are wrong: converting the app to an ASE is unnecessary because App Service can be protected through Application Gateway without moving to an ASE, and overriding the backend path does not configure SSL or App Service-specific backend validation.",
+        "options": [
+            {
+                "key": "A",
+                "text": "In the Azure Application Gateway's HTTP setting, enable the Use for App service setting."
+            },
+            {
+                "key": "B",
+                "text": "Convert the web app to run in an Azure App service environment (ASE)."
+            },
+            {
+                "key": "C",
+                "text": "Add an authentication certificate for contoso.azurewebsites.net to the Azure Application Gateway."
+            },
+            {
+                "key": "D",
+                "text": "In the Azure Application Gateway's HTTP setting, set the value of the Override backend path option to contoso22.azurewebsites.net."
+            }
+        ],
+        "answers": [
+            "A",
+            "C"
+        ]
+    },
+    {
+        "id": 100,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou develop a software as a service (SaaS) offering to manage photographs. Users upload photos to a web service which then stores the photos in Azure Storage Blob storage. The storage account type is General-purpose V2.\n\nWhen photos are uploaded, they must be processed to produce and save a mobile-friendly version of the image. The process to produce a mobile-friendly version of the image must start in less than one minute.\n\nYou need to design the process that starts the photo processing.\n\nSolution: Use the Azure Blob Storage change feed to trigger photo processing.\n\nDoes the solution meet the goal?",
+        "explanation": "No. Azure Blob Storage change feed is an ordered, durable log for auditing and asynchronous processing, but it is not designed as a near-real-time trigger mechanism with strict sub-minute startup guarantees. For this requirement, an event-driven trigger path such as Blob-created events via Event Grid is the appropriate approach. Why yes is wrong: change feed availability and processing are typically delayed and do not reliably meet the less-than-one-minute start objective.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
     }
 ]
