@@ -233,6 +233,16 @@ The backend is an ASP.NET Core Web API in the certify-ready-api project.
 
 This keeps the backend simple and easy to maintain while the question ingestion process is still manual.
 
+### Current constraints and planned improvements
+
+Due to budget constraints, the app does not yet use a database and currently relies on JSON files plus file-based result persistence.
+
+Planned next improvements include:
+
+- migrating question and result storage to a database
+- adding authentication and authorization features
+- evolving the app from a local file-backed prototype into a more complete multi-user platform
+
 ## Current question dump workflow
 
 As of now, question dumps are created manually.
