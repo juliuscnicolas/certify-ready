@@ -1,6 +1,13 @@
 import { useEffect, useMemo, useState } from 'react'
-import { fetchAllQuestionsByExam, fetchExams, validateQuestion } from './api'
+import {
+  appendResultHistory,
+  fetchAllQuestionsByExam,
+  fetchExams,
+  fetchResultHistory,
+  validateQuestion,
+} from './api'
 import { QuestionCard } from './components/QuestionCard'
+import { QuestionViewerPanel } from './components/QuestionViewerPanel'
 import { ReviewPanel } from './components/ReviewPanel'
 import { ResultsPanel } from './components/ResultsPanel'
 import './App.css'
@@ -51,8 +58,11 @@ function App() {
   const [phase, setPhase] = useState('setup')
   const [loading, setLoading] = useState(true)
   const [submitting, setSubmitting] = useState(false)
+  const [historyLoading, setHistoryLoading] = useState(false)
   const [error, setError] = useState('')
   const [results, setResults] = useState(null)
+  const [historyEntries, setHistoryEntries] = useState([])
+  const [examStartedAt, setExamStartedAt] = useState(null)
 
   useEffect(() => {
     async function loadExams() {
@@ -116,6 +126,22 @@ function App() {
 
     loadQuestions()
   }, [selectedExamType, selectedSourceType])
+
+  useEffect(() => {
+    async function loadHistory() {
+      try {
+        setHistoryLoading(true)
+        const items = await fetchResultHistory()
+        setHistoryEntries(items)
+      } catch (historyError) {
+        setError(historyError.message || 'Unable to load result history from the API.')
+      } finally {
+        setHistoryLoading(false)
+      }
+    }
+
+    loadHistory()
+  }, [])
 
   const selectedExam = exams.find((exam) => exam.examType === selectedExamType)
   const availableSources = selectedExam?.sources ?? []
@@ -226,6 +252,7 @@ function App() {
     setSelectedQuestions(sampledQuestions)
     setAnswers({})
     setResults(null)
+    setExamStartedAt(new Date().toISOString())
     setPhase('answering')
     setError('')
   }
@@ -296,10 +323,36 @@ function App() {
 
       const incorrectItems = validations.filter((item) => !item.isCorrect)
       const correctCount = validations.length - incorrectItems.length
+      const totalIncorrect = incorrectItems.length
       const unansweredCount = validations.filter((item) => item.selectedAnswers.length === 0).length
       const percentage = validations.length === 0
         ? 0
         : Math.round((correctCount / validations.length) * 100)
+
+      const completedAt = new Date()
+      const startedAt = examStartedAt ? new Date(examStartedAt) : null
+      const durationSeconds = startedAt
+        ? Math.max(0, Math.round((completedAt.getTime() - startedAt.getTime()) / 1000))
+        : 0
+
+      const historyEntry = {
+        examType: selectedExamType,
+        sourceType: selectedSourceType,
+        totalQuestions: validations.length,
+        totalCorrect: correctCount,
+        totalIncorrect,
+        incorrectQuestionIds: incorrectItems.map((item) => item.question.id),
+        durationSeconds,
+        completedAt: completedAt.toISOString(),
+        percentage,
+      }
+
+      try {
+        const updatedHistory = await appendResultHistory(historyEntry)
+        setHistoryEntries(updatedHistory)
+      } catch {
+        setError('Exam submitted, but saving history failed.')
+      }
 
       setResults({
         totalQuestions: validations.length,
@@ -309,6 +362,9 @@ function App() {
         answeredCount,
         unansweredCount,
         percentage,
+        totalIncorrect,
+        durationSeconds,
+        completedAt: completedAt.toISOString(),
         incorrectItems,
       })
       setPhase('results')
@@ -323,8 +379,16 @@ function App() {
     setSelectedQuestions([])
     setAnswers({})
     setResults(null)
+    setExamStartedAt(null)
     setPhase('setup')
     setError('')
+  }
+
+  function formatDuration(seconds) {
+    const safeSeconds = Math.max(0, Number(seconds) || 0)
+    const mins = Math.floor(safeSeconds / 60)
+    const secs = safeSeconds % 60
+    return `${mins}m ${String(secs).padStart(2, '0')}s`
   }
 
   const unansweredCount = selectedQuestions.length - answeredCount
@@ -498,6 +562,24 @@ function App() {
           <div className="panel__actions">
             <button
               type="button"
+              className="button button--secondary"
+              onClick={() => setPhase('viewer')}
+              disabled={!allQuestions.length}
+            >
+              Question viewer
+            </button>
+
+            <button
+              type="button"
+              className="button button--secondary"
+              onClick={() => setPhase('history')}
+              disabled={historyLoading}
+            >
+              {historyLoading ? 'Loading history...' : 'View result history'}
+            </button>
+
+            <button
+              type="button"
               className="button"
               onClick={startExam}
               disabled={!availableQuestionCount}
@@ -568,6 +650,74 @@ function App() {
           results={results}
           onRestart={resetExam}
           onReview={() => setPhase('review')}
+          onViewHistory={() => setPhase('history')}
+        />
+      ) : null}
+
+      {!loading && phase === 'history' ? (
+        <section className="panel history-panel">
+          <div className="panel__header">
+            <div>
+              <p className="panel__eyebrow">Result history</p>
+              <h2>Past exam attempts</h2>
+            </div>
+          </div>
+
+          {historyEntries.length === 0 ? (
+            <p className="empty-state">No exam history yet. Complete an exam to see attempts here.</p>
+          ) : (
+            <div className="history-table-wrap">
+              <table className="history-table">
+                <thead>
+                  <tr>
+                    <th>Date &amp; time</th>
+                    <th>Exam type</th>
+                    <th>Exam source</th>
+                    <th>Total</th>
+                    <th>Correct</th>
+                    <th>Incorrect</th>
+                    <th>Incorrect IDs</th>
+                    <th>Duration</th>
+                    <th>Percentage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {historyEntries.map((entry) => (
+                    <tr key={entry.attemptId ?? `${entry.completedAt}-${entry.examType}-${entry.sourceType}`}>
+                      <td>{new Date(entry.completedAt).toLocaleString()}</td>
+                      <td>{entry.examType}</td>
+                      <td>{entry.sourceType}</td>
+                      <td>{entry.totalQuestions}</td>
+                      <td>{entry.totalCorrect}</td>
+                      <td>{entry.totalIncorrect}</td>
+                      <td>
+                        {(entry.incorrectQuestionIds ?? []).length
+                          ? entry.incorrectQuestionIds.join(', ')
+                          : '--'}
+                      </td>
+                      <td>{formatDuration(entry.durationSeconds)}</td>
+                      <td>{entry.percentage}%</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
+          <div className="panel__actions">
+            <button type="button" className="button button--secondary" onClick={() => setPhase('setup')}>
+              Back to setup
+            </button>
+          </div>
+        </section>
+      ) : null}
+
+      {!loading && phase === 'viewer' ? (
+        <QuestionViewerPanel
+          questions={allQuestions}
+          examType={selectedExamType}
+          sourceType={selectedSourceType}
+          onBack={() => setPhase('setup')}
         />
       ) : null}
     </div>

@@ -11,7 +11,7 @@ function renderOptionText(question, keys) {
     .join(', ');
 }
 
-export function ResultsPanel({ results, onRestart, onReview }) {
+export function ResultsPanel({ results, onRestart, onReview, onViewHistory }) {
   return (
     <section className="panel results-panel">
       <div className="results-hero">
@@ -45,6 +45,9 @@ export function ResultsPanel({ results, onRestart, onReview }) {
       </div>
 
       <div className="panel__actions">
+        <button type="button" className="button button--secondary" onClick={onViewHistory}>
+          View history
+        </button>
         <button type="button" className="button button--secondary" onClick={onReview}>
           Review attempt
         </button>

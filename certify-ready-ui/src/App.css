@@ -464,6 +464,67 @@
   margin-top: 1.5rem;
 }
 
+.history-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(7, 59, 76, 0.12);
+  border-radius: 16px;
+  background: #fffef9;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 980px;
+}
+
+.history-table th,
+.history-table td {
+  padding: 0.8rem 0.9rem;
+  border-bottom: 1px solid rgba(7, 59, 76, 0.08);
+  text-align: left;
+  vertical-align: top;
+  color: #14323f;
+}
+
+.history-table th {
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #185260;
+  background: #eef6f7;
+}
+
+.history-table tbody tr:nth-child(even) {
+  background: rgba(238, 246, 247, 0.35);
+}
+
+.viewer-panel__meta {
+  margin: 0.65rem 0 0;
+  color: #185260;
+  font-weight: 600;
+}
+
+.viewer-filter-grid {
+  margin-bottom: 1rem;
+}
+
+.viewer-filter-grid .input-group:first-child {
+  grid-column: 1 / -1;
+}
+
+.viewer-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.viewer-item {
+  background: #fffef9;
+}
+
+.viewer-stats {
+  margin-bottom: 1rem;
+}
+
 .error-banner {
   color: #7a1d12;
   background: #ffe6de;

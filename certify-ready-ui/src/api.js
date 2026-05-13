@@ -71,3 +71,20 @@ export async function validateQuestion(questionId, selectedAnswers, examType, so
 
   return readJson(response);
 }
+
+export async function fetchResultHistory() {
+  const response = await fetch(`${API_BASE_URL}/api/results/history`);
+  return readJson(response);
+}
+
+export async function appendResultHistory(entry) {
+  const response = await fetch(`${API_BASE_URL}/api/results/history`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(entry),
+  });
+
+  return readJson(response);
+}
