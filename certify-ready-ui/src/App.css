@@ -105,7 +105,7 @@
 
 .setup-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
@@ -123,12 +123,16 @@
 .input-group input,
 .input-group select {
   width: 100%;
+  min-width: 0;
   box-sizing: border-box;
   border-radius: 14px;
   border: 1px solid rgba(7, 59, 76, 0.18);
   padding: 0.95rem 1rem;
   font: inherit;
   background: #fffef9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .input-group--range input {
@@ -468,9 +472,12 @@
 
 @media (max-width: 960px) {
   .hero,
-  .content-grid,
-  .setup-grid {
+  .content-grid {
     grid-template-columns: 1fr;
+  }
+
+  .setup-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .results-hero,
@@ -485,6 +492,10 @@
 }
 
 @media (max-width: 640px) {
+  .setup-grid {
+    grid-template-columns: 1fr;
+  }
+
   .panel,
   .hero,
   .question-card {

@@ -336,8 +336,9 @@ function App() {
           <p className="hero__eyebrow">Certify Ready</p>
           <h1>Build a focused exam session before you submit the real one.</h1>
           <p className="hero__description">
-            Pick how many questions you want, answer them in one pass, review your choices,
-            then submit to see your percentage and every incorrect answer.
+            Pick an exam and source, narrow down by question ID range, then choose whether to
+            tackle them in order or shuffle for a real exam feel. Review your answers before
+            submitting — and get an instant score breakdown when you&apos;re done.
           </p>
         </div>
         <div className="hero__meta">
