@@ -3602,5 +3602,169 @@
         "answers": [
             "B"
         ]
+    },
+    {
+        "id": 101,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing a web application that runs as an Azure Web App. The web application stores data in Azure SQL Database and stores files in an Azure Storage account. The web application makes HTTP requests to external services as part of normal operations.\n\nThe web application is instrumented with Application Insights. The external services are OpenTelemetry compliant.\n\nYou need to ensure that the customer ID of the signed in user is associated with all operations throughout the overall system.\n\nWhat should you do?",
+        "explanation": "Correct: A. Add the signed-in customer ID to correlation context (OpenTelemetry baggage/CorrelationContext) so it propagates across distributed operations and downstream calls while preserving trace semantics. Why others are wrong: B repurposes TraceId, which must remain a tracing identifier and not business data; C (Ocp-Apim-Trace) is for API Management tracing behavior and not end-to-end customer context propagation; D misuses TraceFlags, which are for trace options like sampling, not custom identifiers.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Add the customer ID for the signed in user to the CorrelationContext in the web application"
+            },
+            {
+                "key": "B",
+                "text": "On the current SpanContext, set the TraceId to the customer ID for the signed in user"
+            },
+            {
+                "key": "C",
+                "text": "Set the header Ocp-Apim-Trace to the customer ID for the signed in user"
+            },
+            {
+                "key": "D",
+                "text": "Create a new SpanContext with the TraceFlags value set to the customer ID for the signed in user"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 102,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou develop a software as a service (SaaS) offering to manage photographs. Users upload photos to a web service which then stores the photos in Azure Storage Blob storage. The storage account type is General-purpose V2.\n\nWhen photos are uploaded, they must be processed to produce and save a mobile-friendly version of the image. The process to produce a mobile-friendly version of the image must start in less than one minute.\n\nYou need to design the process that starts the photo processing.\n\nSolution: Trigger the photo processing from Blob storage events.\n\nDoes the solution meet the goal?",
+        "explanation": "Yes. Triggering photo processing from Blob Storage events is an event-driven approach (typically via Event Grid) that supports near-real-time reaction to blob uploads and can satisfy the less-than-one-minute startup requirement. Why no is wrong: unlike delayed log-style mechanisms, blob-created events are designed for prompt downstream processing workflows.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 103,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Publish",
+            "Runtime stack",
+            "Version"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B"],
+            ["C", "D", "E", "F"],
+            ["G", "H", "I"]
+        ],
+        "question": "HOTSPOT - You are developing an Azure Function App. You develop code by using a language that is not supported by the Azure Function App host. The code language supports HTTP primitives.\n\nYou must deploy the code to a production Azure Function App environment.\n\nYou need to configure the app for deployment.\n\nWhich configuration values should you use? To answer, select the appropriate options in the answer area.\n\nNOTE: Each correct selection is worth one point.\n\nAnswer area:\nPublish -> [SLOT 1]\nRuntime stack -> [SLOT 2]\nVersion -> [SLOT 3]",
+        "explanation": "Correct: A, F, and I. For an unsupported language that can handle HTTP primitives, use Azure Functions Custom Handler. In App Service configuration this aligns to Publish = Code, Runtime stack = Custom Handler, and Version = custom. Why others are wrong: Docker Container is not required for custom handler in this scenario, Node.js/Python/PowerShell Core are supported built-in worker runtimes rather than custom handler runtime, and 14 LTS or 7.0 are runtime-specific versions not used for Custom Handler.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Code"
+            },
+            {
+                "key": "B",
+                "text": "Docker Container"
+            },
+            {
+                "key": "C",
+                "text": "Node.js"
+            },
+            {
+                "key": "D",
+                "text": "Python"
+            },
+            {
+                "key": "E",
+                "text": "PowerShell Core"
+            },
+            {
+                "key": "F",
+                "text": "Custom Handler"
+            },
+            {
+                "key": "G",
+                "text": "14 LTS"
+            },
+            {
+                "key": "H",
+                "text": "7.0"
+            },
+            {
+                "key": "I",
+                "text": "custom"
+            }
+        ],
+        "answers": [
+            "A",
+            "F",
+            "I"
+        ]
+    },
+    {
+        "id": 104,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "sequence",
+        "sequenceLength": 4,
+        "question": "DRAG DROP - You provision virtual machines (VMs) as development environments.\n\nOne VM does not start. The VM is stuck in a Windows update process. You attach the OS disk for the affected VM to a recovery VM.\n\nYou need to correct the issue.\n\nIn which order should you perform the actions? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
+        "explanation": "Correct sequence: A, D, B, C. First list installed packages on the attached OS image using DISM and export the result. Next inspect Patch.txt to identify the update in a pending state. Then remove that pending package from the offline image with DISM /Remove-Package. Finally detach the repaired OS disk and recreate/bring back the VM with that corrected disk state.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Run the following command at an elevated command prompt: dism /image:\\ /get-packages > c:\\temp\\Patch.txt"
+            },
+            {
+                "key": "B",
+                "text": "Run the following command at an elevated command prompt: dism /Image:<Attached OS disks>:\\ /Remove Package /PackageName:<package name to delete>"
+            },
+            {
+                "key": "C",
+                "text": "Detach the OS disk and recreate the VM"
+            },
+            {
+                "key": "D",
+                "text": "Open c:\\temp\\Patch.txt file and locate the update that is in a pending state"
+            }
+        ],
+        "answers": [
+            "A",
+            "D",
+            "B",
+            "C"
+        ]
+    },
+    {
+        "id": 105,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou develop an HTTP triggered Azure Function app to process Azure Storage blob data. The app is triggered using an output binding on the blob.\n\nThe app continues to time out after four minutes. The app must process the blob data.\n\nYou need to ensure the app does not time out and processes the blob data.\n\nSolution: Update the functionTimeout property of the host.json project file to 10 minutes.\n\nDoes the solution meet the goal?",
+        "explanation": "No. For HTTP-triggered Azure Functions, requests can still hit the platform HTTP timeout boundary (about 230 seconds) regardless of increasing functionTimeout. Updating host.json to 10 minutes does not remove that HTTP request timeout limit. Use an async pattern (for example queue-triggered processing or Durable Functions) to ensure long-running blob processing completes reliably.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
     }
 ]

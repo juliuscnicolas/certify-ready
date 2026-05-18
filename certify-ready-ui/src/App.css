@@ -235,7 +235,51 @@
 }
 
 .question-card__text {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.question-text-chunk {
+  margin: 0;
   white-space: pre-line;
+}
+
+.code-block-wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  border: 1px solid rgba(7, 59, 76, 0.16);
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.code-block-header {
+  background: #185260;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.code-block-language {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.question-code-editor {
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  border: none;
+  background: #f5f8fa;
+  color: #102b36;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  padding: 0.65rem 0.75rem;
 }
 
 .question-card__options {
@@ -519,6 +563,195 @@
 
 .viewer-item {
   background: #fffef9;
+}
+
+.viewer-item--json {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.viewer-item__topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.viewer-type-pill {
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  background: #eef6f7;
+  color: #185260;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.viewer-block {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.viewer-block__label {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #185260;
+}
+
+.viewer-pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-radius: 12px;
+  border: 1px solid rgba(7, 59, 76, 0.1);
+  background: #f9fbfb;
+  color: #102b36;
+  padding: 0.75rem 0.85rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  max-height: 340px;
+  overflow: auto;
+}
+
+.viewer-pre--answer-area {
+  max-height: 220px;
+}
+
+.viewer-prompt-sections {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.viewer-pre--text-chunk {
+  max-height: none;
+}
+
+.viewer-inline-code-editor {
+  max-height: 360px;
+}
+
+.viewer-code-details {
+  border: 1px solid rgba(7, 59, 76, 0.12);
+  border-radius: 12px;
+  background: #f9fbfb;
+  padding: 0.5rem 0.7rem;
+}
+
+.viewer-code-details summary {
+  cursor: pointer;
+  color: #185260;
+  font-weight: 700;
+}
+
+.viewer-code-block {
+  margin-top: 0.55rem;
+}
+
+.viewer-code-editor,
+.viewer-option-editor {
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  border-radius: 12px;
+  border: 1px solid rgba(7, 59, 76, 0.16);
+  background: #f5f8fa;
+  color: #102b36;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  padding: 0.65rem 0.75rem;
+}
+
+.code-block-wrapper .viewer-code-editor {
+  border-radius: 0;
+  border: none;
+}
+
+.viewer-code-editor:focus,
+.viewer-option-editor:focus {
+  outline: none;
+  border-color: rgba(14, 73, 86, 0.45);
+}
+
+.viewer-option-grid,
+.viewer-slot-grid {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.viewer-option-item,
+.viewer-slot-item {
+  border: 1px solid rgba(7, 59, 76, 0.1);
+  border-radius: 12px;
+  padding: 0.65rem 0.75rem;
+  background: #fffef9;
+}
+
+.viewer-option-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.viewer-option-item--correct {
+  border-color: #ef6f36;
+  background: #fff1e7;
+}
+
+.viewer-option-item__key {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background: #e8f0ef;
+  color: #0e4956;
+}
+
+.viewer-option-item__text {
+  color: #14323f;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.viewer-option-editor {
+  margin: 0;
+  min-height: 4.2rem;
+}
+
+.viewer-slot-item p,
+.viewer-inline-meta {
+  margin: 0;
+  color: #174c59;
+}
+
+.viewer-answer {
+  margin-top: 0.1rem;
+}
+
+.viewer-raw-json {
+  border-top: 1px dashed rgba(7, 59, 76, 0.16);
+  padding-top: 0.55rem;
+}
+
+.viewer-raw-json summary {
+  cursor: pointer;
+  color: #185260;
+  font-weight: 700;
+}
+
+.viewer-pre--raw {
+  margin-top: 0.6rem;
+  max-height: 280px;
+  font-size: 0.84rem;
+  line-height: 1.35;
 }
 
 .viewer-stats {

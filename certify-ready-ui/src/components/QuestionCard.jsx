@@ -10,15 +10,135 @@ function getSelectionHelp(question) {
   return question.answers.length > 1 ? 'Select all correct answers.' : 'Select one answer.';
 }
 
+function detectCodeLanguage(code) {
+  const text = code ?? ''
+  
+  // C# patterns
+  if (/\b(public|private|protected|class|namespace|async|await|using|var|readonly)\b/.test(text) && /[{}]/.test(text)) {
+    return 'C#'
+  }
+  
+  // PowerShell patterns
+  if (/\$[a-zA-Z_]|Get-|Set-|New-|Remove-|-like|-eq|-ne/.test(text)) {
+    return 'PowerShell'
+  }
+  
+  // YAML patterns
+  if (/^[a-zA-Z_][a-zA-Z0-9_-]*:\s/m.test(text) && /^[\s-]/.test(text)) {
+    return 'YAML'
+  }
+  
+  // JSON patterns
+  if (/^[\s]*[\{\[]/.test(text) && /[\}\]][,\s]*$/.test(text)) {
+    return 'JSON'
+  }
+  
+  // JavaScript patterns
+  if (/\b(function|const|let|var|=>|async|await|import|export)\b/.test(text)) {
+    return 'JavaScript'
+  }
+  
+  // CLI patterns (az, kubectl, docker commands)
+  if (/^(az |kubectl |docker |git |npm |yarn )/m.test(text)) {
+    return 'CLI'
+  }
+  
+  return 'Code'
+}
+
+function CodeBlock({ code }) {
+  const language = detectCodeLanguage(code)
+  
+  return (
+    <div className="code-block-wrapper">
+      <div className="code-block-header">
+        <span className="code-block-language">{language}</span>
+      </div>
+      <textarea
+        className="question-code-editor"
+        value={code}
+        readOnly
+        rows={Math.min(Math.max(code.split('\n').length + 1, 4), 16)}
+        spellCheck={false}
+      />
+    </div>
+  )
+}
+
+function splitByBlankLines(value) {
+  return value
+    .split(/\n{2,}/)
+    .map((chunk) => chunk.trim())
+    .filter((chunk) => chunk.length > 0);
+}
+
+function isCodeChunk(chunk) {
+  const lines = chunk.split('\n');
+  let score = 0;
+
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+
+    if (trimmed === '' || trimmed === '{' || trimmed === '}') {
+      score += 1;
+      return;
+    }
+
+    if (/^\[\w+/.test(trimmed)) {
+      score += 2;
+    }
+
+    if (/^\$[a-zA-Z_]/.test(trimmed)) {
+      score += 2;
+    }
+
+    if (/^(public|private|protected|class|function|var|const|let|if|for|while|return)\b/.test(trimmed)) {
+      score += 2;
+    }
+
+    if (/(;|=>|\(.*\)|\[SLOT \d+\])/.test(trimmed)) {
+      score += 1;
+    }
+
+    if (/^(az|kubectl|docker)\s/.test(trimmed)) {
+      score += 2;
+    }
+  });
+
+  return score >= Math.max(3, Math.floor(lines.length * 1.2));
+}
+
+function renderTextSegment(segment, segmentIndex) {
+  const chunks = splitByBlankLines(segment);
+
+  if (chunks.length === 0) {
+    return null;
+  }
+
+  return chunks.map((chunk, chunkIndex) => {
+    if (isCodeChunk(chunk)) {
+      return (
+        <CodeBlock key={`code-${segmentIndex}-${chunkIndex}`} code={chunk} />
+      );
+    }
+
+    return (
+      <p key={`text-${segmentIndex}-${chunkIndex}`} className="question-text-chunk">
+        {chunk}
+      </p>
+    );
+  });
+}
+
 function renderQuestionText(text) {
-  return text.split(/(<u>[\s\S]*?<\/u>)/g).map((segment, index) => {
+  return text.split(/(<u>[\s\S]*?<\/u>)/g).flatMap((segment, index) => {
     const underlineMatch = segment.match(/^<u>([\s\S]*?)<\/u>$/);
 
     if (underlineMatch) {
-      return <u key={index}>{underlineMatch[1]}</u>;
+      return <u key={`u-${index}`}>{underlineMatch[1]}</u>;
     }
 
-    return <span key={index}>{segment}</span>;
+    return renderTextSegment(segment, index);
   });
 }
 
@@ -187,7 +307,7 @@ export function QuestionCard({
         <header className="question-card__header">
           <div>
             <p className="question-card__eyebrow">Question {index + 1}</p>
-            <h2 className="question-card__text">{renderQuestionText(question.question)}</h2>
+            <div className="question-card__text">{renderQuestionText(question.question)}</div>
           </div>
           <span className="question-card__hint">{getSelectionHelp(question)}</span>
         </header>
@@ -207,7 +327,7 @@ export function QuestionCard({
         <header className="question-card__header">
           <div>
             <p className="question-card__eyebrow">Question {index + 1}</p>
-            <h2 className="question-card__text">{renderQuestionText(question.question)}</h2>
+            <div className="question-card__text">{renderQuestionText(question.question)}</div>
           </div>
           <span className="question-card__hint">{getSelectionHelp(question)}</span>
         </header>
@@ -229,7 +349,7 @@ export function QuestionCard({
       <header className="question-card__header">
         <div>
           <p className="question-card__eyebrow">Question {index + 1}</p>
-          <h2 className="question-card__text">{renderQuestionText(question.question)}</h2>
+          <div className="question-card__text">{renderQuestionText(question.question)}</div>
         </div>
         <span className="question-card__hint">{getSelectionHelp(question)}</span>
       </header>
