@@ -3766,5 +3766,799 @@
         "answers": [
             "B"
         ]
+    },
+    {
+        "id": 106,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Orchestrator API to expose invalid input",
+            "Runtime status value to stop polling",
+            "Diagnostic JSON property holding the invalid input"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"],
+            ["I", "J", "K", "L"]
+        ],
+        "question": "HOTSPOT - You are developing an Azure Durable Function based application that processes a list of input values. The application is monitored using a console application that retrieves JSON data from an Azure Function diagnostic endpoint.\n\nDuring processing a single instance of invalid input does not cause the function to fail. Invalid input must be available to the monitoring application.\n\nYou need to implement the Azure Durable Function and the monitoring console application.\n\nHow should you complete the code segments? To answer, select the appropriate options in the answer area.\n\nAnswer area:\n\n[FunctionName(\"App\")]\npublic static async Task<List<string>> RunOrchestrator(\n    [OrchestrationTrigger] IDurableOrchestrationContext context)\n{\n    EntityId[] input = ...\n    int errIndex = ...\n    [SLOT 1];\n}\n\nusing (var client = new HttpClient())\n{\n    while (true)\n    {\n        var response = await client.GetAsync(\"...\");\n        response.EnsureSuccessStatusCode();\n        var json = await response.Content.ReadAsStringAsync();\n        dynamic result = JsonConvert.DeserializeObject(json);\n        if (result.runtimeStatus == \"[SLOT 2]\")\n        {\n            return result.[SLOT 3];\n        }\n    }\n}",
+        "explanation": "Correct: context.SetCustomStatus(input[errIndex]), Completed, and customStatus. In Durable Functions, SetCustomStatus publishes progress or supplemental state without failing the orchestration, and that value is exposed on the orchestration status endpoint as the customStatus property. The monitoring console should continue polling until runtimeStatus is Completed, then read the invalid input from customStatus. Why others are wrong: SetOutput changes the orchestration output rather than transient status; entity signaling APIs are unrelated to exposing invalid input through orchestration status; Failed would imply the orchestration faulted, and input/output/runtimeStatus do not contain the nonfatal invalid item in this pattern.",
+        "options": [
+            {
+                "key": "A",
+                "text": "context.SetOutput(input[errIndex])"
+            },
+            {
+                "key": "B",
+                "text": "context.SetCustomStatus(input[errIndex])"
+            },
+            {
+                "key": "C",
+                "text": "context.SignalEntity(input[errIndex], \"error\")"
+            },
+            {
+                "key": "D",
+                "text": "await context.CallEntityAsync(input[errIndex], \"error\")"
+            },
+            {
+                "key": "E",
+                "text": "Failed"
+            },
+            {
+                "key": "F",
+                "text": "Awaited"
+            },
+            {
+                "key": "G",
+                "text": "Listening"
+            },
+            {
+                "key": "H",
+                "text": "Completed"
+            },
+            {
+                "key": "I",
+                "text": "input"
+            },
+            {
+                "key": "J",
+                "text": "output"
+            },
+            {
+                "key": "K",
+                "text": "runtimeStatus"
+            },
+            {
+                "key": "L",
+                "text": "customStatus"
+            }
+        ],
+        "answers": [
+            "B",
+            "H",
+            "L"
+        ]
+    },
+    {
+        "id": 107,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing an Azure Durable Function to manage an online ordering process.\n\nThe process must call an external API to gather product discount information.\n\nYou need to implement the Azure Durable Function.\n\nWhich Azure Durable Function types should you use? Each correct answer presents part of the solution.",
+        "explanation": "Correct: Orchestrator and Activity. Use an Orchestrator function to coordinate the workflow steps for the ordering process. Use an Activity function to execute the external API call for discount information, because outbound I/O and non-deterministic operations belong in activities, not in orchestrator code. Why others are wrong: Entity is for durable stateful objects and operation dispatch, not general workflow coordination plus external API invocation in this scenario. Client functions are used to start and query orchestrations, but they do not perform the orchestration logic or the external API work itself.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Orchestrator"
+            },
+            {
+                "key": "B",
+                "text": "Entity"
+            },
+            {
+                "key": "C",
+                "text": "Client"
+            },
+            {
+                "key": "D",
+                "text": "Activity"
+            }
+        ],
+        "answers": [
+            "A",
+            "D"
+        ]
+    },
+    {
+        "id": 108,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Determine whether the templates follow recommended practices",
+            "Test and validate changes that templates will make to the environment"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D", "E", "F"],
+            ["A", "B", "C", "D", "E", "F"]
+        ],
+        "question": "DRAG DROP - You are authoring a set of nested Azure Resource Manager templates to deploy multiple Azure resources.\n\nThe templates must be tested before deployment and must follow recommended practices.\n\nYou need to validate and test the templates before deployment.\n\nWhich tools should you use? To answer, drag the appropriate tools to the correct requirements. Each tool may be used once, more than once, or not at all.",
+        "explanation": "Correct: Azure Resource Manager test toolkit, and What-if operation. The ARM test toolkit evaluates ARM/Bicep templates against best-practice and style rules, helping verify that templates follow recommended practices. What-if operation previews the resource changes a deployment would make, allowing you to test and validate the impact before deployment. Why others are wrong: Parameter files provide input values but do not assess template quality or deployment impact; template and user-defined functions are authoring constructs inside templates, not validation tools; Azure Deployment Manager orchestrates staged deployments but is not the primary tool for best-practice linting or change preview in this scenario.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Parameter file"
+            },
+            {
+                "key": "B",
+                "text": "Template function"
+            },
+            {
+                "key": "C",
+                "text": "Azure Resource Manager test toolkit"
+            },
+            {
+                "key": "D",
+                "text": "User-defined function"
+            },
+            {
+                "key": "E",
+                "text": "What-if operation"
+            },
+            {
+                "key": "F",
+                "text": "Azure Deployment Manager"
+            }
+        ],
+        "answers": [
+            "C",
+            "E"
+        ]
+    },
+    {
+        "id": 109,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You develop Azure Durable Functions to manage vehicle loans.\n\nThe loan process includes multiple actions that must be run in a specified order. One of the actions includes a customer credit check process, which may require multiple days to process.\n\nYou need to implement Azure Durable Functions for the loan process.\n\nWhich Azure Durable Functions type should you use?",
+        "explanation": "Correct: orchestrator. Durable orchestrator functions coordinate stateful workflows that execute actions in a required sequence and can run for long periods (including waiting days) through checkpoints and rehydration. Why others are wrong: client functions start and monitor orchestrations but do not manage step ordering; entity functions model durable state objects and operations, not this end-to-end ordered workflow; activity functions perform individual work units but do not coordinate long-running process flow.",
+        "options": [
+            {
+                "key": "A",
+                "text": "orchestrator"
+            },
+            {
+                "key": "B",
+                "text": "client"
+            },
+            {
+                "key": "C",
+                "text": "entity"
+            },
+            {
+                "key": "D",
+                "text": "activity"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 110,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Root property for retry policy",
+            "Retry strategy value",
+            "Property set to 10 attempts"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"],
+            ["G", "H", "I"]
+        ],
+        "question": "HOTSPOT - You are developing an Azure Function app.\n\nAll functions in the app meet the following requirements:\n\n- Run until either a successful run or until 10 run attempts occur.\n- Ensure that there are at least 20 seconds between attempts for up to 15 minutes.\n\nYou need to configure the host.json file.\n\nHow should you complete the code segment? To answer, select the appropriate options in the answer area.\n\nAnswer area:\n{\n  \"[SLOT 1]\": {\n    \"strategy\": \"[SLOT 2]\",\n    \"[SLOT 3]\": 10,\n    \"minimumInterval\": \"00:00:20\",\n    \"maximumInterval\": \"00:15:00\"\n  }\n}",
+        "explanation": "Correct: retry, exponentialBackoff, maxRetryCount. In Azure Functions host.json, retry behavior is configured under the retry section. Because the policy uses minimumInterval and maximumInterval, the strategy must be exponentialBackoff. A value of 10 attempts is configured with maxRetryCount. Why others are wrong: healthMonitor and singleton are unrelated host settings; counterThreshold, healthCheckInterval, and healthCheckThreshold belong to health monitor settings, not function retry policy.",
+        "options": [
+            {
+                "key": "A",
+                "text": "retry"
+            },
+            {
+                "key": "B",
+                "text": "healthMonitor"
+            },
+            {
+                "key": "C",
+                "text": "singleton"
+            },
+            {
+                "key": "D",
+                "text": "exponentialBackoff"
+            },
+            {
+                "key": "E",
+                "text": "counterThreshold"
+            },
+            {
+                "key": "F",
+                "text": "fixedDelay"
+            },
+            {
+                "key": "G",
+                "text": "maxRetryCount"
+            },
+            {
+                "key": "H",
+                "text": "healthCheckInterval"
+            },
+            {
+                "key": "I",
+                "text": "healthCheckThreshold"
+            }
+        ],
+        "answers": [
+            "A",
+            "D",
+            "G"
+        ]
+    },
+    {
+        "id": 111,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "First auto scaling configuration",
+            "Second auto scaling configuration"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"]
+        ],
+        "question": "You develop Azure Web Apps for a commercial diving company. Regulations require that all divers fill out a health questionnaire every 15 days after each diving job starts.\n\nYou need to configure the Azure Web Apps so that the instance count scales up when divers are filling out the questionnaire and scales down after they are complete.\n\nYou need to configure autoscaling.\n\nWhat are two possible auto scaling configurations to achieve this goal? Each correct answer presents a complete solution.\n\nNOTE: Each correct selection is worth one point.\n\nAnswer area:\nFirst auto scaling configuration -> [SLOT 1]\nSecond auto scaling configuration -> [SLOT 2]",
+        "explanation": "Correct: CPU usage-based autoscaling and Predictive autoscaling. CPU usage-based autoscaling responds to live load, which can scale the app out when divers are actively completing questionnaires and scale back in when the load drops. Predictive autoscaling uses historical patterns to forecast demand and pre-scale the app ahead of expected questionnaire activity. Why others are wrong: Recurrence profile is a fixed schedule and is not a complete solution for dynamic user-driven load in this scenario; Fixed date profile is a one-time schedule and does not suit recurring questionnaire-driven scaling needs.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Recurrence profile"
+            },
+            {
+                "key": "B",
+                "text": "CPU usage-based autoscaling"
+            },
+            {
+                "key": "C",
+                "text": "Fixed date profile"
+            },
+            {
+                "key": "D",
+                "text": "Predictive autoscaling"
+            }
+        ],
+        "answers": [
+            "B",
+            "D"
+        ]
+    },
+    {
+        "id": 112,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Durable client type to inject",
+            "Durable entity operation to invoke"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"]
+        ],
+        "question": "HOTSPOT - You are developing an online game that allows players to vote for their favorite photo that illustrates a word. The game is built by using Azure Functions and uses durable entities to track the vote count.\n\nThe voting window is 30 seconds. You must minimize latency.\n\nYou need to implement the Azure Function for voting.\n\nHow should you complete the code? To answer, select the appropriate options in the answer area.",
+        "explanation": "Correct: [DurableClient] IDurableEntityClient and SignalEntityAsync. The function should use an entity client because the vote is being recorded directly against a durable entity. SignalEntityAsync is the low-latency choice because it enqueues the operation without waiting for a response, which is appropriate for a short voting window and helps minimize end-to-end latency. Why others are wrong: CallEntityAsync waits for the entity operation to complete and adds unnecessary latency; IDurableOrchestrationClient is for orchestrations, not entity operations; the orchestration client does not directly signal durable entities in this pattern.",
+        "options": [
+            {
+                "key": "A",
+                "text": "CallEntityAsync"
+            },
+            {
+                "key": "B",
+                "text": "SignalEntityAsync"
+            },
+            {
+                "key": "C",
+                "text": "[DurableClient] IDurableEntityClient"
+            },
+            {
+                "key": "D",
+                "text": "[DurableClient] IDurableOrchestrationClient"
+            }
+        ],
+        "answers": [
+            "C",
+            "B"
+        ]
+    },
+    {
+        "id": 113,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou develop and deploy an Azure App Service API app to a Windows-hosted deployment slot named Development. You create additional deployment slots named Testing and Production. You enable auto swap on the Production deployment slot.\n\nYou need to ensure that scripts run and resources are available before a swap operation occurs.\n\nSolution: Update the web.config file to include the applicationInitialization configuration element. Specify custom initialization actions to run the scripts.\n\nDoes the solution meet the goal?",
+        "explanation": "No. The applicationInitialization element is used for application warm-up and initialization behavior in IIS/App Service, but by itself it does not guarantee the full pre-swap script and resource-availability workflow described here. The supported App Service swap warm-up mechanism for this scenario is to configure the WEBSITE_SWAP_WARMUP_PING_PATH and WEBSITE_SWAP_WARMUP_PING_STATUSES app settings so the app can run initialization logic and validate readiness before swap completes. Why yes is wrong: applicationInitialization is not the correct configuration to meet the specific auto-swap warm-up requirement in this scenario.",
+        "options": [
+            {
+                "key": "A",
+                "text": "No"
+            },
+            {
+                "key": "B",
+                "text": "Yes"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 114,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Azure App Service feature",
+            "Azure App Service pricing tier"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"]
+        ],
+        "question": "HOTSPOT - You have an App Service plan named asp1 based on the Free pricing tier.\n\nYou plan to use asp1 to implement an Azure Function app with a queue trigger. Your solution must minimize cost.\n\nYou need to identify the configuration options that will meet the requirements.\n\nWhich value should you configure? To answer, select the appropriate options in the answer area.\n\nNOTE: Each correct selection is worth one point.\n\nAnswer area:\nConfiguration option: Azure App Service feature -> [SLOT 1]\nConfiguration option: Azure App Service pricing tier -> [SLOT 2]",
+        "explanation": "Correct: Always On and Basic. Queue-triggered Azure Functions on an App Service plan require the app to stay running continuously, which is provided by Always On. Free and Shared tiers do not support Always On, so to minimize cost while meeting the requirement, the lowest viable App Service pricing tier is Basic. Why others are wrong: Managed identity and Continuous deployment are unrelated to keeping a queue trigger continuously active; Shared cannot satisfy the Always On requirement; Standard also works technically but costs more than Basic and therefore does not minimize cost.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Always On"
+            },
+            {
+                "key": "B",
+                "text": "Managed identity"
+            },
+            {
+                "key": "C",
+                "text": "Continuous deployment"
+            },
+            {
+                "key": "D",
+                "text": "Basic"
+            },
+            {
+                "key": "E",
+                "text": "Shared"
+            },
+            {
+                "key": "F",
+                "text": "Standard"
+            }
+        ],
+        "answers": [
+            "A",
+            "D"
+        ]
+    },
+    {
+        "id": 115,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "sequence",
+        "sequenceLength": 5,
+        "question": "DRAG DROP - You are developing several microservices to run on Azure Container Apps.\n\nThe microservices must allow HTTPS access by using a custom domain.\n\nYou need to configure the custom domain in Azure Container Apps.\n\nIn which order should you perform the actions? To answer, move all actions from the list of actions to the answer area and arrange them in the correct order.",
+        "explanation": "Correct sequence: Enable ingress, add DNS records to the domain provider, add the custom domain name, validate the custom domain name, and bind the certificate. In Azure Container Apps, external ingress must be enabled for public domain access. DNS records (such as CNAME/A and TXT for verification) must exist before domain validation can succeed. After adding the custom domain to the container app, validate ownership and mapping, then bind a certificate to enable HTTPS for that host. Why others are wrong: binding a certificate before domain validation fails because the host is not yet verified; validating before DNS setup fails verification checks.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Validate the custom domain name."
+            },
+            {
+                "key": "B",
+                "text": "Enable ingress."
+            },
+            {
+                "key": "C",
+                "text": "Bind the certificate."
+            },
+            {
+                "key": "D",
+                "text": "Add DNS records to the domain provider."
+            },
+            {
+                "key": "E",
+                "text": "Add the custom domain name."
+            }
+        ],
+        "answers": [
+            "B",
+            "D",
+            "E",
+            "A",
+            "C"
+        ]
+    },
+    {
+        "id": 116,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing several microservices to run on Azure Container Apps. External HTTP ingress traffic has been enabled for the microservices.\n\nThe microservices must be deployed to the same virtual network and write logs to the same Log Analytics workspace.\n\nYou need to deploy the microservices.\n\nWhat should you do?",
+        "explanation": "Correct: D. In Azure Container Apps, apps that must share the same virtual network integration and Log Analytics workspace should be deployed into the same Container Apps environment, because the environment defines those shared infrastructure boundaries. Why others are wrong: A and E are revision settings that control traffic and version behavior, not network/workspace sharing. B splits services across environments, which would not meet the same VNet and same workspace requirement. C concerns image source strategy and does not enforce shared networking or logging configuration.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Enable single revision mode."
+            },
+            {
+                "key": "B",
+                "text": "Use a separate environment for each container."
+            },
+            {
+                "key": "C",
+                "text": "Use a private container registry image and single image for all containers."
+            },
+            {
+                "key": "D",
+                "text": "Use a single environment for all containers."
+            },
+            {
+                "key": "E",
+                "text": "Enable multiple revision mode."
+            }
+        ],
+        "answers": [
+            "D"
+        ]
+    },
+    {
+        "id": 117,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Single URL for test users",
+            "Current microservice activation"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"]
+        ],
+        "question": "HOTSPOT - You are developing several microservices to run on Azure Container Apps. External HTTP ingress traffic has been enabled for the microservices.\n\nA deployed microservice must be updated to allow users to test new features. You have the following requirements:\n\n- Enable and maintain a single URL for the updated microservice to provide to test users.\n- Update the microservice that corresponds to the current microservice version.\n\nYou need to configure Azure Container Apps.\n\nWhich features should you configure? To answer, select the appropriate options in the answer area.\n\nNOTE: Each correct selection is worth one point.",
+        "explanation": "Correct: Revision label and Revision mode. A revision label provides a stable, dedicated URL for a specific revision, which is ideal for test users validating new features. Revision mode controls how revisions are activated and routed (for example, single revision for latest-only activation or multiple revision for side-by-side rollout), which addresses current microservice activation behavior. Why others are wrong: Container image defines the artifact version but does not by itself provide a stable test URL or activation policy. Container registry is the image source location and does not control revision URL labeling or activation behavior.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Revision label"
+            },
+            {
+                "key": "B",
+                "text": "Revision mode"
+            },
+            {
+                "key": "C",
+                "text": "Container image"
+            },
+            {
+                "key": "D",
+                "text": "Container registry"
+            }
+        ],
+        "answers": [
+            "A",
+            "B"
+        ]
+    },
+    {
+        "id": 118,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Hosting plan",
+            "Timeout value"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"]
+        ],
+        "question": "HOTSPOT - You plan to develop an Azure Functions app with an HTTP trigger.\n\nThe app must support the following requirements:\n\n- Event-driven scaling\n- Ability to use custom Linux images for function execution\n\nYou need to identify the app's hosting plan and the maximum amount of time that the app function can take to respond to incoming requests.\n\nWhich configuration setting values should you use? To answer, select the appropriate values in the answer area.\n\nNOTE: Each correct selection is worth one point.",
+        "explanation": "Correct: Premium and 230 seconds. Premium plan supports event-driven scaling and supports running Azure Functions with custom Linux container images. For HTTP-triggered Azure Functions, the effective maximum time to return a response is constrained by the platform HTTP timeout boundary (about 230 seconds), even if function runtime timeout settings are higher. Why others are wrong: Consumption does event-driven scaling but does not satisfy this custom Linux image hosting requirement in this plan set; Dedicated can run containers but does not provide event-driven scaling behavior. 10 minutes and unlimited are not valid HTTP response limits for this scenario.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Consumption"
+            },
+            {
+                "key": "B",
+                "text": "Dedicated"
+            },
+            {
+                "key": "C",
+                "text": "Premium"
+            },
+            {
+                "key": "D",
+                "text": "230 seconds"
+            },
+            {
+                "key": "E",
+                "text": "10 minutes"
+            },
+            {
+                "key": "F",
+                "text": "unlimited"
+            }
+        ],
+        "answers": [
+            "C",
+            "D"
+        ]
+    },
+    {
+        "id": 119,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Compute target",
+            "Container termination"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"]
+        ],
+        "question": "HOTSPOT - You develop a Python application for image rendering. The application uses GPU resources to optimize rendering processes.\n\nYou have the following requirements:\n\n- The application must be deployed to a Linux container.\n- The container must be stopped when the image rendering is complete.\n- The solution must minimize cost.\n\nYou need to deploy the application to Azure.\n\nWhich configuration setting values should you use? To answer, select the appropriate values in the answer area.\n\nNOTE: Each correct selection is worth one point.",
+        "explanation": "Correct: Azure Container Instances and Restart policy. Azure Container Instances is a cost-efficient compute target for running a single Linux container workload without managing cluster infrastructure, and it supports GPU-enabled workloads in supported configurations. To ensure the container stops after rendering is complete, configure the restart policy so the container does not keep restarting after successful completion. Why others are wrong: Azure Kubernetes Service introduces higher operational and baseline cost for this single-job scenario. Azure Container Apps and Azure App Service are not the best fit for this explicit GPU batch-style requirement in this context. Environment variable and managed identity settings do not control post-completion container shutdown behavior.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Azure Container Instances"
+            },
+            {
+                "key": "B",
+                "text": "Azure Kubernetes Service"
+            },
+            {
+                "key": "C",
+                "text": "Azure Container Apps"
+            },
+            {
+                "key": "D",
+                "text": "Azure App Service"
+            },
+            {
+                "key": "E",
+                "text": "Restart policy"
+            },
+            {
+                "key": "F",
+                "text": "Environment variable"
+            },
+            {
+                "key": "G",
+                "text": "System-assigned Managed identity"
+            },
+            {
+                "key": "H",
+                "text": "User-assigned Managed identity"
+            }
+        ],
+        "answers": [
+            "A",
+            "E"
+        ]
+    },
+    {
+        "id": 120,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Hosting plan",
+            "Maximum execution time"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"]
+        ],
+        "question": "HOTSPOT - You plan to develop an Azure Functions app with an Azure Blob Storage trigger. The app will be used infrequently, with a limited duration of individual executions.\n\nThe app must meet the following requirements:\n\n- Event-driven scaling\n- Support for deployment slots\n- Minimize costs\n\nYou need to identify the hosting plan and the maximum duration when executing the app.\n\nWhich configuration setting values should you use? To answer, select the appropriate values in the answer area.\n\nNOTE: Each correct selection is worth one point.",
+        "explanation": "Correct: Premium and unlimited. Premium Functions supports event-driven scaling and supports deployment slots, which Consumption does not support. Dedicated supports deployment slots but does not provide event-driven scale behavior. Given the required feature combination, Premium is the correct hosting plan. For Blob-triggered executions on Premium, maximum execution duration can be configured as unlimited. Why others are wrong: Consumption cannot satisfy deployment-slot support; Dedicated cannot satisfy event-driven scaling; 230 seconds applies to HTTP request timeout constraints, and 10 minutes is the Consumption-plan function timeout cap rather than the Premium maximum.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Consumption"
+            },
+            {
+                "key": "B",
+                "text": "Dedicated"
+            },
+            {
+                "key": "C",
+                "text": "Premium"
+            },
+            {
+                "key": "D",
+                "text": "230 seconds"
+            },
+            {
+                "key": "E",
+                "text": "10 minutes"
+            },
+            {
+                "key": "F",
+                "text": "unlimited"
+            }
+        ],
+        "answers": [
+            "C",
+            "F"
+        ]
+    },
+    {
+        "id": 121,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing an ASP.NET Core app hosted in Azure App Service.\n\nThe app requires custom claims to be returned from Microsoft Entra ID for user authorization. The claims must be removed when the app registration is removed.\n\nYou need to include the custom claims in the user access token.\n\nWhat should you do?",
+        "explanation": "Correct: E. Define application roles in the app registration manifest by using appRoles. App roles are emitted as role claims in tokens and are tied to the application registration lifecycle, so removing the app registration removes those custom role definitions and claims. Why others are wrong: A requests Microsoft Graph permissions and does not define custom authorization claims for this app. B selects an OAuth flow but does not create custom claims. C adds application-side logic rather than configuring token-issued claims in Entra ID. D groupMembershipClaims emits directory group claims, not custom app role claims designed for this authorization model.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Require the https://graph.microsoft.com/.default scope during authentication."
+            },
+            {
+                "key": "B",
+                "text": "Configure the app to use the OAuth 2.0 authorization code flow."
+            },
+            {
+                "key": "C",
+                "text": "Implement custom middleware to retrieve role information from Azure AD."
+            },
+            {
+                "key": "D",
+                "text": "Add the groups to the groupMembershipClaims attribute in the app manifest."
+            },
+            {
+                "key": "E",
+                "text": "Add the roles to the appRoles attribute in the app manifest."
+            }
+        ],
+        "answers": [
+            "E"
+        ]
+    },
+    {
+        "id": 122,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing a microservice to run on Azure Container Apps for a company. External HTTP ingress traffic has been enabled.\n\nThe company requires that updates to the microservice must not cause downtime.\n\nYou need to deploy an update to the microservices.\n\nWhat should you do?",
+        "explanation": "Correct: E. Enable multiple revision mode in Azure Container Apps so a new revision can be deployed and validated while the current revision continues serving traffic, enabling zero-downtime rollout and controlled traffic shifting. Why others are wrong: A single revision mode replaces the active revision and can cause interruption during rollout. B and D describe environment layout and do not directly provide zero-downtime update behavior. C concerns image source strategy and does not itself guarantee no-downtime deployment.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Enable single revision mode."
+            },
+            {
+                "key": "B",
+                "text": "Use multiple environments for each container."
+            },
+            {
+                "key": "C",
+                "text": "Use a private container registry and single image for all containers."
+            },
+            {
+                "key": "D",
+                "text": "Use a single environment for all containers."
+            },
+            {
+                "key": "E",
+                "text": "Enable multiple revision mode."
+            }
+        ],
+        "answers": [
+            "E"
+        ]
+    },
+    {
+        "id": 123,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "First CLI command group",
+            "Second CLI command group"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"]
+        ],
+        "question": "HOTSPOT - A company uses Azure Container Apps. A container app named App1 resides in a resource group named RG1.\n\nThe company requires testing of updates to App1.\n\nYou enable multiple revision modes on App1.\n\nYou need to ensure traffic is routed to each revision of App1.\n\nHow should you complete the code segment?\n\nNOTE: Each correct selection is worth one point.\n\nAnswer area:\naz [SLOT 1] [SLOT 2] traffic set \\\n  --name App1 \\\n  --resource-group RG1 \\\n  --revision-weight <REVISION_1>=80 <REVISION_2>=20",
+        "explanation": "Correct: containerapp and ingress. In Azure CLI, traffic splitting between Container Apps revisions is configured by using the ingress traffic command group: az containerapp ingress traffic set. This command applies weighted routing across revisions when multiple revision mode is enabled. Why others are wrong: container and network/resource command groups are not the Container Apps revision traffic command path, and app/connection/revision do not form the valid traffic-set command group for this operation.",
+        "options": [
+            {
+                "key": "A",
+                "text": "container"
+            },
+            {
+                "key": "B",
+                "text": "containerapp"
+            },
+            {
+                "key": "C",
+                "text": "network"
+            },
+            {
+                "key": "D",
+                "text": "resource"
+            },
+            {
+                "key": "E",
+                "text": "app"
+            },
+            {
+                "key": "F",
+                "text": "connection"
+            },
+            {
+                "key": "G",
+                "text": "ingress"
+            },
+            {
+                "key": "H",
+                "text": "revision"
+            }
+        ],
+        "answers": [
+            "B",
+            "G"
+        ]
+    },
+    {
+        "id": 124,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou develop and deploy an Azure App Service API app to a Windows-hosted deployment slot named Development. You create additional deployment slots named Testing and Production. You enable auto swap on the Production deployment slot.\n\nYou need to ensure that scripts run and resources are available before a swap operation occurs.\n\nSolution: Enable auto swap for the Testing slot. Deploy the app to the Testing slot.\n\nDoes the solution meet the goal?",
+        "explanation": "No. Enabling auto swap on the Testing slot and deploying there does not by itself guarantee that required scripts run and dependent resources are ready before swap finalization. To satisfy this goal, configure explicit swap warm-up behavior (for example, WEBSITE_SWAP_WARMUP_PING_PATH and WEBSITE_SWAP_WARMUP_PING_STATUSES) so readiness checks and initialization logic complete before traffic is switched. Why yes is wrong: auto swap only automates slot promotion; it does not inherently validate custom pre-swap initialization requirements.",
+        "options": [
+            {
+                "key": "A",
+                "text": "No"
+            },
+            {
+                "key": "B",
+                "text": "Yes"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 125,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou deploy an Azure Container Apps app and disable ingress on the container app.\n\nUsers report that they are unable to access the container app. You investigate and observe that the app has scaled to 0 instances.\n\nYou need to resolve the issue with the container app.\n\nSolution: Enable ingress, create an HTTP scale rule, and apply the rule to the container app.\n\nDoes the solution meet the goal?",
+        "explanation": "Yes. Disabling ingress prevents users from reaching the container app endpoint, so re-enabling ingress is required for external access. Adding and applying an HTTP-based scale rule allows request-driven scale-out from zero, so the app can activate instances when traffic arrives. Why no is wrong: leaving ingress disabled and without HTTP-triggered scaling would continue to block user access and keep the app inactive under request load.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
     }
 ]
