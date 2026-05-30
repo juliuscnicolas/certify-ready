@@ -205,21 +205,6 @@ function PromptSections({ text }) {
   )
 }
 
-function ReadOnlyCodeEditor({ value, label, minRows = 8 }) {
-  return (
-    <div className="viewer-block viewer-code-block">
-      <p className="viewer-block__label">{label}</p>
-      <textarea
-        className="viewer-code-editor"
-        value={value}
-        readOnly
-        rows={minRows}
-        spellCheck={false}
-      />
-    </div>
-  )
-}
-
 function QuestionJsonViewerItem({ question }) {
   const optionMap = getOptionMap(question)
   const { prompt, answerArea } = splitPrompt(question.question ?? '')
@@ -237,15 +222,6 @@ function QuestionJsonViewerItem({ question }) {
         <p className="viewer-block__label">Prompt</p>
         <PromptSections text={prompt} />
       </div>
-
-      <details className="viewer-code-details" open={looksLikeCodeBlock(prompt)}>
-        <summary>Open full question in read-only editor</summary>
-        <ReadOnlyCodeEditor
-          label="Question source"
-          value={question.question ?? ''}
-          minRows={Math.min(Math.max((question.question ?? '').split('\n').length + 1, 10), 22)}
-        />
-      </details>
 
       {answerArea ? (
         <div className="viewer-block">
