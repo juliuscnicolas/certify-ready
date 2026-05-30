@@ -4560,5 +4560,852 @@
         "answers": [
             "A"
         ]
+    },
+    {
+        "id": 126,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou deploy an Azure Container Apps app and disable ingress on the container app.\n\nUsers report that they are unable to access the container app. You investigate and observe that the app has scaled to 0 instances.\n\nYou need to resolve the issue with the container app.\n\nSolution: Enable ingress, create a custom scale rule, and apply the rule to the container app.\n\nDoes the solution meet the goal?",
+        "explanation": "No. Re-enabling ingress is necessary for external reachability, but user-driven access to a Container Apps endpoint should scale from zero through HTTP request-based scaling behavior. A generic custom scale rule is for external event sources (for example queue/topic/custom metrics) and does not by itself guarantee scale-out on incoming HTTP traffic. Why yes is wrong: unless the custom rule is explicitly tied to the right request signal, it does not directly solve the HTTP access and scale-from-zero symptom described.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 127,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou deploy an Azure Container Apps app and disable ingress on the container app.\n\nUsers report that they are unable to access the container app. You investigate and observe that the app has scaled to 0 instances.\n\nYou need to resolve the issue with the container app.\n\nSolution: Enable ingress and configure the minimum replicas to 1 for the container app.\n\nDoes the solution meet the goal?",
+        "explanation": "Yes. Re-enabling ingress restores endpoint reachability, and setting minimum replicas to 1 keeps at least one instance running so the app does not remain at zero replicas. Together, these changes resolve the reported access issue and avoid scale-from-zero startup delays for incoming requests. Why no is wrong: leaving ingress disabled or allowing minimum replicas to remain at zero can continue to prevent immediate user access.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 128,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "App Service plan",
+            "Code change validation feature"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"]
+        ],
+        "question": "HOTSPOT -\n\nCase study -\n\nThis is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case. However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to complete all questions included on this exam in the time provided.\n\nTo answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is independent of the other questions in this case study.\n\nAt the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you move to the next section of the exam. After you begin a new section, you cannot return to this section.\n\nTo start the case study -\n\nTo display the first question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and problem statements. When you are ready to answer a question, click the Question button to return to the question.\n\nBackground -\n\nMunson's Pickles and Preserves Farm is an agricultural cooperative corporation based in Washington, US, with farms located across the United States. The company supports agricultural production resources by distributing seeds fertilizers, chemicals, fuel, and farm machinery to the farms.\n\nCurrent Environment -\n\nThe company is migrating all applications from an on-premises datacenter to Microsoft Azure. Applications support distributors, farmers, and internal company staff.\n\nCorporate website -\n\n- The company hosts a public website located at http://www.munsonspicklesandpreservesfarm.com. The site supports farmers and distributors who request agricultural production resources.\n\nFarms -\n\n- The company created a new customer tenant in the Microsoft Entra admin center to support authentication and authorization for applications.\n\nDistributors -\n\n- Distributors integrate their applications with data that is accessible by using APIs hosted at http://www.munsonspicklesandpreservesfarm.com/api to receive and update resource data.\n\nRequirements -\n\nThe application components must meet the following requirements:\n\nCorporate website -\n\n- The site must be migrated to Azure App Service.\n- Costs must be minimized when hosting in Azure.\n- Applications must automatically scale independent of the compute resources.\n- All code changes must be validated by internal staff before release to production.\n- File transfer speeds must improve, and webpage-load performance must increase.\n- All site settings must be centrally stored, secured without using secrets, and encrypted at rest and in transit.\n- A queue-based load leveling pattern must be implemented by using Azure Service Bus queues to support high volumes of website agricultural production resource requests.\n\nFarms -\n\n- Farmers must authenticate to applications by using Microsoft Entra ID.\n\nDistributors -\n\n- The company must track a custom telemetry value with each API call and monitor performance of all APIs.\n- API telemetry values must be charted to evaluate variations and trends for resource data.\n\nInternal staff -\n\n- App and API updates must be validated before release to production.\n- Staff must be able to select a link to direct them back to the production app when validating an app or API update.\n- Staff profile photos and email must be displayed on the website once they authenticate to applications by using their Microsoft Entra ID.\n\nSecurity -\n\n- All web communications must be secured by using TLS/HTTPS.\n- Web content must be restricted by country/region to support corporate compliance standards.\n- The principle of least privilege must be applied when providing any user rights or process access rights.\n- Managed identities for Azure resources must be used to authenticate services that support Microsoft Entra ID authentication.\n\nIssues -\n\nCorporate website -\n\n- Farmers report HTTP 503 errors at the same time as internal staff report that CPU and memory usage are high.\n- Distributors report HTTP 502 errors at the same time as internal staff report that average response times and networking traffic are high.\n- Internal staff report webpage load sizes are large and take a long time to load.\n- Developers receive authentication errors to Service Bus when they debug locally.\n\nDistributors -\n\n- Many API telemetry values are sent in a short period of time. Telemetry traffic, data costs, and storage costs must be reduced while preserving a statistically correct analysis of the data points sent by the APIs.\n\nYou need to configure App Service to support the corporate website migration.\n\nWhich configuration should you use? To answer, select the appropriate options in the answer area.\n\nNOTE: Each correct selection is worth one point.\n\nAnswer area:\nConfiguration setting: App Service plan -> [SLOT 1]\nConfiguration setting: Code change validation feature -> [SLOT 2]",
+        "explanation": "Correct: Standard and Deployment slot. Standard is the lowest App Service tier in the provided choices that supports autoscale and deployment slots, which meets the requirements to minimize cost while allowing independent automatic scaling and pre-production validation. Deployment slots enable internal staff to validate code and then swap safely to production. Why others are wrong: Basic does not provide deployment slots/autoscale capabilities needed here; Premium and Isolated can work technically but are not cost-minimizing for this requirement set; Custom container, Domain certificate, and Deployment credentials are not the feature used for staged validation before production release.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Basic"
+            },
+            {
+                "key": "B",
+                "text": "Standard"
+            },
+            {
+                "key": "C",
+                "text": "Premium"
+            },
+            {
+                "key": "D",
+                "text": "Isolated"
+            },
+            {
+                "key": "E",
+                "text": "Deployment slot"
+            },
+            {
+                "key": "F",
+                "text": "Custom container"
+            },
+            {
+                "key": "G",
+                "text": "Domain certificate"
+            },
+            {
+                "key": "H",
+                "text": "Deployment credentials"
+            }
+        ],
+        "answers": [
+            "B",
+            "E"
+        ]
+    },
+    {
+        "id": 129,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Read",
+            "Write"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["A", "B", "C"]
+        ],
+        "question": "DRAG DROP -\n\nYou have an Azure Cosmos DB for NoSQL API account named account1 and a database named db1. An application named app1 will access db1 to perform read and write operations.\n\nYou plan to modify the consistency levels for read and write operations performed by app1 on db1.\n\nYou must enforce the consistency level on a per-operation basis whenever possible.\n\nYou need to configure the consistency level for read and write operations.\n\nWhich locations should you configure? To answer, move the appropriate locations to the correct operations. You may use each location once, more than once, or not at all. You may need to move the split bar between panes or scroll to view content.\n\nNOTE: Each correct selection is worth one point.\n\nAnswer area:\nOperation: Read -> [SLOT 1]\nOperation: Write -> [SLOT 2]",
+        "explanation": "Correct: Read -> app1, Write -> account1. In Azure Cosmos DB for NoSQL, read consistency can be controlled per operation from the client application request options, so app1 is the right location for read behavior tuning. Write consistency is governed by the account-level consistency configuration, so account1 is where write consistency enforcement is configured. Why others are wrong: db1 is not the location where consistency policy is configured for this scenario.",
+        "options": [
+            {
+                "key": "A",
+                "text": "db1"
+            },
+            {
+                "key": "B",
+                "text": "app1"
+            },
+            {
+                "key": "C",
+                "text": "account1"
+            }
+        ],
+        "answers": [
+            "B",
+            "C"
+        ]
+    },
+    {
+        "id": 130,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Command",
+            "Parameter"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"]
+        ],
+        "question": "HOTSPOT -\n\nYou are creating an Azure Functions app project in your local development environment by using Azure Functions Core Tools.\n\nYou must create the project in either Python or C# without using a template.\n\nYou need to specify the command and its parameter required to create the Azure Functions app project.\n\nWhich command and parameter should you specify? To answer, select the appropriate options in the answer area.\n\nNOTE: Each correct selection is worth one point.\n\nAnswer area:\nSyntax element: Command -> [SLOT 1]\nSyntax element: Parameter -> [SLOT 2]",
+        "explanation": "Correct: func init and --worker-runtime. Use func init to create a new Functions project (rather than a function template), and specify the worker language with --worker-runtime (for example, python or dotnet). Why others are wrong: func new is used to add a function from a template inside an existing project. func azure commands target Azure resource operations rather than local project creation. --language is used with templating flows, and --target-framework is specific to framework targeting rather than selecting the worker runtime for project initialization.",
+        "options": [
+            {
+                "key": "A",
+                "text": "func new"
+            },
+            {
+                "key": "B",
+                "text": "func init"
+            },
+            {
+                "key": "C",
+                "text": "func azure"
+            },
+            {
+                "key": "D",
+                "text": "--language"
+            },
+            {
+                "key": "E",
+                "text": "--worker-runtime"
+            },
+            {
+                "key": "F",
+                "text": "--target-framework"
+            }
+        ],
+        "answers": [
+            "B",
+            "E"
+        ]
+    },
+    {
+        "id": 131,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou have an Azure App Service plan named APSPlan1 set to the Basic B1 pricing tier. APSPlan1 contains an App Service web app named WebApp1.\n\nYou plan to enable schedule-based autoscaling for APSPlan1.\n\nYou need to minimize the cost of running WebApp1.\n\nSolution: Scale down ASPPlan1 to the Shared pricing tier.\n\nDoes the solution meet the goal?",
+        "explanation": "No. App Service autoscaling (including schedule-based autoscaling) is not supported on the Shared tier, and Basic tier also does not provide autoscale. To enable scheduled autoscale, the plan must be on a tier that supports autoscale (for example Standard or higher). Scaling down to Shared reduces cost but prevents meeting the autoscaling requirement. Why yes is wrong: the proposed change conflicts with the requirement to enable schedule-based autoscaling.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 132,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou have an Azure App Service plan named APSPlan1 set to the Basic B1 pricing tier. APSPlan1 contains an App Service web app named WebApp1.\n\nYou plan to enable schedule-based autoscaling for APSPlan1.\n\nYou need to minimize the cost of running WebApp1.\n\nSolution: Scale out APSPlan1.\n\nDoes the solution meet the goal?",
+        "explanation": "No. Scaling out increases the number of running instances and typically increases cost; it does not enable schedule-based autoscaling on a Basic plan. Schedule-based autoscaling for App Service requires a tier that supports autoscale (for example Standard or higher). Why yes is wrong: the proposed action neither satisfies the autoscaling-tier requirement nor minimizes cost.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 133,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou have an Azure App Service plan named APSPlan1 set to the Basic B1 pricing tier. APSPlan1 contains an App Service web app named WebApp1.\n\nYou plan to enable schedule-based autoscaling for APSPlan1.\n\nYou need to minimize the cost of running WebApp1.\n\nSolution: Scale up ASPPlan1 to the Premium V2 pricing tier.\n\nDoes the solution meet the goal?",
+        "explanation": "No. Moving from Basic to Premium V2 would increase cost significantly, so it does not minimize the cost of running WebApp1. Although Premium V2 supports autoscale, the requirement is to enable schedule-based autoscaling while minimizing cost, and the lower-cost suitable tier for autoscale is Standard (or equivalent autoscale-capable tier), not Premium V2. Why yes is wrong: the solution meets autoscale capability but fails the cost-minimization goal.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 134,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "File name",
+            "Function name"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"]
+        ],
+        "question": "You have an Azure Functions app using the Consumption hosting plan for a company. The app contains the following functions:\n\n- f1: HTTP trigger\n- f2: Timer trigger\n- f3: Azure Queues trigger\n\nYou plan to enable dynamic concurrency on the app. The company requires that each function has its concurrency level managed separately.\n\nYou need to configure the app for dynamic concurrency.\n\nWhich file or function names should you use? To answer, select the appropriate values in the answer area.\n\nNOTE: Each correct selection is worth one point.\n\nAnswer area:\nRequirement: File name -> [SLOT 1]\nRequirement: Function name -> [SLOT 2]",
+        "explanation": "Correct: host.json and f3. Dynamic concurrency is configured at the function app level in host.json. It applies to supported trigger types, including Azure Queue Storage triggers, and manages concurrency per function for those supported triggers. HTTP and Timer triggers are not the target of dynamic concurrency in this context. Why others are wrong: function.json and local.settings.json are not where dynamic concurrency is enabled for runtime behavior in Azure; f1 and f2 do not represent the supported trigger in the given set.",
+        "options": [
+            {
+                "key": "A",
+                "text": "function.json"
+            },
+            {
+                "key": "B",
+                "text": "host.json"
+            },
+            {
+                "key": "C",
+                "text": "local.settings.json"
+            },
+            {
+                "key": "D",
+                "text": "f1"
+            },
+            {
+                "key": "E",
+                "text": "f2"
+            },
+            {
+                "key": "F",
+                "text": "f3"
+            }
+        ],
+        "answers": [
+            "B",
+            "F"
+        ]
+    },
+    {
+        "id": 135,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou develop and deploy an Azure App Service API app to a Windows-hosted deployment slot named Development. You create additional deployment slots named Testing and Production. You enable auto swap on the Production deployment slot.\n\nYou need to ensure that scripts run and resources are available before a swap operation occurs.\n\nSolution: Disable auto swap. Update the app with a method named statuscheck to run the scripts. Re-enable auto swap and deploy the app to the Production slot.\n\nDoes the solution meet the goal?",
+        "explanation": "No. This approach adds a statuscheck method but does not configure App Service swap warm-up settings that invoke and validate that endpoint before swap completion. To ensure scripts run and resources are ready before swap, you must configure WEBSITE_SWAP_WARMUP_PING_PATH and WEBSITE_SWAP_WARMUP_PING_STATUSES (or equivalent warm-up configuration). Why yes is wrong: simply toggling auto swap and deploying does not guarantee pre-swap readiness checks are enforced.",
+        "options": [
+            {
+                "key": "A",
+                "text": "No"
+            },
+            {
+                "key": "B",
+                "text": "Yes"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 136,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou deploy an Azure Container Apps app and disable ingress on the container app.\n\nUsers report that they are unable to access the container app. You investigate and observe that the app has scaled to 0 instances.\n\nYou need to resolve the issue with the container app.\n\nSolution: Enable ingress, create an TCP scale rule, and apply the rule to the container app.\n\nDoes the solution meet the goal?",
+        "explanation": "No. Re-enabling ingress is required, but for user access to a web endpoint that scales from zero, the scale rule should be request-driven (HTTP) rather than TCP in this scenario. A TCP scale rule is intended for TCP-based connection workloads and does not directly address typical HTTP request scaling behavior for this app access issue. Why yes is wrong: it does not use the appropriate trigger type for the described user-access pattern.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 137,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "sequence",
+        "sequenceLength": 5,
+        "question": "DRAG DROP -\n\nYou have two Azure Container Registry (ACR) instances: ACR01 and ACR02.\n\nYou plan to implement a containerized application named APP1 that will use a base image named BASE1. The image for APP1 will be stored in ACR01. The image BASE1 will be stored in ACR02.\n\nYou need to automate the planned implementation by using a sequence of five Azure command-line interface (Azure CLI) commands. Your solution must ensure that the APP1 image stored in ACR01 will be automatically updated when the BASE1 image is updated.\n\nIn which order should you perform the actions? To answer, move all container build automation options from the list of container build automations to the answer area and arrange them in the correct order.\n\nNOTE: More than one order of answer choices is correct. You will receive credit for any of the correct orders you select.",
+        "explanation": "One valid sequence is: run az acr build for the base image, create the ACR task in ACR01, grant role assignment for cross-registry access, add task credentials for the source registry, and run the task to build APP1. This aligns with the Microsoft Learn private base image update flow and ensures APP1 can be rebuilt automatically when BASE1 is updated.",
+        "options": [
+            {
+                "key": "A",
+                "text": "az acr task credential add"
+            },
+            {
+                "key": "B",
+                "text": "az role assignment create"
+            },
+            {
+                "key": "C",
+                "text": "az acr build"
+            },
+            {
+                "key": "D",
+                "text": "az acr task run"
+            },
+            {
+                "key": "E",
+                "text": "az acr task create"
+            }
+        ],
+        "answers": [
+            "C",
+            "E",
+            "B",
+            "A",
+            "D"
+        ]
+    },
+    {
+        "id": 138,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Hosting model",
+            "Schedule expression assignment"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"]
+        ],
+        "question": "HOTSPOT -\n\nYou plan to implement an Azure function named Function1 that will use the timer trigger.\n\nYou plan to use a TimeSpan value to set the schedule of function execution.\n\nYou need to select the hosting model and the schedule expression assignment method.\n\nWhich hosting model and schedule expression assignment method should you use? To answer, select the appropriate options in the answer area.\n\nNOTE: Each correct selection is worth one point.\n\nAnswer area:\nFunction configuration option: Hosting model -> [SLOT 1]\nFunction configuration option: Schedule expression assignment -> [SLOT 2]",
+        "explanation": "Correct: App Service plan and App settings. A TimeSpan schedule can be used only for a function app running on an App Service plan. The timer schedule expression can be stored in an app setting and referenced by name wrapped in percent signs (for example, %ScheduleAppSetting%). Why others are wrong: Consumption does not support TimeSpan schedules for this timer-trigger pattern; host.json is not where the timer schedule binding value is assigned for this answer set.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Consumption"
+            },
+            {
+                "key": "B",
+                "text": "App Service plan"
+            },
+            {
+                "key": "C",
+                "text": "Azure Arc-enabled Kubernetes"
+            },
+            {
+                "key": "D",
+                "text": "App settings"
+            },
+            {
+                "key": "E",
+                "text": "host.json file"
+            },
+            {
+                "key": "F",
+                "text": "function.json file"
+            }
+        ],
+        "answers": [
+            "B",
+            "D"
+        ]
+    },
+    {
+        "id": 139,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "First CLI token",
+            "Second CLI token",
+            "Environment configuration argument"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"],
+            ["G", "H", "I"]
+        ],
+        "question": "HOTSPOT -\n\nYou are developing a microservices-based application that uses Azure Container Apps. The application consists of several containerized services that handle tasks, such as processing orders, managing inventory, and generating reports.\n\nYou must secure the container apps. All apps must reside in the same virtual network, share the same Dapr configuration, and share the same logging location.\n\nApps must support the configuration of the amount of memory and compute resources available to containers.\n\nYou need to configure the Azure Container App.\n\nHow should you complete the CLI command? To answer, select the appropriate options in the answer area.\n\nNOTE: Each correct selection is worth one point.\n\nAnswer area:\naz containerapp [SLOT 1] [SLOT 2] -n MyContainerApp -g MyResourceGroup --location eastus2 [SLOT 3]",
+        "explanation": "Correct: env, create, and --enable-workload-profiles. Container apps that must share VNet, Dapr settings, and Log Analytics are grouped in the same Container Apps environment, created with az containerapp env create. Enabling workload profiles allows choosing compute and memory resource shapes for containerized workloads in that environment. Why others are wrong: add-on is not the environment creation verb for this requirement, and --enable-mtls or --internal-only address traffic/security behavior but do not provide workload profile-based resource configuration.",
+        "options": [
+            {
+                "key": "A",
+                "text": "env"
+            },
+            {
+                "key": "B",
+                "text": "create"
+            },
+            {
+                "key": "C",
+                "text": "add-on"
+            },
+            {
+                "key": "D",
+                "text": "env"
+            },
+            {
+                "key": "E",
+                "text": "create"
+            },
+            {
+                "key": "F",
+                "text": "add-on"
+            },
+            {
+                "key": "G",
+                "text": "--enable-mtls"
+            },
+            {
+                "key": "H",
+                "text": "--internal-only"
+            },
+            {
+                "key": "I",
+                "text": "--enable-workload-profiles"
+            }
+        ],
+        "answers": [
+            "A",
+            "E",
+            "I"
+        ]
+    },
+    {
+        "id": 140,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Azure Container App CLI command token",
+            "Minimum replicas value"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C"],
+            ["D", "E", "F"]
+        ],
+        "question": "HOTSPOT -\n\nYou are developing a microservices-based application by using Azure Container Apps. The application consists of several containerized services that handle tasks, such as processing orders, managing inventory, and generating reports.\n\nProcessing orders has the following requirements:\n\n- Orders must be triggered by a web request.\n- Additional replicas must be added when the total number of web requests exceeds 300 for at least 15 seconds.\n- Processing orders must always be available based on incoming web requests.\n- Costs must be minimized for the Azure Container Apps instance.\n\nYou need to configure scaling.\n\nHow should you complete the CLI command? To answer, select the appropriate options in the answer area.\n\nNOTE: Each correct selection is worth one point.\n\nAnswer area:\naz containerapp [SLOT 1] \\\n  --name OrderProcessingApp \\\n  --resource-group MyResourceGroup \\\n  --environment MyEnvironmentName \\\n  --image myimage:latest \\\n  --min-replicas [SLOT 2] \\\n  --max-replicas 10 \\\n  --scale-rule-name azure-http-rule \\\n  --scale-rule-type http \\\n  --scale-rule-http-concurrency 20",
+        "explanation": "Correct: create and 0. The command to define a container app with scaling settings is az containerapp create. Using an HTTP scale rule handles web-triggered workloads, and setting minimum replicas to 0 minimizes cost while still allowing scale-out on incoming requests. Why others are wrong: env and add-on are different command groups, not the app creation verb here; higher minimum replicas increase baseline cost and are not the cost-minimizing choice.",
+        "options": [
+            {
+                "key": "A",
+                "text": "env"
+            },
+            {
+                "key": "B",
+                "text": "create"
+            },
+            {
+                "key": "C",
+                "text": "add-on"
+            },
+            {
+                "key": "D",
+                "text": "0"
+            },
+            {
+                "key": "E",
+                "text": "1"
+            },
+            {
+                "key": "F",
+                "text": "10"
+            }
+        ],
+        "answers": [
+            "B",
+            "D"
+        ]
+    },
+    {
+        "id": 141,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "sequence",
+        "sequenceLength": 3,
+        "question": "DRAG DROP -\n\nYou create an Azure subscription. You then create an Azure resource group.\n\nYou plan to create a containerized task that will run as an Azure Container App in regular intervals.\n\nYou need to automate the process of creating the task in the resource group by using Azure CLI commands.\n\nWhich three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
+        "explanation": "Correct sequence: az provider register, az containerapp env create, az containerapp job create. First register the required resource provider for Container Apps. Next create the Container Apps environment in the resource group. Then create the scheduled Container Apps job that runs at regular intervals. Why others are wrong: connected-env create targets Arc-connected environments; registry set is for registry credentials/configuration and not required as a mandatory first sequence for the core setup; job start manually runs a job and is not required to define the recurring schedule.",
+        "options": [
+            {
+                "key": "A",
+                "text": "az containerapp job start"
+            },
+            {
+                "key": "B",
+                "text": "az containerapp env create"
+            },
+            {
+                "key": "C",
+                "text": "az containerapp job create"
+            },
+            {
+                "key": "D",
+                "text": "az containerapp connected-env create"
+            },
+            {
+                "key": "E",
+                "text": "az containerapp registry set"
+            },
+            {
+                "key": "F",
+                "text": "az provider register"
+            }
+        ],
+        "answers": [
+            "F",
+            "B",
+            "C"
+        ]
+    },
+    {
+        "id": 142,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing a microservices-based application that uses Azure Container Apps. The application consists of several containerized services that handle tasks, such as processing orders, managing inventory, and generating reports. You deploy a new revision of the processing orders app.\n\nProcessing orders must be triggered by a web request and must always be available based on incoming web requests.\n\nYou need to validate that the replica is ready to handle incoming requests.\n\nWhat should you implement?",
+        "explanation": "Correct: A (HTTP readiness probe). A readiness probe determines whether a container replica is ready to receive traffic. For a web-request-driven service, an HTTP readiness probe is the appropriate check before routing incoming requests. Why others are wrong: TCP readiness probe can check port reachability but does not provide HTTP-level readiness semantics expected for this web workload; startup probe is for slow app initialization behavior; liveness probes detect whether a container should be restarted, not whether it is ready to serve traffic.",
+        "options": [
+            {
+                "key": "A",
+                "text": "HTTP readiness probe"
+            },
+            {
+                "key": "B",
+                "text": "TCP readiness probe"
+            },
+            {
+                "key": "C",
+                "text": "HTTP startup probe"
+            },
+            {
+                "key": "D",
+                "text": "TCP liveness probe"
+            },
+            {
+                "key": "E",
+                "text": "HTTP liveness probe"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 143,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing a microservices-based application that uses Azure Container Apps. The application consists of several containerized services that handle tasks, such as processing orders, managing inventory, and generating reports. You deploy two microservices named serviceA and serviceB to support managing inventory.\n\nYou have the following requirements:\n\n- serviceA and serviceB must publish events to a single Azure Event Hub by using the Event Hubs SDK.\n- serviceA must publish 1,000 events per second.\n- serviceB must publish 3,000 events per second.\n- Costs must be minimized.\n\nYou need to support the publishing of events.\n\nWhat should you do?",
+        "explanation": "Correct: A. Using four partitions allows parallel publishing throughput distribution across a single Event Hub while keeping the solution in the standard model at lower cost than dedicated cluster options. Mapping serviceA to one partition and serviceB to three partitions aligns with their 1:3 publish rate split. Why others are wrong: Capture is for archiving/egress and does not increase publish throughput; dedicated cluster is significantly more expensive and unnecessary for this requirement; Schema Registry validates schemas but does not solve throughput scaling; consumer groups are for independent readers and do not improve producer-side publishing capacity.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Create four partitions. Update serviceA to use one partition and serviceB to use three partitions."
+            },
+            {
+                "key": "B",
+                "text": "Enable and configure Azure Event Hubs Capture."
+            },
+            {
+                "key": "C",
+                "text": "Create an Azure Event Hubs dedicated cluster. Configure the capacity units to one and the scaling units to two."
+            },
+            {
+                "key": "D",
+                "text": "Create and configure an Azure Schema Registry in Event Hubs. Update serviceA and serviceB to validate message schemas."
+            },
+            {
+                "key": "E",
+                "text": "Create four consumer groups. Update serviceA to use one consumer group and serviceB to use three consumer groups."
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 144,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "serviceA CLI command",
+            "serviceB CLI command"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["A", "B", "C", "D"]
+        ],
+        "question": "DRAG DROP -\n\nYou are developing a microservices-based application by using Azure Container Apps. The application consists of several containerized services that handle tasks, such as processing orders, managing inventory, and generating reports.\n\nYou must deploy two microservices named serviceA and serviceB to support managing inventory. Deployment of the microservices have the following requirements:\n\n- serviceA must create and configure all necessary Azure resources, including multiple Dapr components and an Azure Blob Storage account, by using Bicep files.\n- serviceB must create and configure all necessary Azure resources without using Bicep files.\n- All microservices must use the same resource group, environment, Azure Container Registry, and Log Analytics workspace.\n\nYou need to deploy the microservices.\n\nWhich CLI command should you use? To answer, move the appropriate CLI commands to the correct microservices. You may use each CLI command once, more than once, or not at all. You may need to move the split bar between panes or scroll to view content.\n\nNOTE: Each correct selection is worth one point.\n\nAnswer area:\nMicroservice: serviceA -> [SLOT 1]\nMicroservice: serviceB -> [SLOT 2]",
+        "explanation": "Correct: serviceA uses azd up, and serviceB uses az containerapp up. azd up supports provisioning and deploying complete application infrastructure using Bicep templates, which matches serviceA requirements. az containerapp up can create and configure required Container Apps resources directly from source/container inputs without Bicep, matching serviceB. Why others are wrong: az acr build only builds/pushes container images and does not provision the full app environment. docker-compose up is local/container runtime orchestration and does not provision Azure Container Apps infrastructure.",
+        "options": [
+            {
+                "key": "A",
+                "text": "azd up"
+            },
+            {
+                "key": "B",
+                "text": "az acr build"
+            },
+            {
+                "key": "C",
+                "text": "az containerapp up"
+            },
+            {
+                "key": "D",
+                "text": "docker-compose up"
+            }
+        ],
+        "answers": [
+            "A",
+            "C"
+        ]
+    },
+    {
+        "id": 145,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You are developing an Azure Function app for scalability and integration with Azure Blob Storage.\n\nYou must run the code in an Azure production environment that allows the function to scale based on demand, providing instance size selection and higher concurrency control.\n\nThe function must connect to other Azure services secured inside a virtual network, scale to zero instances when there are no incoming events and minimize costs.\n\nYou need to select a hosting plan to meet the requirement.\n\nWhich plan should you use?",
+        "explanation": "Correct: A (Flex Consumption). Flex Consumption supports event-driven scale including scale to zero, virtual network integration, configurable instance sizes, and higher concurrency controls while remaining cost-efficient for bursty workloads. Why others are wrong: classic Consumption scales to zero and is cost-effective but does not provide the same instance size selection and enhanced concurrency controls; Premium supports advanced networking and performance but does not scale to zero and generally costs more; Dedicated does not provide event-driven scale-to-zero behavior and is not cost-minimizing for this scenario.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Flex Consumption"
+            },
+            {
+                "key": "B",
+                "text": "Consumption"
+            },
+            {
+                "key": "C",
+                "text": "Premium"
+            },
+            {
+                "key": "D",
+                "text": "Dedicated"
+            }
+        ],
+        "answers": [
+            "A"
+        ]
+    },
+    {
+        "id": 146,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "yesno",
+        "question": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou develop a software as a service (SaaS) offering to manage photographs. Users upload photos to a web service which then stores the photos in Azure Storage Blob storage. The storage account type is General-purpose V2.\n\nWhen photos are uploaded, they must be processed to produce and save a mobile-friendly version of the image. The process to produce a mobile-friendly version of the image must start in less than one minute.\n\nYou need to design the process that starts the photo processing.\n\nSolution: Convert the Azure Storage account to a BlockBlobStorage storage account.\n\nDoes the solution meet the goal?",
+        "explanation": "No. Changing the storage account type to BlockBlobStorage does not provide the event-triggering design needed to reliably start photo processing within one minute. The timing requirement is addressed by an event-driven trigger path (for example Blob-created events with Event Grid and a processing function), not by converting account type. Why yes is wrong: storage account SKU/type alone does not ensure near-real-time processing start.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Yes"
+            },
+            {
+                "key": "B",
+                "text": "No"
+            }
+        ],
+        "answers": [
+            "B"
+        ]
+    },
+    {
+        "id": 147,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "questionType": "hotspot",
+        "hotspotSlots": [
+            "Client certificate location",
+            "Encoding type"
+        ],
+        "hotspotSlotOptionKeys": [
+            ["A", "B", "C", "D"],
+            ["E", "F", "G", "H"]
+        ],
+        "question": "HOTSPOT -\n\nYou are developing an Azure Web App. You configure TLS mutual authentication for the web app.\n\nYou need to validate the client certificate in the web app. To answer, select the appropriate options in the answer area.\n\nNOTE: Each correct selection is worth one point.\n\nAnswer area:\nProperty: Client certificate location -> [SLOT 1]\nProperty: Encoding type -> [SLOT 2]",
+        "explanation": "Correct: HTTP request header and Base64. In Azure App Service mutual TLS, the client certificate is forwarded to the app in an HTTP request header (for example X-ARR-ClientCert), and the certificate value is Base64-encoded for app-side parsing/validation. Why others are wrong: cookie, message body, and query string are not the App Service client certificate transport mechanism for mTLS; HTML, URL, and Unicode are not the certificate encoding format used in this header flow.",
+        "options": [
+            {
+                "key": "A",
+                "text": "HTTP request header"
+            },
+            {
+                "key": "B",
+                "text": "Client cookie"
+            },
+            {
+                "key": "C",
+                "text": "HTTP message body"
+            },
+            {
+                "key": "D",
+                "text": "URL query string"
+            },
+            {
+                "key": "E",
+                "text": "HTML"
+            },
+            {
+                "key": "F",
+                "text": "URL"
+            },
+            {
+                "key": "G",
+                "text": "Unicode"
+            },
+            {
+                "key": "H",
+                "text": "Base64"
+            }
+        ],
+        "answers": [
+            "A",
+            "H"
+        ]
+    },
+    {
+        "id": 148,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You need to ensure receipt processing occurs correctly.\n\nWhat should you do?",
+        "explanation": "Correct: D (Use blob leases to prevent concurrency problems). Blob leases provide an exclusive lock mechanism that helps prevent multiple processors from concurrently modifying or processing the same blob/receipt record. Why others are wrong: blob properties and metadata are useful for storing attributes but do not enforce mutual exclusion; SnapshotTime creates point-in-time copies and does not itself prevent concurrent processing conflicts.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Use blob properties to prevent concurrency problems"
+            },
+            {
+                "key": "B",
+                "text": "Use blob SnapshotTime to prevent concurrency problems"
+            },
+            {
+                "key": "C",
+                "text": "Use blob metadata to prevent concurrency problems"
+            },
+            {
+                "key": "D",
+                "text": "Use blob leases to prevent concurrency problems"
+            }
+        ],
+        "answers": [
+            "D"
+        ]
+    },
+    {
+        "id": 149,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You need to resolve the capacity issue.\n\nWhat should you do?",
+        "explanation": "Correct: D (Update the loop starting on line PC09 to process items in parallel). A capacity bottleneck caused by sequential item processing is best addressed by parallelizing the workload so available compute is utilized more efficiently and throughput increases. Why others are wrong: changing trigger type does not inherently solve CPU-bound/sequential processing bottlenecks; consumption plan scaling helps at instance level but does not fix inefficient per-instance serial code; moving to a dedicated plan increases baseline cost and still leaves the same code bottleneck if processing remains sequential.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Convert the trigger on the Azure Function to an Azure Blob storage trigger"
+            },
+            {
+                "key": "B",
+                "text": "Ensure that the consumption plan is configured correctly to allow scaling"
+            },
+            {
+                "key": "C",
+                "text": "Move the Azure Function to a dedicated App Service Plan"
+            },
+            {
+                "key": "D",
+                "text": "Update the loop starting on line PC09 to process items in parallel"
+            }
+        ],
+        "answers": [
+            "D"
+        ]
+    },
+    {
+        "id": 150,
+        "examType": "AZ204",
+        "dumpSource": "Examprepper",
+        "question": "You need to resolve the log capacity issue.\n\nWhat should you do?",
+        "explanation": "Correct: C (Implement Application Insights Sampling). Sampling reduces the volume of telemetry sent and stored while preserving statistically meaningful observability, which directly addresses log capacity pressure. Why others are wrong: a telemetry filter or category filter can drop selected logs but is usually less adaptive for broad capacity control; increasing minimum log level can hide useful diagnostic events and is not as targeted for balanced cost-versus-visibility management as sampling.",
+        "options": [
+            {
+                "key": "A",
+                "text": "Create an Application Insights Telemetry Filter"
+            },
+            {
+                "key": "B",
+                "text": "Change the minimum log level in the host.json file for the function"
+            },
+            {
+                "key": "C",
+                "text": "Implement Application Insights Sampling"
+            },
+            {
+                "key": "D",
+                "text": "Set a LogCategoryFilter during startup"
+            }
+        ],
+        "answers": [
+            "C"
+        ]
     }
 ]
